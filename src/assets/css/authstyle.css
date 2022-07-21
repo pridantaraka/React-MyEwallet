@@ -1,0 +1,94 @@
+.auth-r-bg{
+    background: url(/assets/image/authbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.auth-pad{
+    padding: 7.5rem 5.4rem 0rem 5.4rem;
+}
+.auth-pad-cov{
+    padding: 3.1rem 9.4rem 4.4rem 10.7rem;
+}
+.auth-input{
+    border: unset;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+}
+.auth-icon-wr{
+    background: unset;
+    border: unset;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+}
+.auth-input:focus{
+    border-color: gray;
+    box-shadow: unset;
+}
+.auth-alltext{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+}
+.auth-ewallet{
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+.auth-hcover{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+.auth-pcover{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.auth-h1{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 33px;
+    color: #3A3D42;
+}
+.auth-ptext{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 30px;
+    color: rgba(58, 61, 66, 0.6);
+}
+.auth-pin{
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+.auth-pin input{
+    border: unset;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    text-align: center;
+    font-size: 1.2rem;
+}
+.auth-pin input:focus{
+    outline: none;
+}
+.auth-btn{
+    font-size: 1.2rem;
+}
+@media (max-width: 768px) { 
+    .auth-pad{
+        padding: 2rem 2rem;
+    }
+    .auth-h1{
+        text-align: center;
+    }
+    .auth-ptext{
+        text-align: center;
+    }
+    .auth-pin{
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 0.4rem;
+        margin: 0.4rem;
+    }
+}

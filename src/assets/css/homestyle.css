@@ -1,0 +1,245 @@
+footer{
+    background-color: #6379F4;
+}
+body{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    background: #E5E5E5;
+}
+/* home */
+.ft-p{
+    color: rgba(239, 239, 239, 0.9);
+}
+.h-zwallet{
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 40px;
+    color: #6379F4;
+}
+.h-user{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 31px;
+    color: #3A3D42;
+}
+.h-phone{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: rgba(58, 61, 66, 0.9);
+}
+.h-box{
+    border-bottom: 0.5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.h-boxsh{
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+.main-box{
+    border-radius: 1.2rem;
+}
+.p-history{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #3A3D42;
+}
+.p-user{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4D4B57;
+}
+.p-info{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #7A7886;
+}
+.p-gr{
+    font-weight: 700;
+    font-size: 16px;
+    color: #1EC15F;
+}
+.p-red{
+    font-weight: 700;
+    font-size: 16px;
+    color: #FF5B37;
+}
+.sec-bg1{
+    background-color: #6379F4;
+}
+.sec-m{
+    color: #E0E0E0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 31px;
+}
+.sec-p{
+    color: #E0E0E0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+}
+.sec-h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+}
+.btn-box{
+    border: 1px solid #FFFFFF;
+    background-color: #8d9beb;
+    border-radius: 0.7rem;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    width: 10rem;
+    height: 3.5rem;
+}
+.sec-menu-p{
+    font-weight: 700;
+    font-size: 18px;
+    color: rgba(58, 61, 66, 0.8);
+}
+
+.sec-menu-p:hover{
+    color: #6379F4;
+}
+.sec-menu-see{
+    font-weight: 600;
+    font-size: 14px;
+    color: #6379F4;
+}
+.bot-log{
+    padding-top: 15rem;
+}
+/* home */
+
+/* history */
+.history-p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #7A7886;
+}
+.trans-his{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #3A3D42;
+}
+/* history */
+
+/* confirmation */
+.boxconfirm{
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 0.7rem;
+}
+.p-confirm{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7A7886;
+}
+.h3-confirm{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #514F5B;
+}
+.btn-confirm{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.7rem;
+    background: #6379F4;
+    margin-top: 5rem;
+    box-shadow: 0px 6px 75px rgba(100, 87, 87, 0.05);
+}
+/* confirmation */
+
+/* topup */
+.p-topup{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #6379F4;
+}
+.p1-topup{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #7A7886;
+}
+.text-hover:hover{
+    color: #6379F4;
+}
+/* topup */
+
+/* resetPassword */
+.reset-icon-wrp{
+    background: unset;
+    border: unset;
+    border-bottom: 1px solid #7A7886;
+    border-radius: 0;
+    color: #7A7886;
+}
+.reset-input{
+    border: unset;
+    border-bottom: 1px solid #7A7886;
+    border-radius: 0;
+}
+.reset-input:focus{
+    border-color: #7A7886;
+    box-shadow: unset;
+}
+.reset-btn-chnge{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #6379F4;
+    border-radius: 0.7rem;
+    border: none;
+    width: 20rem;
+    height: 3rem;
+}
+/* resetPassword */
+
+/* changePin */
+.change-pin{
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+.change-pin input{
+    border: unset;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    text-align: center;
+    font-size: 1.2rem;
+}
+.change-pin input:focus{
+    outline: none;
+}
+/* changePin */
+
+/* Transfer */
+.trans-search{
+    
+}
+.trans-search input:focus{
+    outline: none;
+    box-shadow: unset;
+}
+.input-search{
+    border: unset;
+}
+/* Transfer */
