@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&family=Poppins&display=swap');
+
 .auth-r-bg{
-    background: url(/assets/image/authbg.png);
+    background: #F2789F;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -31,31 +33,26 @@
 .auth-ewallet{
     font-weight: 400;
     font-size: 2rem;
-    line-height: 40px;
     color: #FFFFFF;
 }
 .auth-hcover{
     font-weight: 700;
     font-size: 1.5rem;
-    line-height: 33px;
     color: #FFFFFF;
 }
 .auth-pcover{
     font-weight: 400;
     font-size: 1rem;
-    line-height: 23px;
     color: rgba(255, 255, 255, 0.8);
 }
 .auth-h1{
     font-weight: 700;
     font-size: 1.5rem;
-    line-height: 33px;
     color: #3A3D42;
 }
 .auth-ptext{
     font-weight: 400;
     font-size: 1rem;
-    line-height: 30px;
     color: rgba(58, 61, 66, 0.6);
 }
 .auth-pin{
