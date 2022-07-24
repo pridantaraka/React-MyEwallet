@@ -38,6 +38,7 @@
 .auth-hcover{
     font-weight: 700;
     font-size: 1.5rem;
+    padding-bottom: 0.8rem;
     color: #FFFFFF;
 }
 .auth-pcover{
@@ -81,6 +82,13 @@
     }
     .auth-ptext{
         text-align: center;
+    }
+    .auth-ewallet{
+        
+        text-align: center;
+    }
+    .auth-res{
+        color: #F999B7;
     }
     .auth-pin{
         border: 1px solid;
