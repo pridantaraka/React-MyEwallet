@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/style4css.css'
 import './assets/css/authstyle.css'
+import './assets/css/homestyle.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

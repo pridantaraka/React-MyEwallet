@@ -9,6 +9,7 @@ import Createpin from './pages/Createpin'
 import Pinsuccess from './pages/Pinsuccess'
 import Forgetpwd from './pages/Forgetpwd'
 import CreateNewpwd from './pages/CreateNewpwd'
+import Homepage from './homepages/Homepage'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="pinsuccess" element={<Pinsuccess />}/>
         <Route path="forgetpwd" element={<Forgetpwd />}/>
         <Route path="createnewpwd" element={<CreateNewpwd />}/>
+        <Route path="homepage" element={<Homepage />}/>
       </Routes>
     </BrowserRouter>
   )
