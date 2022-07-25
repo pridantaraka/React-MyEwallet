@@ -1,5 +1,7 @@
 import React from 'react'
-import {Container, Row, Col} from 'react-bootstrap'
+import {Link} from 'react-router-dom';
+import {Container, Row, Col, Button} from 'react-bootstrap'
+import { Mail, Lock, User } from "react-feather";
 
 import authphon from '../assets/image/authphon.png'
 
@@ -44,30 +46,29 @@ function Signup() {
                     </div>
                     <div className="input-group flex-nowrap">
                         <span className="input-group-text auth-icon-wr">
-                            <i data-feather="user"></i>
+                            <User />
                         </span>
                         <input type="email" className="form-control auth-input" placeholder="Enter your username"/>
                     </div>
                     <div className="input-group flex-nowrap">
                         <span className="input-group-text auth-icon-wr">
-                            <i data-feather="mail"></i>
+                            <Mail />
                         </span>
                         <input type="email" className="form-control auth-input" placeholder="Enter your e-mail"/>
                     </div>
                     <div className="input-group flex-nowrap">
                         <span className="input-group-text auth-icon-wr">
-                            <i data-feather="lock"></i>
+                            <Lock />
                         </span>
                         <input type="password" className="form-control auth-input" placeholder="Enter your password"/>
                         <span className="input-group-text auth-icon-wr">
-                        <i data-feather="eye-off"></i>
                         </span>
                     </div>
                     <div className="d-grid">
-                        <button className="btn btn-primary p-2 auth-btn"><a className="nav-link" href="createPin.html">Sign Up</a></button>
+                    <Link to="/createpin" className="auth-btn "><Button className='w-100'>Sign Up</Button></Link>
                     </div>
                     <div className="text-center">
-                        <span>Already have an account? Let`s <a href="login.html">Login</a></span>
+                        <span>Already have an account? Let`s <Link to="/login">Login</Link></span>
                     </div>
                 </section>
                 </Col>

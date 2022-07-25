@@ -1,5 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import {Container, Row, Col, Button} from 'react-bootstrap'
+import { Mail, Lock } from "react-feather";
 
 import authphon from '../assets/image/authphon.png'
 
@@ -45,26 +47,27 @@ function Login() {
                         <div className="input-group flex-nowrap">
                             <span className="input-group-text auth-icon-wr">
                                 <i data-feather="mail"></i>
+                                <Mail />
                             </span>
                             <input type="email" className="form-control auth-input" placeholder="Enter your e-mail"/>
                             </div>
                             <div className="input-group flex-nowrap">
                             <span className="input-group-text auth-icon-wr">
                                 <i data-feather="lock"></i>
+                                <Lock />
                             </span>
                             <input type="password" className="form-control auth-input" placeholder="Enter your password"/>
                             <span className="input-group-text auth-icon-wr">
-                                <i data-feather="eye-off"></i>
                             </span>
                             </div>
                             <div className="text-end">
-                            <a href="resetpwd.html">Forgot Password?</a>
+                            <Link to="/forgetpwd">Forgot Password?</Link>
                             </div>
                             <div className="d-grid">
-                            <Button className="btn btn-primary auth-btn"><a className="nav-link" href="homepage.html">Login</a></Button>
+                            <Link to="/homepage" className="auth-btn"><Button className='w-100'>Login</Button></Link>
                             </div>
                             <div className="text-center">
-                            <span>Don`t have an account? Let`s <a href="signUp.html">Sign Up</a></span>
+                            <span>Don`t have an account? Let`s <Link to="/signup">Forgot Password?</Link></span>
                             </div>
                     </section>
                     </Col>

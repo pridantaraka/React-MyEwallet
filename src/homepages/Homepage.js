@@ -1,17 +1,78 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import {Container, Row, Col, Nav} from 'react-bootstrap'
+import { Bell, Grid, User, Plus, ArrowUp, LogOut } from "react-feather";
 
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 import graficin from '../assets/image/in2.png'
 import graficout from '../assets/image/out2.png'
 import grafic from '../assets/image/graphic.png'
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
-import Nlogo from '../assets/image/Nlogo.png'
-import JessicaMera from '../assets/image/users/JessicaMera.png'
-import Alogo from '../assets/image/Alogo.png'
 
+function Users({picture, name, transaction, type}){
+    return(
+    <div className="d-flex flex-row justify-content-around pb-3">
+        <div className="align-self-center">
+        <img className="img-fluid rounded" src={SamuelSuhi} alt="profileimg"/>
+        </div>
+        <div className="d-flex flex-column align-self-center">
+            <p className="p-user mb-0">{name}</p>
+             <p className="p-info mb-0">{type}</p>
+         </div>
+         <div className="d-flex align-self-center">
+             <p className="p-gr mb-0">Rp.{transaction}</p>
+         </div>
+     </div>
+    )
+}
 
 function Homepage() {
+    const [data, setData] = React.useState({
+        success: true,
+        massage: 'List User',
+        results: [
+            {
+                "id_transaction": 34,
+                "time_transaction": "2022-07-11T15:32:09.773Z",
+                "recipient_id": 33,
+                "sander_id": 45,
+                "name": "jojo",
+                "notes": "hellow",
+                "amount": "10000",
+                "type_id": 1
+            },
+            {
+                "id_transaction": 35,
+                "time_transaction": "2022-10-31T17:00:00.000Z",
+                "recipient_id": 33,
+                "sander_id": 45,
+                "name": "lilo",
+                "notes": "hellow",
+                "amount": "10000",
+                "type_id": 1
+            },
+            {
+                "id_transaction": 36,
+                "time_transaction": "2022-10-31T17:00:00.000Z",
+                "recipient_id": 33,
+                "sander_id": 45,
+                "name": "nona",
+                "notes": "hellow",
+                "amount": "1000",
+                "type_id": 1
+            },
+            {
+                "id_transaction": 46,
+                "time_transaction": "2022-10-31T17:00:00.000Z",
+                "recipient_id": 45,
+                "sander_id": 46,
+                "name": "milo",
+                "notes": "hello",
+                "amount": "50000",
+                "type_id": 1
+            }
+        ]
+    })
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -30,8 +91,8 @@ function Homepage() {
                                 <p class="h-user mb-0">Robert Chandler</p>
                                 <p class="h-phone mb-0">+62 8139 3877 7946</p>
                             </div>
-                                <div class="sec-menu-p">
-                                    <i data-feather="bell"></i>
+                                <div class="sec-menu-p d-flex align-self-center">
+                                    <Bell />
                                 </div>
                         </div>
                     </div>
@@ -49,6 +110,7 @@ function Homepage() {
                                     <div class="d-inline-flex flex-row sec-menu-p">
                                         <div class="align-self-center px-2">
                                             <i data-feather="grid"></i>
+                                            <Grid />
                                         </div>
                                         <div><p class="mb-0">Dashboard</p></div>
                                     </div>
@@ -57,6 +119,7 @@ function Homepage() {
                                         <div class="d-inline-flex flex-row sec-menu-p">
                                             <div class="align-self-center px-2">
                                                 <i data-feather="arrow-up"></i>
+                                                <ArrowUp />
                                             </div>
                                             <div><p class="mb-0">Transfer</p></div>
                                         </div>
@@ -65,6 +128,7 @@ function Homepage() {
                                     <div class="d-inline-flex flex-row sec-menu-p">
                                         <div class="align-self-center px-2">
                                             <i data-feather="plus"></i>
+                                            <Plus />
                                         </div>
                                         <div><p class="mb-0">TopUp</p></div>
                                     </div>
@@ -73,21 +137,25 @@ function Homepage() {
                                     <div class="d-inline-flex flex-row sec-menu-p">
                                         <div class="align-self-center px-2">
                                             <i data-feather="user"></i>
+                                            <User />
                                         </div>
                                         <div>Profile</div>
                                     </div>
                                 </a>
                             </div>
+                            <Link to='/Home'>
                             <a class="nav-link ms-3 my-1" href="./landingpage/index.html">
                                 <div class="d-flex">
                                     <div class="d-inline-flex sec-menu-p">
                                         <div class="align-self-center px-2">
                                             <i data-feather="log-out"></i>
+                                            <LogOut />
                                         </div>
                                         <div><p class="mb-0">Logout</p></div>
                                     </div>
                                 </div>
                             </a>
+                            </Link>
                         </div>
                         </section>
                         </Col>
@@ -109,11 +177,11 @@ function Homepage() {
                             <div class="col-12 main-box d-flex flex-md-row flex-column gap-1 p-0">
                                 <div class="col-12 col-md-8 bg-white main-box ">
                                     <div class="d-flex justify-content-between p-4">
-                                        <div><img src={graficin} alt="grafic-image"/></div>
-                                        <div><img src={graficout} alt="grafic-image"/></div>
+                                        <div><img src={graficin} alt="graficimg"/></div>
+                                        <div><img src={graficout} alt="graficimg"/></div>
                                     </div>
                                     <div class="d-flex justify-content-center">
-                                        <img src={grafic} alt="grafic-image"/>
+                                        <img src={grafic} alt="graficimg"/>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 bg-white main-box">
@@ -123,54 +191,17 @@ function Homepage() {
                                             <a class="nav-link ms-3 my-1 sec-menu-see" href="historypage.html">See all</a>
                                         </div>
                                         <div class="p-2">
-                                            <div class="d-flex flex-row justify-content-between pb-3">
-                                                <div class="align-self-center">
-                                                <img src={SamuelSuhi} alt="profile-image"/>
-                                                </div>
-                                                <div class="d-flex flex-column align-self-center px-2">
-                                                    <p class="p-user mb-0">Samuel Suhi</p>
-                                                    <p class="p-info mb-0">Transfer</p>
-                                                </div>
-                                                <div class="d-flex align-self-center">
-                                                    <p class="p-gr mb-0">+Rp50.000</p>
-                                                </div>
+                                            {/* map data dinamis */}
+                                            <div>
+                                                {data.results.map(o => {
+                                                    return(
+                                                        <>
+                                                        <Users picture={SamuelSuhi} name={o.name} type={o.notes} transaction={o.amount}/>
+                                                        </>
+                                                    )
+                                                })}
                                             </div>
-                                            <div class="d-flex flex-row justify-content-between pb-3">
-                                                <div class="align-self-center">
-                                                <img src={Nlogo} alt="profile-image"/>
-                                                </div>
-                                                <div class="d-flex flex-column align-self-center px-2">
-                                                    <p class="p-user mb-0">Netflix</p>
-                                                    <p class="p-info mb-0">Subscription</p>
-                                                </div>
-                                                <div class="d-flex align-self-end">
-                                                    <p class="p-red">-Rp149.000</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-row justify-content-between pb-3">
-                                                <div class="align-self-center">
-                                                <img src={JessicaMera} alt="profile-image"/>
-                                                </div>
-                                                <div class="d-flex flex-column align-self-center ps-3">
-                                                    <p class="p-user mb-0">Christine Mar...</p>
-                                                    <p class="p-info mb-0">Subscription</p>
-                                                </div>
-                                                <div class="d-flex align-self-end">
-                                                    <p class="p-gr">+Rp150.000</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-row justify-content-between pb-3">
-                                                <div class="align-self-center">
-                                                <img src={Alogo} alt="profile-image"/>
-                                                </div>
-                                                <div class="d-flex flex-column align-self-center px-2">
-                                                    <p class="p-user mb-0">Adobe Inc.</p>
-                                                    <p class="p-info mb-0">Subscription</p>
-                                                </div>
-                                                <div class="d-flex align-self-end">
-                                                    <p class="p-red">-Rp249.000</p>
-                                                </div>
-                                            </div>
+                                            {/* map data dinamis */}
                                         </div>
                                     </div>
                                 </div>

@@ -1,5 +1,6 @@
 import React from 'react'
-import {Container, Row, Col} from 'react-bootstrap'
+import {Link} from 'react-router-dom';
+import {Container, Row, Col, Button} from 'react-bootstrap'
 
 import authphon from '../assets/image/authphon.png'
 
@@ -64,7 +65,7 @@ function Createpin() {
                             </div>
                         </div>
                         <div className="d-grid">
-                            <button className="btn btn-primary p-2 auth-btn" onclick=""><a className="nav-link" href="  ">Confirm</a></button>
+                        <Link to="/pinsuccess" className="auth-btn"><Button className='w-100'>Confirm</Button></Link>
                         </div>
                     </section>
                     </Col>

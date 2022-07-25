@@ -1,6 +1,6 @@
 import React from 'react'
 // import {Navbar, Container, Row, Col, Button} from 'react-bootstrap'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import phlogo from '../assets/image/phlogo.png'
 import lock from '../assets/image/lock.png'
 import download from '../assets/image/download.png'
@@ -20,8 +20,8 @@ function Home() {
                             <span className="ewallet">MyEwallet</span>
                         </div>
                         <div className="mrg mrgtop">
-                            <button className="btn-nav"><a className="nav-link" href="login.html">Login</a></button>
-                            <button className="btn-nav"><a className="nav-link" href="signUp.html">Sign Up</a></button>
+                            <Link to='/login'><button className="btn-nav">Login</button></Link>
+                            <Link to='/signup'><button className="btn-nav">Sign Up</button></Link>
                         </div>
                     </div>
                 </nav>
@@ -33,7 +33,7 @@ function Home() {
                         <p className="head-p p1">We bring you a mobile app for banking problems that <br/>
                             oftenly wasting much of your times.</p>
                             <div>
-                                <button className="head-btn-try"><a className="nav-link" href="signUp.html">Try Free</a></button>
+                            <Link to='/signup'><button className="head-btn-try">Try Free</button></Link>
                             </div>
                     </div>
                 </div>

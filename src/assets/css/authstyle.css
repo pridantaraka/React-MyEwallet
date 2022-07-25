@@ -61,6 +61,7 @@
     border-radius: 10px;
     padding: 0.5rem;
 }
+
 .auth-pin input{
     border: unset;
     border-bottom: 1px solid rgb(177, 177, 177);
@@ -72,6 +73,11 @@
 }
 .auth-btn{
     font-size: 1.2rem;
+    
+}
+.auth-btn Button:focus{
+    outline: none;
+    border-color: none;
 }
 @media (max-width: 768px) { 
     .auth-pad{
