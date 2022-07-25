@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import {Container, Row, Col, Nav} from 'react-bootstrap'
 import { Bell, Grid, User, Plus, ArrowUp, LogOut } from "react-feather";
 
@@ -27,7 +29,7 @@ function Users({picture, name, transaction, type}){
 }
 
 function Homepage() {
-    const [data, setData] = React.useState({
+    const [data] = React.useState({
         success: true,
         massage: 'List User',
         results: [
@@ -77,120 +79,121 @@ function Homepage() {
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
         <Row>
-            <header>
-                <Nav class="bg-white h-box h-boxsh mw-100">
-                    <div class="d-flex flex-row justify-content-between">
-                        <div class="h-zwallet align-self-center ps-5 d-md-block d-none">
+            <header className="bg-white h-box h-boxsh w-100">
+                <Nav className="d-flex flex-row justify-content-between">
+                        <div className="h-zwallet align-self-center ps-5 d-md-block d-none">
                             <span>MyEwallet</span>
                         </div>
-                        <div class="d-flex flex-row p-4 pe-md-5">
-                            <div class="align-self-center px-2">
+                        <div className="d-flex flex-row p-4 pe-md-5">
+                            <div className="align-self-center px-2">
                             <img src={RobertChandler} alt="img-profile"/>
                             </div>
-                            <div class="d-flex flex-column align-self-center px-2">
-                                <p class="h-user mb-0">Robert Chandler</p>
-                                <p class="h-phone mb-0">+62 8139 3877 7946</p>
+                            <div className="d-flex flex-column align-self-center px-2">
+                                <p className="h-user mb-0">Robert Chandler</p>
+                                <p className="h-phone mb-0">+62 8139 3877 7946</p>
                             </div>
-                                <div class="sec-menu-p d-flex align-self-center">
+                                <div className="sec-menu-p d-flex align-self-center">
                                     <Bell />
                                 </div>
                         </div>
-                    </div>
                 </Nav>
             </header>
              <main>
-                <Container className='mw-100'>
+                <Container classNameName='mw-100 min-vh-100'>
                     <Row>
                         <Col md={12} className="d-flex flex-row justify-content-md-center gap-2 mx-0 px-0 mt-4 mb-4 w-100">
                         <Col md={3}>
-                        <section class="bg-white main-box p-md-5 d-md-block d-none h-100">
-                            <div class="d-flex flex-column h-100 justify-content-between">
-                            <div class="d-flex flex-column justify-content-end gap-5">
-                                <a class="nav-link ms-3 my-1" href="homepage.html">
-                                    <div class="d-inline-flex flex-row sec-menu-p">
-                                        <div class="align-self-center px-2">
+                        <section className="bg-white main-box p-md-5 d-md-block d-none h-100">
+                            <div className="d-flex flex-column h-100 justify-content-between">
+                            <div className="d-flex flex-column justify-content-end gap-5">
+                            <Link to='/homepage' className=" ms-3 my-1">
+                                    <div className="d-inline-flex flex-row sec-menu-p">
+                                        <div className="align-self-center px-2">
                                             <i data-feather="grid"></i>
                                             <Grid />
                                         </div>
-                                        <div><p class="mb-0">Dashboard</p></div>
+                                        <div><p className="mb-0">Dashboard</p></div>
                                     </div>
-                                </a>
-                                    <a class="nav-link ms-3 my-1" href="transfer.html">
-                                        <div class="d-inline-flex flex-row sec-menu-p">
-                                            <div class="align-self-center px-2">
-                                                <i data-feather="arrow-up"></i>
+                                </Link>
+                                <Link to='/transfer' className=" ms-3 my-1">
+                                        <div className="d-inline-flex flex-row sec-menu-p">
+                                            <div className="align-self-center px-2">
                                                 <ArrowUp />
                                             </div>
-                                            <div><p class="mb-0">Transfer</p></div>
+                                            <div><p className="mb-0">Transfer</p></div>
                                         </div>
-                                    </a>
-                                <a class="nav-link ms-3 my-1" href="topup.html">
-                                    <div class="d-inline-flex flex-row sec-menu-p">
-                                        <div class="align-self-center px-2">
-                                            <i data-feather="plus"></i>
+                                    </Link>
+                                <Link to='/Topup' className=" ms-3 my-1">
+                                    <div className="d-inline-flex flex-row sec-menu-p">
+                                        <div className="align-self-center px-2">
                                             <Plus />
                                         </div>
-                                        <div><p class="mb-0">TopUp</p></div>
+                                        <div><p className="mb-0">TopUp</p></div>
                                     </div>
-                                </a>
-                                <a class="nav-link ms-3 my-1" href="profile.html">
-                                    <div class="d-inline-flex flex-row sec-menu-p">
-                                        <div class="align-self-center px-2">
-                                            <i data-feather="user"></i>
+                                </Link>
+                                <Link to='/profilepage' className=" ms-3 my-1">
+                                    <div className="d-inline-flex flex-row sec-menu-p">
+                                        <div className="align-self-center px-2">
                                             <User />
                                         </div>
                                         <div>Profile</div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>
-                            <Link to='/Home'>
-                            <a class="nav-link ms-3 my-1" href="./landingpage/index.html">
-                                <div class="d-flex">
-                                    <div class="d-inline-flex sec-menu-p">
-                                        <div class="align-self-center px-2">
-                                            <i data-feather="log-out"></i>
+                            <Link to='/Home' className="ms-3 my-1">
+                                <div className="d-flex">
+                                    <div className="d-inline-flex sec-menu-p">
+                                        <div className="align-self-center px-2">
                                             <LogOut />
                                         </div>
-                                        <div><p class="mb-0">Logout</p></div>
+                                        <div><p className="mb-0">Logout</p></div>
                                     </div>
                                 </div>
-                            </a>
                             </Link>
                         </div>
                         </section>
                         </Col>
-                        <Col md={8}>
-                        <section class="main-box d-flex flex-column gap-2 p-0">
-                            <div class="col-12 main-box sec-bg1 d-sm-flex flex-column">
-                                <div class="d-flex justify-content-md-between flex-md-row flex-column align-items-center">
-                                    <div class="d-flex flex-column p-4">
-                                        <p class="sec-m">Balance</p>
-                                        <h2 class="text-white sec-h2">Rp120.000</h2>
-                                        <p class="sec-p">+62 813-9387-7946</p>
+                        <Col md={9}>
+                            {/* Dropdown */}
+                            <DropdownButton title="Dropdown button" className="mw-100 d-md-none bg-white my-2 main-box d-flex justify-content-center">
+                                <Link to='/homepage'><Dropdown.Item href="#/action-1">Dashboard</Dropdown.Item></Link>
+                                <Link to='/transfer'><Dropdown.Item href="#/action-2">Transfer</Dropdown.Item></Link>
+                                <Link to='/topup'><Dropdown.Item href="#/action-3">TopUp</Dropdown.Item></Link>                              
+                                <Link to='/profilepage'><Dropdown.Item href="#/action-3">Profile</Dropdown.Item></Link>                                
+                                <Link to='/home'><Dropdown.Item href="#/action-3">LogOut</Dropdown.Item></Link>                               
+                                </DropdownButton>
+                            {/* Dropdown */}
+                        <section className="main-box d-flex flex-column gap-2 p-0">
+                            <div className="col-12 main-box sec-bg1 d-flex flex-column">
+                                <div className="d-flex justify-content-md-between flex-md-row flex-column align-items-center">
+                                    <div className="d-flex flex-column p-4">
+                                        <p className="sec-m">Balance</p>
+                                        <h2 className="text-white sec-h2">Rp120.000</h2>
+                                        <p className="sec-p">+62 813-9387-7946</p>
                                     </div>
-                                    <div class="d-flex flex-column justify-content-center p-4 gap-2">
-                                        <button class="btn-box"><i data-feather="arrow-up"></i>Transfer</button>
-                                        <button class="btn-box"><i data-feather="plus"></i>Top Up</button>
+                                    <div className="d-flex flex-column justify-content-center p-4 gap-2">
+                                        <button className="btn-box"><i data-feather="arrow-up"></i>Transfer</button>
+                                        <button className="btn-box"><i data-feather="plus"></i>Top Up</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 main-box d-flex flex-md-row flex-column gap-1 p-0">
-                                <div class="col-12 col-md-8 bg-white main-box ">
-                                    <div class="d-flex justify-content-between p-4">
+                            <div className="col-12 main-box d-flex flex-md-row flex-column gap-1 p-0">
+                                <div className="col-12 col-md-8 bg-white main-box ">
+                                    <div className="d-flex justify-content-between p-4">
                                         <div><img src={graficin} alt="graficimg"/></div>
                                         <div><img src={graficout} alt="graficimg"/></div>
                                     </div>
-                                    <div class="d-flex justify-content-center">
+                                    <div className="d-flex justify-content-center">
                                         <img src={grafic} alt="graficimg"/>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4 bg-white main-box">
-                                    <div class="p-3 row d-flex justify-content-md-between">
-                                        <div class="d-flex justify-content-between">
-                                            <p class="p-history">Transaction History</p>
-                                            <a class="nav-link ms-3 my-1 sec-menu-see" href="historypage.html">See all</a>
+                                <div className="col-12 col-md-4 bg-white main-box">
+                                    <div className="p-3 row d-flex justify-content-md-between">
+                                        <div className="d-flex justify-content-between">
+                                            <p className="p-history">Transaction History</p>
+                                            <Link to='/historypage' className=" ms-3 my-1">See all</Link>
                                         </div>
-                                        <div class="p-2">
+                                        <div className="p-2">
                                             {/* map data dinamis */}
                                             <div>
                                                 {data.results.map(o => {
@@ -213,11 +216,15 @@ function Homepage() {
                 </Container>
              </main>
             <footer className='f-bg-pg'>
-                <div class="d-flex flex-row justify-content-between p-3">
-                    <p class="ft-p mb-0">2020 Zwallet. All right reserved.</p>
-                    <div class="d-flex flex-row gap-4">
-                    <p class="ft-p mb-0">+62 5637 8882 9901</p>
-                    <p class="ft-p mb-0">contact@zwallet.com</p>
+                <div className="d-flex flex-row justify-content-between p-3">
+                    <p className="ft-p mb-0">2020 Zwallet. All right reserved.</p>
+                    <div className="d-flex flex-md-row flex-column gap-4">
+                        <div>
+                            <p className="ft-p mb-0">+62 5637 8882 9901</p>
+                        </div>
+                        <div>
+                            <p className="ft-p mb-0">contact@zwallet.com</p>
+                        </div>
                     </div>
                 </div>
             </footer>

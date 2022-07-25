@@ -10,6 +10,11 @@ import Pinsuccess from './pages/Pinsuccess'
 import Forgetpwd from './pages/Forgetpwd'
 import CreateNewpwd from './pages/CreateNewpwd'
 import Homepage from './homepages/Homepage'
+import Historypage from './homepages/Historypage'
+import Confirmpage from './homepages/Confirmpage'
+import Profilepage from './homepages/Profilepage'
+import Personalinfo from './homepages/Personalinfo';
+import Searchpage from './homepages/Searchpage';
 
 function App() {
   return (
@@ -23,6 +28,11 @@ function App() {
         <Route path="forgetpwd" element={<Forgetpwd />}/>
         <Route path="createnewpwd" element={<CreateNewpwd />}/>
         <Route path="homepage" element={<Homepage />}/>
+        <Route path="historypage" element={<Historypage />}/>
+        <Route path="confirmpage" element={<Confirmpage />}/>
+        <Route path="profilepage" element={<Profilepage />}/>
+        <Route path="personalinfo" element={<Personalinfo />}/>
+        <Route path="searchpage" element={<Searchpage />}/>
       </Routes>
     </BrowserRouter>
   )
