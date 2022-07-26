@@ -47,7 +47,7 @@ function Confirmpage() {
                             <section className="bg-white main-box p-md-5 d-md-block d-none h-100">
                                 <div className="d-flex flex-column h-100 justify-content-between">
                                 <div className="d-flex flex-column justify-content-end gap-5">
-                                <Link to='/homepage' className="nav-link ms-3 my-1">
+                                <Link to='/dashboard' className="nav-link ms-3 my-1">
                                         <div className="d-inline-flex flex-row sec-menu-p">
                                             <div className="align-self-center px-2">
                                                 <i data-feather="grid"></i>

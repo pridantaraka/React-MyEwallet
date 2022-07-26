@@ -5,7 +5,7 @@ import { Mail } from "react-feather";
 
 import authphon from '../assets/image/authphon.png'
 
-function Forgetpwd() {
+function ForgetPwd() {
     return(
         <>
         <Container className='mw-100 min-vh-100'>
@@ -64,4 +64,4 @@ function Forgetpwd() {
     )
 }
 
-export default Forgetpwd
+export default ForgetPwd

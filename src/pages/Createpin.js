@@ -4,7 +4,7 @@ import {Container, Row, Col, Button} from 'react-bootstrap'
 
 import authphon from '../assets/image/authphon.png'
 
-function Createpin() {
+function CreatePin() {
     return(
         <>
             <Container className='mw-100 min-vh-100'>
@@ -74,4 +74,4 @@ function Createpin() {
         </>
     )
 }
-export default Createpin
+export default CreatePin

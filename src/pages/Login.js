@@ -64,10 +64,10 @@ function Login() {
                             <Link to="/forgetpwd">Forgot Password?</Link>
                             </div>
                             <div className="d-grid">
-                            <Link to="/homepage" className="auth-btn"><Button className='w-100'>Login</Button></Link>
+                            <Link to="/dashboard" className="auth-btn"><Button className='w-100'>Login</Button></Link>
                             </div>
                             <div className="text-center">
-                            <span>Don`t have an account? Let`s <Link to="/signup">Forgot Password?</Link></span>
+                            <span>Don`t have an account? Let`s <Link to="/signup">SignUp</Link></span>
                             </div>
                     </section>
                     </Col>

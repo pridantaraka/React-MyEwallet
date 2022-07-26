@@ -5,7 +5,7 @@ import { Lock } from "react-feather";
 
 import authphon from '../assets/image/authphon.png'
 
-function CreateNewpwd() {
+function CreateNewPwd() {
     return(
         <>
         <Container className='mw-100 min-vh-100'>
@@ -73,4 +73,4 @@ function CreateNewpwd() {
     )
 }
 
-export default CreateNewpwd
+export default CreateNewPwd

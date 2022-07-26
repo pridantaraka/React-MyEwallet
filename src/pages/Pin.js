@@ -5,7 +5,7 @@ import {Container, Row, Col, Button} from 'react-bootstrap'
 import authphon from '../assets/image/authphon.png'
 import authsuc from '../assets/image/success.png'
 
-function Pinsuccess() {
+function Pin () {
     return(
         <>
         <Container className='mw-100 min-vh-100'>
@@ -56,4 +56,4 @@ function Pinsuccess() {
     )
 }
 
-export default Pinsuccess
+export default Pin

@@ -1,5 +1,4 @@
 import React from 'react'
-// import {Navbar, Container, Row, Col, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import phlogo from '../assets/image/phlogo.png'
 import lock from '../assets/image/lock.png'
