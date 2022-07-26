@@ -11,14 +11,14 @@ import ForgetPwd from './pages/ForgetPwd'
 import CreateNewPwd from './pages/CreateNewPwd'
 import Dashboard from './homepages/Dashboard'
 import Historypage from './homepages/Historypage'
-import Confirmpage from './homepages/Confirmpage'
+import Confirmation from './homepages/Confirmation';
 import Profilepage from './homepages/Profilepage'
 import Personalinfo from './homepages/Personalinfo';
 import Searchpage from './homepages/Searchpage';
-import Changepwd from './homepages/Changepwd';
+import ChangePwd from './homepages/ChangePwd';
 import ChangePin from './homepages/ChangePin';
-import Addphone from './homepages/Addphone';
-import Managephone from './homepages/Managephone';
+import AddPhone from './homepages/AddPhone';
+import ManagePhone from './homepages/ManagePhone';
 import Topup from './homepages/Topup';
 
 function App() {
@@ -34,14 +34,14 @@ function App() {
         <Route path="createnewpwd" element={<CreateNewPwd />}/>
         <Route path="dashboard" element={<Dashboard />}/>
         <Route path="historypage" element={<Historypage />}/>
-        <Route path="confirmpage" element={<Confirmpage />}/>
+        <Route path="confirmation" element={<Confirmation />}/>
         <Route path="profilepage" element={<Profilepage />}/>
         <Route path="personalinfo" element={<Personalinfo />}/>
         <Route path="searchpage" element={<Searchpage />}/>
-        <Route path="changepwd" element={<Changepwd />}/>
+        <Route path="changepwd" element={<ChangePwd />}/>
         <Route path="changepin" element={<ChangePin />}/>
-        <Route path="addphone" element={<Addphone />}/>
-        <Route path="managephone" element={<Managephone />}/>
+        <Route path="addphone" element={<AddPhone />}/>
+        <Route path="managephone" element={<ManagePhone />}/>
         <Route path="topup" element={<Topup />}/>
       </Routes>
     </BrowserRouter>

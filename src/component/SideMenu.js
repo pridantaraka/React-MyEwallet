@@ -31,7 +31,7 @@ export default function SideMenu() {
                             <div className="align-self-center px-2">
                                 <Plus />
                             </div>
-                            <div><p className="mb-0">Topup</p></div>
+                            <div><p className="mb-0">TopUp</p></div>
                         </div>
                      </Link>
                     <Link to='/profilepage' className="nav-link ms-3 my-1">

@@ -102,7 +102,7 @@ function Searchpage() {
                                         </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <Link to='/confirmpage' class="nav-link ms-3 my-1">
+                                        <Link to='/confirmation' class="nav-link ms-3 my-1">
                                         <div class="d-flex flex-row align-self-center">
                                         <img src={SamuelSuhi} alt="profileimg"/>
                                         <div class="d-inline-flex flex-column align-self-center px-2">

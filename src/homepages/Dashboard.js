@@ -91,7 +91,7 @@ function Dashboard() {
                         </Col>
                         <Col md={9}>
                             <DropdownMenu />
-                        <section className="main-box d-flex flex-column gap-2 p-0">
+                        <section className="main-box box-side d-flex flex-column gap-2 p-0">
                             <div className="col-12 main-box sec-bg1 d-flex flex-column">
                                 <div className="d-flex justify-content-md-between flex-md-row flex-column align-items-center">
                                     <div className="d-flex flex-column p-4">

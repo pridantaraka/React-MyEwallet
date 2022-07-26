@@ -18,7 +18,7 @@ function ChangePin() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
-                            <section class="bg-white main-box p-5 mw-100">
+                            <section class="bg-white box-side main-box p-5 mw-100">
                                 <div class="d-flex flex-column gap-3">
                                     <h3 class="trans-his py-2">Change PIN</h3>
                                     <p class="p-confirm">Type your new 6 digits security PIN to use in<br/> MyEwallet.</p>

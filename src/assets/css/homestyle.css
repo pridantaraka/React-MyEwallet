@@ -23,6 +23,9 @@
     line-height: 31px;
     color: #3A3D42;
 }
+.box-side{
+    min-height: 678px;
+}
 .h-phone{
     font-weight: 400;
     font-size: 13px;
@@ -69,16 +72,16 @@
     color: #FF5B37;
 }
 .sec-bg1{
-    background-color: #6379F4;
+    background-color: #F2789F;
 }
 .sec-m{
-    color: #E0E0E0;
+    color: #FFFFFF;
     font-weight: 400;
     font-size: 18px;
     line-height: 31px;
 }
 .sec-p{
-    color: #E0E0E0;
+    color: #FFFFFF;
     font-weight: 600;
     font-size: 14px;
     line-height: 19px;
