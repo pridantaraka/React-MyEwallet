@@ -1,11 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import {Container, Row, Col, Nav} from 'react-bootstrap'
-import { Bell, Grid, User, Plus, ArrowUp, LogOut, Lock } from "react-feather";
+import { Bell, Grid, User, Plus, ArrowUp, LogOut, Trash } from "react-feather";
 
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 
-function Changepwd() {
+function Managephone() {
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -70,8 +70,7 @@ function Changepwd() {
                                             <div>Profile</div>
                                         </div>
                                     </Link>
-                                </div>
-                                <Link to='/Home' className="nav-link ms-3 my-1">
+                                    <Link to='/Home' className="nav-link ms-3 my-1">
                                     <div className="d-flex">
                                         <div className="d-inline-flex sec-menu-p">
                                             <div className="align-self-center px-2">
@@ -81,45 +80,27 @@ function Changepwd() {
                                         </div>
                                     </div>
                                 </Link>
+                                </div>
                             </div>
                             </section>
                             </Col>
                             <Col md={9}>
-                            <section class="bg-white main-box p-5 mw-100">
+                            <section class="bg-white main-box p-5 h-100">
                                 <div class="d-flex flex-column gap-3">
-                                    <h3 class="trans-his py-2">Change Password</h3>
-                                    <p class="p-confirm">You must enter your current password and then<br/>
-                                        type your new password twice.</p>
-                                    <div class="d-inline-flex flex-column justify-content-center w-md-50 align-self-center py-5 gap-5 align-content-center">
-                                        <div class="input-group flex-nowrap w-100">
-                                            <span class="input-group-text reset-icon-wrp">
-                                                <Lock />
-                                            </span>
-                                            <input type="password" class="form-control reset-input" placeholder="Current password"/>
-                                            <span class="input-group-text reset-icon-wrp">
-                                            <i data-feather="eye-off"></i>
-                                            </span>
-                                        </div>
-                                        <div class="input-group flex-nowrap ">
-                                            <span class="input-group-text reset-icon-wrp">
-                                                <Lock />
-                                            </span>
-                                            <input type="password" class="form-control reset-input" placeholder="New password"/>
-                                            <span class="input-group-text reset-icon-wrp">
-                                            <i data-feather="eye-off"></i>
-                                            </span>
-                                        </div>
-                                        <div class="input-group flex-nowrap ">
-                                            <span class="input-group-text reset-icon-wrp">
-                                                <Lock />
-                                            </span>
-                                            <input type="password" class="form-control reset-input" placeholder="Repeat new password"/>
-                                            <span class="input-group-text reset-icon-wrp">
-                                            <i data-feather="eye-off"></i>
-                                            </span>
+                                    <h3 class="trans-his py-2">Manage Phone Number</h3>
+                                    <p class="p-confirm">You can only delete the phone number and then<br/>
+                                        you must add another phone number.</p>
+                                    <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div class="d-inline-flex flex-column align-self-center px-2">
+                                            <p class="p-confirm mb-1">Primary</p>
+                                            <p class="h3-confirm mb-0">+62 813-9387-7946</p>
                                         </div>
                                         <div class="align-self-center">
-                                            <button class="reset-btn-chnge">Change Password</button>
+                                            <Link to='/personalinfo' class="nav-link ms-3 my-1 text-hover p-confirm">
+                                                <div class="align-self-center px-2">
+                                                    <Trash />
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -149,4 +130,4 @@ function Changepwd() {
 }
 
 
-export default Changepwd
+export default Managephone

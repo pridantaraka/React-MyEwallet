@@ -40,7 +40,7 @@ function Searchpage() {
                             <section className="bg-white main-box p-md-5 d-md-block d-none h-100">
                                 <div className="d-flex flex-column h-100 justify-content-between">
                                 <div className="d-flex flex-column justify-content-end gap-5">
-                                <Link to='/homepage' className=" ms-3 my-1">
+                                <Link to='/homepage' className="nav-link ms-3 my-1">
                                         <div className="d-inline-flex flex-row sec-menu-p">
                                             <div className="align-self-center px-2">
                                                 <i data-feather="grid"></i>
@@ -49,7 +49,7 @@ function Searchpage() {
                                             <div><p className="mb-0">Dashboard</p></div>
                                         </div>
                                     </Link>
-                                    <Link to='/transfer' className=" ms-3 my-1">
+                                    <Link to='/searchpage' className="nav-link ms-3 my-1">
                                             <div className="d-inline-flex flex-row sec-menu-p">
                                                 <div className="align-self-center px-2">
                                                     <ArrowUp />
@@ -57,7 +57,7 @@ function Searchpage() {
                                                 <div><p className="mb-0">Transfer</p></div>
                                             </div>
                                         </Link>
-                                    <Link to='/Topup' className=" ms-3 my-1">
+                                    <Link to='/Topup' className="nav-link ms-3 my-1">
                                         <div className="d-inline-flex flex-row sec-menu-p">
                                             <div className="align-self-center px-2">
                                                 <Plus />
@@ -65,7 +65,7 @@ function Searchpage() {
                                             <div><p className="mb-0">TopUp</p></div>
                                         </div>
                                     </Link>
-                                    <Link to='/profilepage' className=" ms-3 my-1">
+                                    <Link to='/profilepage' className="nav-link ms-3 my-1">
                                         <div className="d-inline-flex flex-row sec-menu-p">
                                             <div className="align-self-center px-2">
                                                 <User />
@@ -74,7 +74,7 @@ function Searchpage() {
                                         </div>
                                     </Link>
                                 </div>
-                                <Link to='/Home' className="ms-3 my-1">
+                                <Link to='/Home' className="nav-link ms-3 my-1">
                                     <div className="d-flex">
                                         <div className="d-inline-flex sec-menu-p">
                                             <div className="align-self-center px-2">
@@ -102,7 +102,7 @@ function Searchpage() {
                                         </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <Link to='/confirmpage' class="ms-3 my-1">
+                                        <Link to='/confirmpage' class="nav-link ms-3 my-1">
                                         <div class="d-flex flex-row align-self-center">
                                         <img src={SamuelSuhi} alt="profileimg"/>
                                         <div class="d-inline-flex flex-column align-self-center px-2">

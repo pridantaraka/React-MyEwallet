@@ -1,11 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import {Container, Row, Col, Nav} from 'react-bootstrap'
-import { Bell, Grid, User, Plus, ArrowUp, LogOut, Lock } from "react-feather";
+import { Bell, Grid, User, Plus, ArrowUp, LogOut } from "react-feather";
 
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 
-function Changepwd() {
+function Topup() {
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -85,41 +85,71 @@ function Changepwd() {
                             </section>
                             </Col>
                             <Col md={9}>
-                            <section class="bg-white main-box p-5 mw-100">
+                            <section class=" bg-white main-box p-5">
                                 <div class="d-flex flex-column gap-3">
-                                    <h3 class="trans-his py-2">Change Password</h3>
-                                    <p class="p-confirm">You must enter your current password and then<br/>
-                                        type your new password twice.</p>
-                                    <div class="d-inline-flex flex-column justify-content-center w-md-50 align-self-center py-5 gap-5 align-content-center">
-                                        <div class="input-group flex-nowrap w-100">
-                                            <span class="input-group-text reset-icon-wrp">
-                                                <Lock />
-                                            </span>
-                                            <input type="password" class="form-control reset-input" placeholder="Current password"/>
-                                            <span class="input-group-text reset-icon-wrp">
-                                            <i data-feather="eye-off"></i>
-                                            </span>
+                                    <h3 class="trans-his py-3">How To Top Up</h3>
+                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div class="d-flex flex-row align-self-center">
+                                        <div class="d-inline-flex flex-row align-self-center px-2">
+                                            <p class="p-topup pe-4 mb-0">1</p>
+                                            <p class="p1-topup mb-0">Go to the nearest ATM or you can use E-Banking.</p>
                                         </div>
-                                        <div class="input-group flex-nowrap ">
-                                            <span class="input-group-text reset-icon-wrp">
-                                                <Lock />
-                                            </span>
-                                            <input type="password" class="form-control reset-input" placeholder="New password"/>
-                                            <span class="input-group-text reset-icon-wrp">
-                                            <i data-feather="eye-off"></i>
-                                            </span>
                                         </div>
-                                        <div class="input-group flex-nowrap ">
-                                            <span class="input-group-text reset-icon-wrp">
-                                                <Lock />
-                                            </span>
-                                            <input type="password" class="form-control reset-input" placeholder="Repeat new password"/>
-                                            <span class="input-group-text reset-icon-wrp">
-                                            <i data-feather="eye-off"></i>
-                                            </span>
+                                    </div>
+                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div class="d-flex flex-row align-self-center">
+                                        <div class="d-inline-flex flex-row align-self-center px-2">
+                                            <p class="p-topup pe-4 mb-0">2</p>
+                                            <p class="p1-topup mb-0">Type your security number on the ATM or E-Banking.</p>
                                         </div>
-                                        <div class="align-self-center">
-                                            <button class="reset-btn-chnge">Change Password</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div class="d-flex flex-row align-self-center">
+                                        <div class="d-inline-flex flex-row align-self-center px-2">
+                                            <p class="p-topup pe-4 mb-0">3</p>
+                                            <p class="p1-topup mb-0">Select “Transfer” in the menu</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div class="d-flex flex-row align-self-center">
+                                        <div class="d-inline-flex flex-row align-self-center px-2">
+                                            <p class="p-topup pe-4 mb-0">4</p>
+                                            <p class="p1-topup mb-0">Type the virtual account number that we provide you at the top.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div class="d-flex flex-row align-self-center">
+                                        <div class="d-inline-flex flex-row align-self-center px-2">
+                                            <p class="p-topup pe-4 mb-0">5</p>
+                                            <p class="p1-topup mb-0">Type the amount of the money you want to top up.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div class="d-flex flex-row align-self-center">
+                                        <div class="d-inline-flex flex-row align-self-center px-2">
+                                            <p class="p-topup pe-4 mb-0">6</p>
+                                            <p class="p1-topup mb-0">Read the summary details</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div class="d-flex flex-row align-self-center">
+                                        <div class="d-inline-flex flex-row align-self-center px-2">
+                                            <p class="p-topup pe-4 mb-0">7</p>
+                                            <p class="p1-topup mb-0">Press transfer / top up</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div class="d-flex flex-row align-self-center">
+                                        <div class="d-inline-flex flex-row align-self-center px-2">
+                                            <p class="p-topup pe-4 mb-0">8</p>
+                                            <p class="p1-topup mb-0">You can see your money in Zwallet within 3 hours.</p>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -149,4 +179,4 @@ function Changepwd() {
 }
 
 
-export default Changepwd
+export default Topup

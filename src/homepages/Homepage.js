@@ -106,7 +106,7 @@ function Homepage() {
                         <section className="bg-white main-box p-md-5 d-md-block d-none h-100">
                             <div className="d-flex flex-column h-100 justify-content-between">
                             <div className="d-flex flex-column justify-content-end gap-5">
-                            <Link to='/homepage' className=" ms-3 my-1">
+                            <Link to='/homepage' className="nav-link ms-3 my-1">
                                     <div className="d-inline-flex flex-row sec-menu-p">
                                         <div className="align-self-center px-2">
                                             <i data-feather="grid"></i>
@@ -115,7 +115,7 @@ function Homepage() {
                                         <div><p className="mb-0">Dashboard</p></div>
                                     </div>
                                 </Link>
-                                <Link to='/transfer' className=" ms-3 my-1">
+                                <Link to='/searchpage' className="nav-link ms-3 my-1">
                                         <div className="d-inline-flex flex-row sec-menu-p">
                                             <div className="align-self-center px-2">
                                                 <ArrowUp />
@@ -123,7 +123,7 @@ function Homepage() {
                                             <div><p className="mb-0">Transfer</p></div>
                                         </div>
                                     </Link>
-                                <Link to='/Topup' className=" ms-3 my-1">
+                                <Link to='/Topup' className="nav-link ms-3 my-1">
                                     <div className="d-inline-flex flex-row sec-menu-p">
                                         <div className="align-self-center px-2">
                                             <Plus />
@@ -131,7 +131,7 @@ function Homepage() {
                                         <div><p className="mb-0">TopUp</p></div>
                                     </div>
                                 </Link>
-                                <Link to='/profilepage' className=" ms-3 my-1">
+                                <Link to='/profilepage' className="nav-link ms-3 my-1">
                                     <div className="d-inline-flex flex-row sec-menu-p">
                                         <div className="align-self-center px-2">
                                             <User />
@@ -140,7 +140,7 @@ function Homepage() {
                                     </div>
                                 </Link>
                             </div>
-                            <Link to='/Home' className="ms-3 my-1">
+                            <Link to='/Home' className="nav-link ms-3 my-1">
                                 <div className="d-flex">
                                     <div className="d-inline-flex sec-menu-p">
                                         <div className="align-self-center px-2">
@@ -161,7 +161,7 @@ function Homepage() {
                                 <Link to='/topup'><Dropdown.Item href="#/action-3">TopUp</Dropdown.Item></Link>                              
                                 <Link to='/profilepage'><Dropdown.Item href="#/action-3">Profile</Dropdown.Item></Link>                                
                                 <Link to='/home'><Dropdown.Item href="#/action-3">LogOut</Dropdown.Item></Link>                               
-                                </DropdownButton>
+                            </DropdownButton>
                             {/* Dropdown */}
                         <section className="main-box d-flex flex-column gap-2 p-0">
                             <div className="col-12 main-box sec-bg1 d-flex flex-column">
@@ -172,8 +172,8 @@ function Homepage() {
                                         <p className="sec-p">+62 813-9387-7946</p>
                                     </div>
                                     <div className="d-flex flex-column justify-content-center p-4 gap-2">
-                                        <button className="btn-box"><i data-feather="arrow-up"></i>Transfer</button>
-                                        <button className="btn-box"><i data-feather="plus"></i>Top Up</button>
+                                        <Link to='/searchpage'><button className="btn-box"><ArrowUp />Transfer</button></Link>
+                                        <Link to='/topup'><button className="btn-box"><Plus />Top Up</button></Link>
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +191,7 @@ function Homepage() {
                                     <div className="p-3 row d-flex justify-content-md-between">
                                         <div className="d-flex justify-content-between">
                                             <p className="p-history">Transaction History</p>
-                                            <Link to='/historypage' className=" ms-3 my-1">See all</Link>
+                                            <Link to='/historypage' className="nav-link ms-3 my-1">See all</Link>
                                         </div>
                                         <div className="p-2">
                                             {/* map data dinamis */}

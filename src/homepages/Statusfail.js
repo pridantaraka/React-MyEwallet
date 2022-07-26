@@ -5,7 +5,7 @@ import { Bell, Grid, User, Plus, ArrowUp, LogOut, Lock } from "react-feather";
 
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 
-function Changepwd() {
+function Statusfail() {
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -149,4 +149,4 @@ function Changepwd() {
 }
 
 
-export default Changepwd
+export default Statusfail

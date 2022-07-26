@@ -15,6 +15,11 @@ import Confirmpage from './homepages/Confirmpage'
 import Profilepage from './homepages/Profilepage'
 import Personalinfo from './homepages/Personalinfo';
 import Searchpage from './homepages/Searchpage';
+import Changepwd from './homepages/Changepwd';
+import Changepin from './homepages/Changepin';
+import Addphone from './homepages/Addphone';
+import Managephone from './homepages/Managephone';
+import Topup from './homepages/Topup';
 
 function App() {
   return (
@@ -33,6 +38,11 @@ function App() {
         <Route path="profilepage" element={<Profilepage />}/>
         <Route path="personalinfo" element={<Personalinfo />}/>
         <Route path="searchpage" element={<Searchpage />}/>
+        <Route path="changepwd" element={<Changepwd />}/>
+        <Route path="changepin" element={<Changepin />}/>
+        <Route path="addphone" element={<Addphone />}/>
+        <Route path="managephone" element={<Managephone />}/>
+        <Route path="topup" element={<Topup />}/>
       </Routes>
     </BrowserRouter>
   )
