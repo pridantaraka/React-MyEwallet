@@ -8,7 +8,7 @@ import Footer from '../component/Footer';
 
 // import RobertChandler from '../assets/image/users/RobertChandler.png'
 
-function StatusFail() {
+function StatusSuccess() {
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -74,4 +74,4 @@ function StatusFail() {
 }
 
 
-export default StatusFail
+export default StatusSuccess

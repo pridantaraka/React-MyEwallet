@@ -1,15 +1,15 @@
 import React from 'react'
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col, Button} from 'react-bootstrap';
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
-import Modal from '../component/Modal';
+import ModalPopup from '../component/ModalPopup';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 
 
 function Confirmation() {
-    
+    const [modalShow, setModalShow] = React.useState(false);
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -23,7 +23,6 @@ function Confirmation() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
-                            <Modal />
                             <section class="bg-white box-side main-box p-5">
                                 <div class="col-12 d-flex flex-column gap-3">
                                     <h3 class="trans-his py-3">Transfer To</h3>
@@ -61,8 +60,17 @@ function Confirmation() {
                                             <p class="h3-confirm mb-0">For buying some socks</p>
                                         </div>
                                     </div>
+                                    <div class="d-flex justify-content-end">
+                                    <Button variant="primary" onClick={() => setModalShow(true)}>
+                                    Continue
+                                    </Button>
+
+                                    <ModalPopup
+                                        show={modalShow}
+                                        onHide={() => setModalShow(false)}
+                                    />
+                                    </div>
                                 </div>
-                                <Modal />
                             </section>
                             </Col>
                             </Col>

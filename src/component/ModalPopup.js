@@ -1,19 +1,22 @@
 import React from 'react'
-import { useState } from 'react';
 import {Button} from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
 
-export default function Modal() {
-    const [show, setShow] = useState(false);
-
-    const handleShow = () => setShow(true);
-    const handleClose = () => setShow(false);
+export default function ModalPopup(props) {
     return(
         <>
-        <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-            <Modal.Title className='ps-2'>Enter PIN to Transfer</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
+        <Modal
+        {...props}
+        size="md"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        >
+        <Modal.Header closeButton>
+            <Modal.Title id="contained-modal-title-vcenter" className="ps-2">
+            Enter PIN to Transfer
+            </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
             <p class="p-confirm px-3">Enter your 6 digits PIN for confirmation to<br/>
              continue transferring money.</p>
              <div class="d-inline-flex flex-column justify-content-center w-100 align-self-center p-5 gap-3 align-content-center">
@@ -40,19 +43,11 @@ export default function Modal() {
                        </div>
                    </div>
                </div>
-            </Modal.Body>
-            <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-                Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-                Save Changes
-            </Button>
-            </Modal.Footer>
+        </Modal.Body>
+        <Modal.Footer>
+            <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
         </Modal>
-        <div class="d-flex justify-content-end">
-            <Button class="btn-confirm p-3 px-5" onClick={handleShow}>Continue</Button>
-        </div>
         </>
     )
 }

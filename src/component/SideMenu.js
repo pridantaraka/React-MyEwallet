@@ -18,7 +18,7 @@ export default function SideMenu() {
                             <div><p className="mb-0">Dashboard</p></div>
                          </div>
                     </Link>
-                    <Link to='/Searchpage' className="nav-link ms-3 my-1">
+                    <Link to='/searchpage' className="nav-link ms-3 my-1">
                             <div className="d-inline-flex flex-row sec-menu-p">
                                 <div className="align-self-center px-2">
                                     <ArrowUp />
@@ -26,7 +26,7 @@ export default function SideMenu() {
                                  <div><p className="mb-0">Transfer</p></div>
                              </div>
                         </Link>
-                     <Link to='/Topup' className="nav-link ms-3 my-1">
+                     <Link to='/topup' className="nav-link ms-3 my-1">
                         <div className="d-inline-flex flex-row sec-menu-p">
                             <div className="align-self-center px-2">
                                 <Plus />
@@ -34,7 +34,7 @@ export default function SideMenu() {
                             <div><p className="mb-0">TopUp</p></div>
                         </div>
                      </Link>
-                    <Link to='/profilepage' className="nav-link ms-3 my-1">
+                    <Link to='/profile' className="nav-link ms-3 my-1">
                         <div className="d-inline-flex flex-row sec-menu-p">
                             <div className="align-self-center px-2">
                                 <User />

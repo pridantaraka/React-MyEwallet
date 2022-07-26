@@ -15,7 +15,7 @@ import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 
 function Users({picture, name, transaction, notes}){
     return(
-    <div className="d-flex flex-row justify-content-around pb-3">
+    <div className="d-flex flex-row justify-content-around pb-3 my-3">
         <div className="align-self-center">
         <img className="img-fluid rounded" src={SamuelSuhi} alt="profileimg"/>
         </div>
@@ -91,8 +91,8 @@ function Dashboard() {
                         </Col>
                         <Col md={9}>
                             <DropdownMenu />
-                        <section className="main-box box-side d-flex flex-column gap-2 p-0">
-                            <div className="col-12 main-box sec-bg1 d-flex flex-column">
+                        <section className="main-box d-flex flex-column gap-2 p-0">
+                            <div className="col-12 main-box sec-bg1 d-flex flex-column ">
                                 <div className="d-flex justify-content-md-between flex-md-row flex-column align-items-center">
                                     <div className="d-flex flex-column p-4">
                                         <p className="sec-m">Balance</p>
@@ -105,8 +105,10 @@ function Dashboard() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-12 main-box d-flex flex-md-row flex-column gap-1 p-0">
-                                <div className="col-12 col-md-8 bg-white main-box ">
+                            <Col md={12}>
+                            <div className="main-box d-flex flex-md-row flex-column gap-1 p-0 ">
+                                <Col md={8}>
+                                <div className="bg-white main-box h-100 box-dashboard">
                                     <div className="d-flex justify-content-between p-4">
                                         <div><img src={graficin} alt="graficimg"/></div>
                                         <div><img src={graficout} alt="graficimg"/></div>
@@ -115,7 +117,9 @@ function Dashboard() {
                                         <img src={grafic} alt="graficimg"/>
                                     </div>
                                 </div>
-                                <div className="col-12 col-md-4 bg-white main-box">
+                                </Col>
+                                <Col md={4}>
+                                <div className="bg-white main-box h-100 box-dashboard">
                                     <div className="p-3 row d-flex justify-content-md-between">
                                         <div className="d-flex justify-content-between">
                                             <p className="p-history">Transaction History</p>
@@ -136,7 +140,9 @@ function Dashboard() {
                                         </div>
                                     </div>
                                 </div>
+                                </Col>
                             </div>
+                            </Col>
                         </section>
                         </Col>
                         </Col>

@@ -23,7 +23,7 @@ function ManagePhone() {
                             <section class="bg-white box-side main-box p-5">
                                 <div class="d-flex flex-column gap-3">
                                     <h3 class="trans-his py-2">Manage Phone Number</h3>
-                                    <p class="p-confirm">You can only delete the phone number and then<br/>
+                                    <p class="p-confirm">You can only delete the phone number and then
                                         you must add another phone number.</p>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">

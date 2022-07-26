@@ -10,9 +10,9 @@ import Pin from './pages/Pin'
 import ForgetPwd from './pages/ForgetPwd'
 import CreateNewPwd from './pages/CreateNewPwd'
 import Dashboard from './homepages/Dashboard'
-import Historypage from './homepages/Historypage'
+import History from './homepages/History'
 import Confirmation from './homepages/Confirmation';
-import Profilepage from './homepages/Profilepage'
+import Profile from './homepages/Profile'
 import Personalinfo from './homepages/Personalinfo';
 import Searchpage from './homepages/Searchpage';
 import ChangePwd from './homepages/ChangePwd';
@@ -33,9 +33,9 @@ function App() {
         <Route path="forgetpwd" element={<ForgetPwd />}/>
         <Route path="createnewpwd" element={<CreateNewPwd />}/>
         <Route path="dashboard" element={<Dashboard />}/>
-        <Route path="historypage" element={<Historypage />}/>
+        <Route path="historypage" element={<History />}/>
         <Route path="confirmation" element={<Confirmation />}/>
-        <Route path="profilepage" element={<Profilepage />}/>
+        <Route path="profile" element={<Profile />}/>
         <Route path="personalinfo" element={<Personalinfo />}/>
         <Route path="searchpage" element={<Searchpage />}/>
         <Route path="changepwd" element={<ChangePwd />}/>

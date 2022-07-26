@@ -26,6 +26,9 @@
 .box-side{
     min-height: 678px;
 }
+.box-dashboard{
+    min-height: 468px;
+}
 .h-phone{
     font-weight: 400;
     font-size: 13px;
