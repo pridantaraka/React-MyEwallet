@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap'
-import { ArrowRight } from "react-feather";
+import { ArrowRight, Edit } from "react-feather";
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
@@ -29,8 +29,8 @@ function Profile() {
                                         <img src={RobertChandler} alt="profileimg"/>
                                     </div>
                                     <div class="d-inline-flex flex-column align-self-center px-2">
-                                        <Link to='/personalinfo' className='nav-link ms-3 my-1 text-hover p-confirm'>
-                                            <p class="p-user ms-0 ps-0 mb-0 p-2">Edit</p>
+                                        <Link to='/personalinfo' className='nav-link ms-3 my-1'>
+                                            <p class="p-user ms-0 ps-0 mb-0 p-2 text-hover p-confirm"><Edit size={16} />Edit</p>
                                         </Link>
                                     </div>
                                     <div class="h4 align-self-center ">Robert Chandler</div>

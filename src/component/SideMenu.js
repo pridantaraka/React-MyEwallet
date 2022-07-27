@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import { Grid, User, Plus, ArrowUp, LogOut } from "react-feather";
 
 
@@ -9,7 +9,8 @@ export default function SideMenu() {
             <section className="bg-white main-box p-md-5 d-md-block d-none h-100">
                 <div className="d-flex flex-column h-100 justify-content-between">
                 <div className="d-flex flex-column justify-content-end gap-5">
-                <Link to='/dashboard' className="nav-link ms-3 my-1">
+                    
+                <NavLink to='/dashboard'  className="nav-link ms-3 my-1">
                         <div className="d-inline-flex flex-row sec-menu-p">
                             <div className="align-self-center px-2">
                                     <i data-feather="grid"></i>
@@ -17,7 +18,7 @@ export default function SideMenu() {
                             </div>
                             <div><p className="mb-0">Dashboard</p></div>
                          </div>
-                    </Link>
+                    </NavLink>
                     <Link to='/searchpage' className="nav-link ms-3 my-1">
                             <div className="d-inline-flex flex-row sec-menu-p">
                                 <div className="align-self-center px-2">

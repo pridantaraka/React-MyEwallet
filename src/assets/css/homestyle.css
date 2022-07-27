@@ -50,7 +50,6 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
-    color: #3A3D42;
 }
 .p-user{
     font-weight: 700;
@@ -75,11 +74,11 @@
     color: #FF5B37;
 }
 .sec-bg1{
-    background-color: #F2789F;
+    background-color: #F999B7;
 }
 .sec-m{
     color: #FFFFFF;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 18px;
     line-height: 31px;
 }
@@ -95,29 +94,35 @@
     line-height: 55px;
 }
 .btn-box{
-    border: 1px solid #FFFFFF;
-    background-color: #8d9beb;
+    border: 1px solid #F2789F;
+    background-color: #FFFFFF;
     border-radius: 0.7rem;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
-    color: #FFFFFF;
+    color: #F999B7;
     width: 10rem;
     height: 3.5rem;
+}
+.btn-box:hover{
+    color: #FFFFFF;
+    background-color: #F2789F;
+    border: 1px solid #FFFFFF;
 }
 .sec-menu-p{
     font-weight: 700;
     font-size: 18px;
     color: rgba(58, 61, 66, 0.8);
 }
-
 .sec-menu-p:hover{
-    color: #6379F4;
+    color: #F2789F;
 }
-.sec-menu-see{
+.sec-p-menu{
     font-weight: 600;
     font-size: 14px;
-    color: #6379F4;
+}
+.sec-p-menu:hover{
+    color: #F2789F;
 }
 .bot-log{
     padding-top: 15rem;
@@ -144,12 +149,6 @@
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
     border-radius: 0.7rem;
 }
-.p-confirm{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #7A7886;
-}
 .h3-confirm{
     font-weight: 700;
     font-size: 22px;
@@ -164,7 +163,7 @@
     color: #FFFFFF;
     border: none;
     border-radius: 0.7rem;
-    background: #6379F4;
+    background: #F999B7;
     margin-top: 5rem;
     box-shadow: 0px 6px 75px rgba(100, 87, 87, 0.05);
 }
@@ -175,7 +174,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
-    color: #6379F4;
+    color: #F2789F;
 }
 .p1-topup{
     font-weight: 400;
@@ -185,8 +184,11 @@
     align-items: center;
     color: #7A7886;
 }
+.text-hover{
+
+}
 .text-hover:hover{
-    color: #6379F4;
+    color: #F2789F;
 }
 /* topup */
 
@@ -213,7 +215,7 @@
     line-height: 25px;
     text-align: center;
     color: #FFFFFF;
-    background: #6379F4;
+    background: #F999B7;
     border-radius: 0.7rem;
     border: none;
     width: 20rem;

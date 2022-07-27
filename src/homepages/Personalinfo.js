@@ -49,8 +49,8 @@ function Personalinfo() {
                                             <p class="p-confirm mb-1">Phone Number</p>
                                             <p class="h3-confirm mb-0">+62 813-9387-7946</p>
                                         </div>
-                                        <div class="align-self-center">
-                                            <Link to='/addphone' class="nav-link ms-3 my-1 text-hover p-confirm">Manage</Link>
+                                        <div class="align-self-center me-3">
+                                            <Link to='/addphone' class="nav-link ms-3 my-1 sec-p-menu">Manage</Link>
                                         </div>
                                     </div>
                                 </div>

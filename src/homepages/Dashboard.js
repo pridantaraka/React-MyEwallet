@@ -123,7 +123,7 @@ function Dashboard() {
                                     <div className="p-3 row d-flex justify-content-md-between">
                                         <div className="d-flex justify-content-between">
                                             <p className="p-history">Transaction History</p>
-                                            <Link to='/historypage' className="nav-link ms-3 my-1">See all</Link>
+                                            <Link to='/historypage' className="nav-link ms-3 my-1 sec-p-menu">See all</Link>
                                         </div>
                                         <div className="p-2">
                                             {/* map data dinamis */}

@@ -46,7 +46,7 @@ function ChangePin() {
                                             </div>
                                         </div>
                                         <div class="align-self-center">
-                                            <button class="reset-btn-chnge">Change Password</button>
+                                            <button class="reset-btn-chnge">Change Pin</button>
                                         </div>
                                     </div>
                                 </div>
