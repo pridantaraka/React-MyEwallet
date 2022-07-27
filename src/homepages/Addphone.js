@@ -7,6 +7,7 @@ import Footer from '../component/Footer'
 
 
 function AddPhone() {
+    
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>

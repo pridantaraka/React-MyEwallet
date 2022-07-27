@@ -1,6 +1,6 @@
 import React from 'react'
-import {Routes, Route} from 'react-router-dom'
-import { BrowserRouter } from 'react-router-dom';
+import {Routes, Route, BrowserRouter} from 'react-router-dom'
+import PrivateRoute from './component/PrivateRoute'
 
 import Home from './pages/Home'
 import Login from './pages/Login'
@@ -32,7 +32,11 @@ function App() {
         <Route path="pinsuccess" element={<Pin />}/>
         <Route path="forgetpwd" element={<ForgetPwd />}/>
         <Route path="createnewpwd" element={<CreateNewPwd />}/>
-        <Route path="dashboard" element={<Dashboard />}/>
+        <Route path="dashboard" element={
+          
+          <Dashboard />
+          
+        }/>
         <Route path="historypage" element={<History />}/>
         <Route path="confirmation" element={<Confirmation />}/>
         <Route path="profile" element={<Profile />}/>
@@ -40,7 +44,11 @@ function App() {
         <Route path="searchpage" element={<Searchpage />}/>
         <Route path="changepwd" element={<ChangePwd />}/>
         <Route path="changepin" element={<ChangePin />}/>
-        <Route path="addphone" element={<AddPhone />}/>
+        <Route path="addphone" element={
+        <PrivateRoute>
+        <AddPhone />
+        </PrivateRoute>
+      }/>
         <Route path="managephone" element={<ManagePhone />}/>
         <Route path="topup" element={<Topup />}/>
       </Routes>

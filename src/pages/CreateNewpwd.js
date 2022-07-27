@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import { Lock } from "react-feather";
 
-import authphon from '../assets/image/authphon.png'
+import SideAuth from '../component/SideAuth';
 
 function CreateNewPwd() {
     return(
@@ -11,23 +11,7 @@ function CreateNewPwd() {
         <Container className='mw-100 min-vh-100'>
             <Row>
                 <Col md ={7} className='auth-r-bg'>
-                    <section className="auth-pad-cov auth-cov d-md-block d-none">
-                        <div className="auth-ewallet">
-                            <span>MyEwallet</span>
-                        </div>
-                        <div className="d-flex flex-column align-items-center">
-                            <div>
-                                <img src={authphon} alt="phoneimg"/>
-                            </div>
-                            <div>
-                                <h1 className=" auth-hcover">App that Covering Banking Needs.</h1>
-                                <p className="auth-pcover">MyEwallet is an application that focussing in banking needs for all users
-                                    in the world. Always updated and always following world trends.
-                                    5000+ users registered in MyEwallet everyday with worldwide
-                                    users coverage.</p>
-                            </div>
-                        </div>
-                    </section>
+                    <SideAuth />
                 </Col>
                 <Col md ={5}>
                 <section className="auth-pad d-flex flex-column gap-5">

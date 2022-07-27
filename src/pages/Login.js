@@ -1,11 +1,21 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
-import {Container, Row, Col, Button} from 'react-bootstrap'
+import {Link, useNavigate, useLocation} from 'react-router-dom';
+import {Container, Row, Col, Button, Alert} from 'react-bootstrap'
 import { Mail, Lock } from "react-feather";
 
 import authphon from '../assets/image/authphon.png'
 
+
 function Login() {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const onLogin = () => {
+        localStorage.setItem("auth", "randomToken");
+        navigate("/addphone");
+    };
+
+
     return(
         <>
             <Container className='mw-100 min-vh-100'>
@@ -30,6 +40,9 @@ function Login() {
                     </section>
                     </Col>
                     <Col md={5} className="">
+                        {location.state?.errorMsg && (
+                            <Alert variant="danger">{location.state.errorMsg}</Alert>
+                            )}
                     <section className="auth-pad d-flex flex-column gap-5"> 
                         <div>
                             <div class="auth-ewallet d-flex flex-column align-items-center mb-3 d-md-none">
@@ -64,11 +77,15 @@ function Login() {
                             <Link to="/forgetpwd">Forgot Password?</Link>
                             </div>
                             <div className="d-grid">
-                            <Link to="/dashboard" className="auth-btn"><Button className='w-100'>Login</Button></Link>
+                            {/* <Link to="/dashboard" className="auth-btn"><Button className='w-100'>Login</Button></Link> */}
                             </div>
                             <div className="text-center">
                             <span>Don`t have an account? Let`s <Link to="/signup">SignUp</Link></span>
                             </div>
+                            {/* coba */}
+                            
+                            <Button onClick={onLogin}>Login</Button>
+                            {/* coba */}
                     </section>
                     </Col>
                 </Row>
