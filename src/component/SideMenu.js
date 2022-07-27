@@ -1,16 +1,11 @@
 import React from 'react'
-import {Link, NavLink, useLocation, useNavigate} from 'react-router-dom';
+import {Link, NavLink,} from 'react-router-dom';
 import { Grid, User, Plus, ArrowUp, LogOut } from "react-feather";
-import { Button } from "bootstrap"
+
 
 
 export default function SideMenu() {
-    const location = useLocation();
-    const navigate = useNavigate();
-    const onLogout = () => {
-        localStorage.removeItem("auth");
-        navigate("/home");
-    };
+    
     return(
         <>
             <section className="bg-white main-box p-md-5 d-md-block d-none h-100">
@@ -51,10 +46,6 @@ export default function SideMenu() {
                         </div>
                      </Link>
                 </div>
-                {location.state?.id}
-                <Button variant="warning" onClick={onLogout}>
-                Logout
-                </Button>
                    <Link to='/Home' className="nav-link ms-3 my-1">
                     <div className="d-flex">
                          <div className="d-inline-flex sec-menu-p">

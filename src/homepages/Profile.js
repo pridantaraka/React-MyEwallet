@@ -1,6 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
-import {Container, Row, Col} from 'react-bootstrap'
+import {Link, useLocation, useNavigate} from 'react-router-dom';
+import {Container, Row, Col, Button} from 'react-bootstrap'
 import { ArrowRight, Edit } from "react-feather";
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
@@ -9,6 +9,12 @@ import Footer from '../component/Footer';
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 
 function Profile() {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const onLogout = () => {
+        localStorage.removeItem("auth");
+        navigate("/home");
+    };
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -84,6 +90,12 @@ function Profile() {
                                         </div>
                                     </div>
                                     </Link>
+                                    {/* coba */}
+                                    {location.state?.id}
+                                    <Button variant="warning" onClick={onLogout}>
+                                    Logout
+                                    </Button>
+                                    {/* coba */}
                                 </div>
                             </section>
                             </Col>

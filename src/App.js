@@ -39,16 +39,16 @@ function App() {
         }/>
         <Route path="historypage" element={<History />}/>
         <Route path="confirmation" element={<Confirmation />}/>
-        <Route path="profile" element={<Profile />}/>
+        <Route path="profile" element={
+        <PrivateRoute>
+        <Profile />
+        </PrivateRoute>
+        }/>
         <Route path="personalinfo" element={<Personalinfo />}/>
         <Route path="searchpage" element={<Searchpage />}/>
         <Route path="changepwd" element={<ChangePwd />}/>
         <Route path="changepin" element={<ChangePin />}/>
-        <Route path="addphone" element={
-        <PrivateRoute>
-        <AddPhone />
-        </PrivateRoute>
-      }/>
+        <Route path="addphone" element={<AddPhone />}/>
         <Route path="managephone" element={<ManagePhone />}/>
         <Route path="topup" element={<Topup />}/>
       </Routes>

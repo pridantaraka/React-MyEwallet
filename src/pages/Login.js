@@ -3,8 +3,7 @@ import {Link, useNavigate, useLocation} from 'react-router-dom';
 import {Container, Row, Col, Button, Alert} from 'react-bootstrap'
 import { Mail, Lock } from "react-feather";
 
-import authphon from '../assets/image/authphon.png'
-
+import SideAuth from '../component/SideAuth';
 
 function Login() {
     const location = useLocation();
@@ -12,7 +11,7 @@ function Login() {
 
     const onLogin = () => {
         localStorage.setItem("auth", "randomToken");
-        navigate("/addphone");
+        navigate("/profile");
     };
 
 
@@ -21,28 +20,9 @@ function Login() {
             <Container className='mw-100 min-vh-100'>
                 <Row>
                     <Col md={7} className="auth-r-bg">
-                    <section className="auth-pad-cov auth-cov d-md-block d-none">
-                        <div className="auth-ewallet">
-                            <span>MyEwallet</span>
-                        </div>
-                        <div className="d-flex flex-column align-items-center">
-                        <div>
-                            <img src={authphon} alt="phoneimg"/>
-                        </div>
-                        <div>
-                            <h1 className="auth-hcover">App that Covering Banking Needs.</h1>
-                            <p className="auth-pcover">MyEwallet is an application that focussing in banking needs for all users
-                                in the world. Always updated and always following world trends.
-                                5000+ users registered in MyEwallet everyday with worldwide
-                                users coverage.</p>
-                        </div>
-                        </div>
-                    </section>
+                        <SideAuth />
                     </Col>
-                    <Col md={5} className="">
-                        {location.state?.errorMsg && (
-                            <Alert variant="danger">{location.state.errorMsg}</Alert>
-                            )}
+                    <Col md={5}>
                     <section className="auth-pad d-flex flex-column gap-5"> 
                         <div>
                             <div class="auth-ewallet d-flex flex-column align-items-center mb-3 d-md-none">
@@ -77,15 +57,14 @@ function Login() {
                             <Link to="/forgetpwd">Forgot Password?</Link>
                             </div>
                             <div className="d-grid">
-                            {/* <Link to="/dashboard" className="auth-btn"><Button className='w-100'>Login</Button></Link> */}
+                            {location.state?.errorMsg && (
+                            <Alert variant="danger">{location.state.errorMsg}</Alert>
+                            )}
+                            <Button className='w-100 auth-btn' onClick={onLogin}>Login</Button>
                             </div>
                             <div className="text-center">
                             <span>Don`t have an account? Let`s <Link to="/signup">SignUp</Link></span>
                             </div>
-                            {/* coba */}
-                            
-                            <Button onClick={onLogin}>Login</Button>
-                            {/* coba */}
                     </section>
                     </Col>
                 </Row>
