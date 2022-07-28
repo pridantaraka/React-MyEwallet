@@ -1,19 +1,68 @@
 import React from 'react'
 import {Link, useNavigate, useLocation} from 'react-router-dom';
-import {Container, Row, Col, Button, Alert} from 'react-bootstrap'
+import {Container, Row, Col, Button, Alert, Form} from 'react-bootstrap'
 import { Mail, Lock } from "react-feather";
+import {Formik} from 'formik'
+import * as Yup from 'yup'
 
 import SideAuth from '../component/SideAuth';
+
+const loginSchema = Yup.object().shape({
+    email: Yup.string().email('Invalid email address format').required('Required'),
+    password: Yup.string().min(4).required('Required')
+  })
+
+const AuthForm = ({errors, handleSubmit, handleChange})=> {
+    console.log(errors)
+    return(
+      <>
+        <Form noValidate onSubmit={handleSubmit} onChange={handleChange}> {/** INI PENTING */}
+          <Form.Group className="mb-3">
+            <Form.Label></Form.Label>
+            <div className="input-group flex-nowrap">
+            <span className="input-group-text auth-icon-wr">
+            <Lock />
+            </span>
+            <Form.Control name="email" className='auth-input' onChange={handleChange} type="email" placeholder="Enter email" isInvalid={!!errors.email} />  {/** INI PENTING */}
+            </div>
+            <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label></Form.Label>
+            <div className="input-group flex-nowrap">
+            <span className="input-group-text auth-icon-wr">
+            <Mail />
+            </span>
+            <Form.Control name="password" className='auth-input' onChange={handleChange} type="password" placeholder="Password" isInvalid={!!errors.password} />  {/** INI PENTING */}
+            </div>
+            <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
+          </Form.Group>
+            <div className="text-end pb-5">
+                <Link to="/forgetpwd">Forgot Password?</Link>
+            </div>
+            <div className="d-grid">
+            <Button className='w-100 auth-btn' type='submit'>Login</Button>
+            </div>
+        </Form>  {/** INI PENTING */}
+      </>
+    )
+  }
 
 function Login() {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const onLogin = () => {
-        localStorage.setItem("auth", "randomToken");
-        navigate("/profile");
+    const onLogin = (val) => {
+        if(val.email === 'a@mail.com' && val.password === '1234'){
+            console.log(val.email === 'a@mail.com');
+            window.alert('Login success')
+            localStorage.setItem("auth", "randomToken");
+            navigate("/dashboard");
+          }else{
+            window.alert('Login Failed')
+          }
+       
     };
-
 
     return(
         <>
@@ -37,14 +86,14 @@ function Login() {
                                 phone? we cover all of that for you!</p>    
                             </div>
                         </div>
-                        <div className="input-group flex-nowrap">
+                        {/* <div className="input-group flex-nowrap">
                             <span className="input-group-text auth-icon-wr">
                                 <i data-feather="mail"></i>
                                 <Mail />
                             </span>
                             <input type="email" className="form-control auth-input" placeholder="Enter your e-mail"/>
-                            </div>
-                            <div className="input-group flex-nowrap">
+                        </div>
+                        <div className="input-group flex-nowrap">
                             <span className="input-group-text auth-icon-wr">
                                 <i data-feather="lock"></i>
                                 <Lock />
@@ -52,16 +101,16 @@ function Login() {
                             <input type="password" className="form-control auth-input" placeholder="Enter your password"/>
                             <span className="input-group-text auth-icon-wr">
                             </span>
-                            </div>
-                            <div className="text-end">
-                            <Link to="/forgetpwd">Forgot Password?</Link>
-                            </div>
-                            <div className="d-grid">
+                        </div> */}
                             {location.state?.errorMsg && (
                             <Alert variant="danger">{location.state.errorMsg}</Alert>
                             )}
-                            <Button className='w-100 auth-btn' onClick={onLogin}>Login</Button>
-                            </div>
+                            <Formik
+                            onSubmit={onLogin}
+                            initialValues={{email: '', password: ''}}
+                            validationSchema={loginSchema}>
+                            {(props)=><AuthForm {...props} />}
+                            </Formik>
                             <div className="text-center">
                             <span>Don`t have an account? Let`s <Link to="/signup">SignUp</Link></span>
                             </div>

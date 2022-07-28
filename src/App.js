@@ -33,9 +33,9 @@ function App() {
         <Route path="forgetpwd" element={<ForgetPwd />}/>
         <Route path="createnewpwd" element={<CreateNewPwd />}/>
         <Route path="dashboard" element={
-          
+          <PrivateRoute>
           <Dashboard />
-          
+          </PrivateRoute>
         }/>
         <Route path="historypage" element={<History />}/>
         <Route path="confirmation" element={<Confirmation />}/>

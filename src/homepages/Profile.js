@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link, useLocation, useNavigate} from 'react-router-dom';
-import {Container, Row, Col, Button} from 'react-bootstrap'
+import {Container, Row, Col} from 'react-bootstrap'
 import { ArrowRight, Edit } from "react-feather";
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
@@ -80,7 +80,8 @@ function Profile() {
                                     </Link>
                                     <Link to='/home' className='nav-link ms-3 my-1 text-hover p-confirm d-flex justify-content-center'>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-self-center w-50">
-                                        <div class="d-inline-flex flex-column align-self-center">
+                                        <div class="d-inline-flex flex-column align-self-center" onClick={onLogout}>
+                                            {location.state?.id}
                                             <p class="p-confirm mb-0">Logout</p>
                                         </div>
                                         <div class="align-self-center">
@@ -90,12 +91,6 @@ function Profile() {
                                         </div>
                                     </div>
                                     </Link>
-                                    {/* coba */}
-                                    {location.state?.id}
-                                    <Button variant="warning" onClick={onLogout}>
-                                    Logout
-                                    </Button>
-                                    {/* coba */}
                                 </div>
                             </section>
                             </Col>
