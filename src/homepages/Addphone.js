@@ -1,13 +1,20 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import {Container, Row, Col} from 'react-bootstrap'
+import {Container, Row, Col, Form} from 'react-bootstrap'
+import { useDispatch } from "react-redux";
+
+import {
+    customValue
+  } from "../redux/reducers/CounterPhone";
+
 import SideMenu from '../component/SideMenu'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
 
 
 function AddPhone() {
-    
+    const dispatch = useDispatch();
+
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -33,7 +40,13 @@ function AddPhone() {
                                                 <i data-feather="phone"></i>
                                                 <p className="mb-0 ps-2">+62</p>
                                             </span>
-                                            <input type="tel" className="form-control reset-input w-md-50" placeholder="Enter your phone number"/>
+                                            {/* <input type="tel" className="form-control reset-input w-md-50" placeholder="Enter your phone number"/> */}
+                                            <Form.Control
+                                            type="number"
+                                            onChange={(e) => {
+                                            dispatch(customValue(e.target.value));
+                                            }}
+                                            />
                                         </div>
                                         <div className="align-self-center">
                                             <Link to='/managephone' nav-link ms-3 my-1><button className="reset-btn-chnge">Add Phone Number</button></Link>
