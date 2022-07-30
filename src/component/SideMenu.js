@@ -10,7 +10,7 @@ export default function SideMenu() {
     const navigate = useNavigate();
     const onLogout = () => {
         localStorage.removeItem("auth");
-        navigate("/home");
+        navigate("/");
     };
     return(
         <>

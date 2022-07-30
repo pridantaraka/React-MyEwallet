@@ -13,7 +13,6 @@ const loginSchema = Yup.object().shape({
   })
 
 const AuthForm = ({errors, handleSubmit, handleChange})=> {
-    console.log(errors)
     return(
       <>
         <Form noValidate onSubmit={handleSubmit} onChange={handleChange}> {/** INI PENTING */}

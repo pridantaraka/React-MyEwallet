@@ -20,12 +20,16 @@ import ChangePin from './homepages/ChangePin';
 import AddPhone from './homepages/AddPhone';
 import ManagePhone from './homepages/ManagePhone';
 import Topup from './homepages/Topup';
+import TransferMoney from './homepages/TransferMoney'
+import StatusSuccess from './homepages/StatusSuccess'
+import StatusFail from './homepages/StatusFail'
 
 function App() {
+  React.useEffect(() => {}, []);
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />}/>
         <Route path="signup" element={<Signup />}/>
         <Route path="createpin" element={<CreatePin />}/>
@@ -49,6 +53,9 @@ function App() {
         <Route path="addphone" element={<AddPhone />}/>
         <Route path="managephone" element={<ManagePhone />}/>
         <Route path="topup" element={<Topup />}/>
+        <Route path="transfermoney" element={<TransferMoney />}/>
+        <Route path="statussuccess" element={<StatusSuccess />}/>
+        <Route path="statusfail" element={<StatusFail />}/>
       </Routes>
     </BrowserRouter>
   )

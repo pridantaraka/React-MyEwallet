@@ -61,10 +61,9 @@ function Confirmation() {
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-end">
-                                    <Button variant="primary" onClick={() => setModalShow(true)}>
+                                    <Button className='btn-box' onClick={() => setModalShow(true)}>
                                     Continue
                                     </Button>
-
                                     <ModalPopup
                                         show={modalShow}
                                         onHide={() => setModalShow(false)}

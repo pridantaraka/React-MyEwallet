@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 import Modal from 'react-bootstrap/Modal';
 
 export default function ModalPopup(props) {
@@ -11,7 +12,7 @@ export default function ModalPopup(props) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
         >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton className='modal-header'>
             <Modal.Title id="contained-modal-title-vcenter" className="ps-2">
             Enter PIN to Transfer
             </Modal.Title>
@@ -44,8 +45,9 @@ export default function ModalPopup(props) {
                    </div>
                </div>
         </Modal.Body>
-        <Modal.Footer>
-            <Button onClick={props.onHide}>Close</Button>
+        <Modal.Footer className='modal-footer btn-modal'>
+            <Link to='/statussuccess'><Button onClick={props.onHide} className=''>Confirm</Button></Link>
+            <Link to='/statusfail'><Button onClick={props.onHide} className='btn-modal'>Close</Button></Link>
         </Modal.Footer>
         </Modal>
         </>

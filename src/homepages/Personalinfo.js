@@ -4,9 +4,12 @@ import {Container, Row, Col} from 'react-bootstrap'
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
+import { useSelector } from "react-redux";
 
 
 function Personalinfo() {
+    const addnumber = useSelector((state) => state.add.value);
+
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -47,7 +50,7 @@ function Personalinfo() {
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">
                                             <p class="p-confirm mb-1">Phone Number</p>
-                                            <p class="h3-confirm mb-0">+62 813-9387-7946</p>
+                                            <p class="h3-confirm mb-0">+62 {addnumber}</p>
                                         </div>
                                         <div class="align-self-center me-3">
                                             <Link to='/addphone' class="nav-link ms-3 my-1 sec-p-menu">Manage</Link>

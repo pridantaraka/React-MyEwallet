@@ -41,12 +41,15 @@ function AddPhone() {
                                                 <p className="mb-0 ps-2">+62</p>
                                             </span>
                                             {/* <input type="tel" className="form-control reset-input w-md-50" placeholder="Enter your phone number"/> */}
-                                            <Form.Control
-                                            type="number"
-                                            onChange={(e) => {
-                                            dispatch(customValue(e.target.value));
-                                            }}
-                                            />
+                                            <Form>
+                                                <Form.Control
+                                                type="tel"
+                                                className=''
+                                                onChange={(e) => {
+                                                dispatch(customValue(e.target.value));
+                                                }}
+                                                />
+                                            </Form>
                                         </div>
                                         <div className="align-self-center">
                                             <Link to='/managephone' nav-link ms-3 my-1><button className="reset-btn-chnge">Add Phone Number</button></Link>

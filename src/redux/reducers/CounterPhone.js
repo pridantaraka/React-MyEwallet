@@ -5,11 +5,12 @@ const initialState = {
 };
 
 export const counterSlice = createSlice({
-  name: "phone",
+  name: "counter",
   initialState,
   reducers: {
     customValue: (state, action) => {
       state.value = parseInt(action.payload, 10);
+      console.log(state.value);
     }
   }
 });

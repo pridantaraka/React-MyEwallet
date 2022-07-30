@@ -252,3 +252,68 @@
     border: unset;
 }
 /* Transfer */
+
+/* Transfer Money */
+.input-money input{
+    border:unset;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    color: #F2789F;
+}
+.input-money input:focus{
+    outline: none;
+}
+.input-money input::placeholder{
+    color:#B5BDCC;
+}
+.input-notes input{
+    border:unset;
+    padding-left: 0.5rem;
+}
+.input-notes input:focus{
+    outline: none;
+}
+.icon-input{
+    border-bottom: 1px solid #B5BDCC;
+    color: #B5BDCC;
+}
+/* Transfer Money */
+
+/* modal */
+.modal-header{
+    border: unset;
+}
+.modal-footer{
+    border: unset;
+}
+.btn-modal button{
+    background-color: #F999B7;
+    color: #FFFFFF;
+    border-color: #F2789F;
+}
+.btn-modal button:hover{
+    background-color: #FFFFFF;
+    color: #F2789F;
+    border-color: #F999B7;
+}
+/* modal */
+
+/* status-success */
+.btn-status{
+    border: 1px solid #F2789F;
+    background-color: #FFFFFF;
+    border-radius: 0.7rem;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #F999B7;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.btn-status:hover{
+    color: #FFFFFF;
+    background-color: #F2789F;
+    border: 1px solid #FFFFFF;
+}

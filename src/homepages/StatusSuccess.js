@@ -1,12 +1,12 @@
 import React from 'react'
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap'
-import { Lock } from "react-feather";
+import { Download, Share2 } from "react-feather";
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 
-// import RobertChandler from '../assets/image/users/RobertChandler.png'
+import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 
 function StatusSuccess() {
     return(
@@ -22,41 +22,55 @@ function StatusSuccess() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
-                            <section class="bg-white box-side main-box p-5 mw-100">
-                                <div class="d-flex flex-column gap-3">
-                                    <h3 class="trans-his py-2">Change Password</h3>
-                                    <p class="p-confirm">You must enter your current password and then<br/>
-                                        type your new password twice.</p>
-                                    <div class="d-inline-flex flex-column justify-content-center w-md-50 align-self-center py-5 gap-5 align-content-center">
-                                        <div class="input-group flex-nowrap w-100">
-                                            <span class="input-group-text reset-icon-wrp">
-                                                <Lock />
-                                            </span>
-                                            <input type="password" class="form-control reset-input" placeholder="Current password"/>
-                                            <span class="input-group-text reset-icon-wrp">
-                                            <i data-feather="eye-off"></i>
-                                            </span>
+                            <section className="bg-white box-side main-box p-5">
+                                <div className="col-12 d-flex flex-column gap-3">
+                                    <div></div>
+                                    <div className='align-self-center my-3'>
+                                        <p className="h3-confirm mb-0">Transfer Success</p>
+                                    </div>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb -0">Amount</p>
+                                            <p className="h3-confirm mb-0">Rp100.000</p>
                                         </div>
-                                        <div class="input-group flex-nowrap ">
-                                            <span class="input-group-text reset-icon-wrp">
-                                                <Lock />
-                                            </span>
-                                            <input type="password" class="form-control reset-input" placeholder="New password"/>
-                                            <span class="input-group-text reset-icon-wrp">
-                                            <i data-feather="eye-off"></i>
-                                            </span>
+                                    </div>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb -0">Balance Left</p>
+                                            <p className="h3-confirm mb-0">Rp20.000</p>
                                         </div>
-                                        <div class="input-group flex-nowrap ">
-                                            <span class="input-group-text reset-icon-wrp">
-                                                <Lock />
-                                            </span>
-                                            <input type="password" class="form-control reset-input" placeholder="Repeat new password"/>
-                                            <span class="input-group-text reset-icon-wrp">
-                                            <i data-feather="eye-off"></i>
-                                            </span>
+                                    </div>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb -0">Date & Time</p>
+                                            <p className="h3-confirm mb-0">May 11, 2020 - 12.20</p>
                                         </div>
-                                        <div class="align-self-center">
-                                            <button class="reset-btn-chnge">Change Password</button>
+                                    </div>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb -0">Notes</p>
+                                            <p className="h3-confirm mb-0">For buying some socks</p>
+                                        </div>
+                                    </div>
+                                    <h3 className="trans-his py-3">Transfer To</h3>
+                                    <div className="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div className="d-flex flex-row align-self-center">
+                                        <img src={SamuelSuhi} alt="userimg"/>
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-user mb-0">Samuel Suhi</p>
+                                            <p className="p-info mb-0">+62 813-8492-9994</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div className="d-flex justify-content-end flex-row gap-3">
+                                        <div>
+                                            <Link to=''><button className='btn-status'><Share2 /></button></Link>
+                                        </div>
+                                        <div>
+                                            <Link to='' ><button className='btn-status w-100 px-5'><Download />Download PDF</button></Link>
+                                        </div>
+                                        <div>
+                                            <Link to='/dashboard'><button className='btn-status w-100 px-5'>Back to Home</button></Link>
                                         </div>
                                     </div>
                                 </div>

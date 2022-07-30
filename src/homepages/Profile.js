@@ -13,7 +13,7 @@ function Profile() {
     const navigate = useNavigate();
     const onLogout = () => {
         localStorage.removeItem("auth");
-        navigate("/home");
+        navigate("/");
     };
     return(
         <>
@@ -78,7 +78,7 @@ function Profile() {
                                         </div>
                                     </div>
                                     </Link>
-                                    <Link to='/home' className='nav-link ms-3 my-1 text-hover p-confirm d-flex justify-content-center'>
+                                    <Link to='/' className='nav-link ms-3 my-1 text-hover p-confirm d-flex justify-content-center'>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-self-center w-50">
                                         <div class="d-inline-flex flex-column align-self-center" onClick={onLogout}>
                                             {location.state?.id}
