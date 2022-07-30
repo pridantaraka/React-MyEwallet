@@ -22,13 +22,13 @@ function Profile() {
         <Row>
             <Header />
                 <main>
-                    <Container>
+                    <Container className=''>
                         <Row>
                             <Col md={12} className="d-flex flex-row justify-content-center gap-2 mx-0 px-0 mt-4 mb-4 w-100">
                             <Col md={3}>
                                 <SideMenu />
                             </Col>
-                            <Col md={9}>
+                            <Col md={9} className='continer-width'>
                             <DropdownMenu />
                             <section class="bg-white box-side main-box p-5">
                                 <div class="d-flex flex-column gap-3">
