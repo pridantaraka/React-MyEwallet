@@ -5,6 +5,7 @@ import { ArrowRight, Edit } from "react-feather";
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
+import DropdownMenu from '../component/DropdownMenu';
 
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 
@@ -28,6 +29,7 @@ function Profile() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
+                            <DropdownMenu />
                             <section class="bg-white box-side main-box p-5">
                                 <div class="d-flex flex-column gap-3">
                                     <div class="d-inline-flex flex-column justify-content-center p-4 align-content-center">

@@ -5,6 +5,7 @@ import { Edit} from "react-feather";
 import SideMenu from '../component/SideMenu'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
+import DropdownMenu from '../component/DropdownMenu';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 
@@ -25,6 +26,7 @@ function TransferMoney() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
+                            <DropdownMenu />
                             <section className="bg-white box-side main-box p-5 mw-100">
                             <div className='d-flex flex-column gap-3'>
                                 <div>

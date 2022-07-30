@@ -4,6 +4,7 @@ import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import ModalPopup from '../component/ModalPopup';
+import DropdownMenu from '../component/DropdownMenu';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 
@@ -23,6 +24,7 @@ function Confirmation() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
+                            <DropdownMenu />
                             <section class="bg-white box-side main-box p-5">
                                 <div class="col-12 d-flex flex-column gap-3">
                                     <h3 class="trans-his py-3">Transfer To</h3>

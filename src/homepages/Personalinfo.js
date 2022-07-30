@@ -5,7 +5,7 @@ import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import { useSelector } from "react-redux";
-
+import DropdownMenu from '../component/DropdownMenu';
 
 function Personalinfo() {
     const addnumber = useSelector((state) => state.add.value);
@@ -23,6 +23,7 @@ function Personalinfo() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
+                            <DropdownMenu />
                             <section class="bg-white box-side main-box p-5">
                                 <div class="d-flex flex-column gap-3">
                                     <h3 class="trans-his py-2">Personal Information</h3>

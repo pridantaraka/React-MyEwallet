@@ -4,6 +4,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
+import DropdownMenu from '../component/DropdownMenu';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 
@@ -21,6 +22,7 @@ function StatusFail() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
+                            <DropdownMenu />
                             <section className="bg-white box-side main-box p-5">
                                 <div className="col-12 d-flex flex-column gap-3">
                                     <div></div>

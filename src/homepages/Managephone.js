@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import { Trash } from "react-feather";
 import { useSelector } from "react-redux";
+import DropdownMenu from '../component/DropdownMenu';
 
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
@@ -24,6 +25,7 @@ function ManagePhone() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
+                            <DropdownMenu />
                             <section class="bg-white box-side main-box p-5">
                                 <div class="d-flex flex-column gap-3">
                                     <h3 class="trans-his py-2">Manage Phone Number</h3>

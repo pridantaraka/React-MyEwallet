@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import {Container, Row, Col, Form} from 'react-bootstrap'
 import { useDispatch } from "react-redux";
-
+import DropdownMenu from '../component/DropdownMenu';
 import {
     customValue
   } from "../redux/reducers/CounterPhone";
@@ -28,6 +28,7 @@ function AddPhone() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
+                            <DropdownMenu />
                             <section className="bg-white box-side main-box p-5 h-100">
                                 <div className="d-flex flex-column gap-3 justify-content-center">
                                     <h3 className="trans-his py-2">Add Phone Number</h3>

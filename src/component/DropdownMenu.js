@@ -1,18 +1,24 @@
 import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import { Menu } from "react-feather"
 import {Link} from 'react-router-dom'
 
 export default function DropdownMenu() {
     return(
         <>
-        <div className="mw-100 d-md-none bg-white my-2 main-box ">
-        <DropdownButton title="Dropdown button" className='w-100 d-flex justify-content-center'>
-            <Link to='/homepage' className='nav-link'><Dropdown.Item href="#/action-1">Dashboard</Dropdown.Item></Link>
-            <Link to='/transfer' className='nav-link'><Dropdown.Item href="#/action-2">Transfer</Dropdown.Item></Link>
+        <div className="mw-100 d-md-none my-2 d-md-none">                 
+        <Dropdown>
+        <Dropdown.Toggle id="dropdown-basic" size="sm" className='w-100 d-flex justify-content-center main-box box-dropdown'>
+            <Menu />Menu
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu className='w-100 text-center'>
+            <Link to='/dashboard' className='nav-link'><Dropdown.Item href="#/action-1">Dashboard</Dropdown.Item></Link>
+            <Link to='/searchpage' className='nav-link'><Dropdown.Item href="#/action-2">Transfer</Dropdown.Item></Link>
             <Link to='/topup' className='nav-link'><Dropdown.Item href="#/action-3">TopUp</Dropdown.Item></Link>                              
-            <Link to='/profilepage' className='nav-link'><Dropdown.Item href="#/action-3">Profile</Dropdown.Item></Link>                                
-            <Link to='/home' className='nav-link'><Dropdown.Item href="#/action-3">LogOut</Dropdown.Item></Link>                               
-        </DropdownButton>
+            <Link to='/profile' className='nav-link'><Dropdown.Item href="#/action-4">Profile</Dropdown.Item></Link>                                
+            <Link to='/' className='nav-link'><Dropdown.Item href="#/action-5">LogOut</Dropdown.Item></Link>      
+        </Dropdown.Menu>
+        </Dropdown>
         </div>
         </>
     )

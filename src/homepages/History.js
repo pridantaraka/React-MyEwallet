@@ -3,6 +3,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
+import DropdownMenu from '../component/DropdownMenu';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 import Nlogo from '../assets/image/Nlogo.png'
@@ -23,6 +24,7 @@ function History() {
                             <SideMenu />
                         </Col>
                         <Col md={9}>
+                        <DropdownMenu />
                         <section class=" bg-white box-side main-box p-5">
                             <div class="d-flex flex-column">
                                 <h3 class="trans-his">Transaction History</h3>

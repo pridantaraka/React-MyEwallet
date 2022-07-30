@@ -85,7 +85,7 @@ function Dashboard() {
              <main>
                 <Container classNameName='mw-100 min-vh-100'>
                     <Row>
-                        <Col md={12} className="d-flex flex-row justify-content-md-center gap-2 mx-0 px-0 mt-4 mb-4 w-100">
+                        <Col md={12} className="d-flex flex-row justify-content-center gap-2 mx-0 px-0 mt-4 mb-4 w-100">
                         <Col md={3}>
                             <SideMenu />
                         </Col>

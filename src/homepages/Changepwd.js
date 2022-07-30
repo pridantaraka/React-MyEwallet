@@ -2,6 +2,7 @@ import React from 'react'
 // import {Link} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap'
 import { Lock } from "react-feather";
+import DropdownMenu from '../component/DropdownMenu';
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
@@ -21,6 +22,7 @@ function ChangePwd() {
                                 <SideMenu />
                             </Col>
                             <Col md={9}>
+                            <DropdownMenu />
                             <section class="bg-white main-box box-side p-5 mw-100">
                                 <div class="d-flex flex-column gap-3">
                                     <h3 class="trans-his py-2">Change Password</h3>

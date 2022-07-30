@@ -317,3 +317,19 @@
     background-color: #F2789F;
     border: 1px solid #FFFFFF;
 }
+/* status-success */
+
+/* dropdownmenu */
+.box-dropdown{
+    background-color: #F999B7;
+    color : #FFFFFF;
+    border-color: unset;
+}
+.box-dropdown:hover{
+    background-color: #F999B7;
+    border-color: unset;
+    outline: none;
+}
+
+
+/* dropdownmenu */

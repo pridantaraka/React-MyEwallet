@@ -5,6 +5,7 @@ import { Search } from "react-feather";
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
+import DropdownMenu from '../component/DropdownMenu';
 
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
@@ -25,6 +26,7 @@ function Searchpage() {
                             <SideMenu />
                         </Col>
                         <Col md={9}>
+                        <DropdownMenu />
                             <section class="bg-white box-side main-box p-5">
                                 <div class="d-flex flex-column gap-3">
                                     <h3 class="trans-his py-3">Search Receiver</h3>
