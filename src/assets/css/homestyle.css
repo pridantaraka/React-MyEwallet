@@ -330,6 +330,10 @@
     border-color: unset;
     outline: none;
 }
-
-
 /* dropdownmenu */
+
+@media (max-width: 576px) { 
+    .box-side{
+        min-width: 420px;
+    }
+ }
