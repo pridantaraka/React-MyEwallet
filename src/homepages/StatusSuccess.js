@@ -8,6 +8,7 @@ import Footer from '../component/Footer';
 import DropdownMenu from '../component/DropdownMenu';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
+import Succsesslogo from '../assets/image/success.png'
 
 function StatusSuccess() {
     return(
@@ -26,7 +27,9 @@ function StatusSuccess() {
                             <DropdownMenu />
                             <section className="bg-white box-side main-box p-5">
                                 <div className="col-12 d-flex flex-column gap-3">
-                                    <div></div>
+                                    <div className='align-self-center'>
+                                        <img src={Succsesslogo} alt='' className='fuild'/>
+                                    </div>
                                     <div className='align-self-center my-3'>
                                         <p className="h3-confirm mb-0">Transfer Success</p>
                                     </div>

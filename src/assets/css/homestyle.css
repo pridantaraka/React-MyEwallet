@@ -331,6 +331,31 @@
     outline: none;
 }
 /* dropdownmenu */
+/* dropdownnotif */
+.btn{
+    border: unset;
+    background-color: #FFFFFF;
+    color: #F2789F;
+    transition: none;
+}
+.btn-success:focus{
+    outline: unset;
+    border: unset;
+    background-color: #FFFFFF;
+    color: #F2789F;
+    transition: none;
+}
+.btn:hover{
+    background-color: #FFFFFF;
+    transition: none;
+}
+.btn:active{
+    outline: unset;
+    background-color: none;
+    transition: none;
+}
+/* dropdownnotif */
+
 
 @media (max-width: 576px) { 
     .box-side{

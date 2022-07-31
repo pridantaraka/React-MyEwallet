@@ -1,6 +1,7 @@
 import React from 'react'
-import { Bell } from "react-feather"
+// import { Bell } from "react-feather"
 import { Nav } from 'react-bootstrap'
+import Notif from './Notif'
 
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 
@@ -20,10 +21,8 @@ export default function Header() {
                           <p className="h-user mb-0">Robert Chandler</p>
                             <p className="h-phone mb-0">+62 8139 3877 7946</p>
                     </div>
-
-                        <div className="sec-menu-p d-flex align-self-center">
-                            <Bell />
-                        </div>
+                        
+                            <Notif />
                 </div>
                 </Nav>
             </header>

@@ -1,19 +1,52 @@
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import {Link} from 'react-router-dom'
+import React from 'react';
+import { Dropdown} from 'react-bootstrap';
+import { Bell } from "react-feather"
 
-export default function DropdownMenu() {
+import innotif from '../assets/image/in-notif.png'
+import outnotif from '../assets/image/out-notif.png'
+import innotif1 from '../assets/image/in-notif1.png'
+import outnotif1 from '../assets/image/out-notif1.png'
+
+export default function Notif() {
+
     return(
         <>
-        <div className="bg-white my-2 main-box ">
-        <DropdownButton title="Dropdown button" className='w-100 d-flex justify-content-center'>
-            <Link to='/homepage' className='nav-link'><Dropdown.Item href="#/action-1">Dashboard</Dropdown.Item></Link>
-            <Link to='/transfer' className='nav-link'><Dropdown.Item href="#/action-2">Transfer</Dropdown.Item></Link>
-            <Link to='/topup' className='nav-link'><Dropdown.Item href="#/action-3">TopUp</Dropdown.Item></Link>                              
-            <Link to='/profilepage' className='nav-link'><Dropdown.Item href="#/action-3">Profile</Dropdown.Item></Link>                                
-            <Link to='/home' className='nav-link'><Dropdown.Item href="#/action-3">LogOut</Dropdown.Item></Link>                               
-        </DropdownButton>
+        <Dropdown>
+        <Dropdown.Toggle variant="success">
+        <div className="sec-menu-p align-self-center box-notif">
+          <Bell />
         </div>
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+            <div className='box-main'>
+              <div d-flex flex-column>
+              <h5 class="p-confirm p-4 mb-0">Today</h5>
+                    <div class="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
+                        <div class="d-inline-flex flex-column align-self-center px-2 ">
+                            <img src={innotif} alt="img-notif"/>
+                        </div>
+                    </div>
+              </div>
+              <div class="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
+                        <div class="d-inline-flex flex-column align-self-center px-2 ">
+                            <img src={outnotif} alt="img-notif"/>
+                        </div>
+                    </div>
+                    <h5 class="p-confirm p-4 mb-0">This Week</h5>
+                    <div class="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
+                        <div class="d-inline-flex flex-column align-self-center px-2 ">
+                            <img src={innotif1} alt="img-notif"/>
+                        </div>
+                    </div>
+                    <div class="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
+                        <div class="d-inline-flex flex-column align-self-center px-2 ">
+                            <img src={outnotif1} alt="img-notif"/>
+                        </div>
+                    </div>
+            </div>
+          
+        </Dropdown.Menu>
+      </Dropdown>
         </>
     )
 }

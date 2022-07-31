@@ -7,6 +7,7 @@ import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import DropdownMenu from '../component/DropdownMenu';
 
+
 import graficin from '../assets/image/in2.png'
 import graficout from '../assets/image/out2.png'
 import grafic from '../assets/image/graphic.png'

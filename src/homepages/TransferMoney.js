@@ -27,7 +27,7 @@ function TransferMoney() {
                             </Col>
                             <Col md={9}>
                             <DropdownMenu />
-                            <section className="bg-white box-side main-box p-5 mw-100">
+                            <section className="bg-white box-side main-box p-5">
                             <div className='d-flex flex-column gap-3'>
                                 <div>
                                     <h3 className="trans-his py-2">Transfer Money</h3>
