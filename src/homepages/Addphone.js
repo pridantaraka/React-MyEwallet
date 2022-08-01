@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import DropdownMenu from '../component/DropdownMenu';
 import {
     customValue
-  } from "../redux/reducers/CounterPhone";
+  } from "../redux/reducers/Counter";
 
 import SideMenu from '../component/SideMenu'
 import Header from '../component/Header'

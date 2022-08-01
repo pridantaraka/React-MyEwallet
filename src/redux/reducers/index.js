@@ -1,9 +1,11 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
-import CounterPhone from "./CounterPhone";
+import counter from "./Counter";
+import auth from "./auth"
 
 const reducer = combineReducers({
-  add : CounterPhone
+  add : counter,
+  auth
 });
 
 export default reducer;

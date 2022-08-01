@@ -10,7 +10,6 @@ export const counterSlice = createSlice({
   reducers: {
     customValue: (state, action) => {
       state.value = parseInt(action.payload, 10);
-      console.log(state.value);
     }
   }
 });

@@ -1,40 +1,48 @@
 import React from 'react'
-import {Link, useNavigate, useLocation} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import {Container, Row, Col, Button, Alert, Form} from 'react-bootstrap'
-import { Mail, Lock } from "react-feather";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../redux/asyncActions/auth";
+// import { Mail } from "react-feather";
 import {Formik} from 'formik'
-import * as Yup from 'yup'
+// import * as Yup from 'yup'
 
 import SideAuth from '../component/SideAuth';
 
-const loginSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email address format').required('Required'),
-    password: Yup.string().min(4).required('Required')
-  })
+// const loginSchema = Yup.object().shape({
+//     email: Yup.string().email('Invalid email address format').required('Required'),
+//     password: Yup.string().min(4).required('Required')
+//   })
 
-const AuthForm = ({errors, handleSubmit, handleChange})=> {
+const AuthForm = ({values, errors, handleSubmit, handleChange})=> {
+    const successMsg = useSelector((state) => state.auth.successMsg);
+    const errorMsg = useSelector((state) => state.auth.errorMsg);
     return(
       <>
+        {successMsg && <Alert variant="success">{successMsg}</Alert>}
+        {errorMsg && <Alert variant="danger">{errorMsg}</Alert>}
         <Form noValidate onSubmit={handleSubmit} onChange={handleChange}> {/** INI PENTING */}
           <Form.Group className="mb-3">
             <Form.Label></Form.Label>
-            <div className="input-group flex-nowrap">
-            <span className="input-group-text auth-icon-wr">
-            <Lock />
-            </span>
-            <Form.Control name="email" className='auth-input' onChange={handleChange} type="email" placeholder="Enter email" isInvalid={!!errors.email} />  {/** INI PENTING */}
-            </div>
-            <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>
+            <Form.Control 
+            name="email" 
+            onChange={handleChange} 
+            type="email" 
+            value={values.email}
+            placeholder="Enter email" 
+            isInvalid={!!errors.email} />  {/** INI PENTING */}
+            {/* <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback> */}
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label></Form.Label>
-            <div className="input-group flex-nowrap">
-            <span className="input-group-text auth-icon-wr">
-            <Mail />
-            </span>
-            <Form.Control name="password" className='auth-input' onChange={handleChange} type="password" placeholder="Password" isInvalid={!!errors.password} />  {/** INI PENTING */}
-            </div>
-            <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
+            <Form.Control 
+            name="password" 
+            onChange={handleChange} 
+            type="password"
+            value={values.password}
+            placeholder="Password" 
+            isInvalid={!!errors.password} />  {/** INI PENTING */}
+            {/* <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback> */}
           </Form.Group>
             <div className="text-end pb-5">
                 <Link to="/forgetpwd">Forgot Password?</Link>
@@ -48,20 +56,31 @@ const AuthForm = ({errors, handleSubmit, handleChange})=> {
   }
 
 function Login() {
-    const location = useLocation();
+    // const location = useLocation();
+    const dispatch = useDispatch();
+    const token = useSelector((state) => state.auth.token);
     const navigate = useNavigate();
 
-    const onLogin = (val) => {
-        if(val.email === 'a@mail.com' && val.password === '1234'){
-            console.log(val.email === 'a@mail.com');
-            window.alert('Login success')
-            localStorage.setItem("auth", "randomToken");
-            navigate("/dashboard");
-          }else{
-            window.alert('Login Failed')
-          }
-       
-    };
+    const onLogin = (value) => {
+        const data = { email: value.email, password: value.password };
+        dispatch(login(data));
+      };
+    
+      React.useEffect(() => {
+        if (token) {
+          navigate("/dashboard");
+        }
+      }, [navigate, token]);
+    // const onLogin = (val) => {
+    //     if(val.email === 'a@mail.com' && val.password === '1234'){
+    //         console.log(val.email === 'a@mail.com');
+    //         window.alert('Login success')
+    //         localStorage.setItem("auth", "randomToken");
+    //         navigate("/dashboard");
+    //       }else{
+    //         window.alert('Login Failed')
+    //       }
+    // };
 
     return(
         <>
@@ -101,14 +120,16 @@ function Login() {
                             <span className="input-group-text auth-icon-wr">
                             </span>
                         </div> */}
-                            {location.state?.errorMsg && (
+                            {/* {location.state?.errorMsg && (
                             <Alert variant="danger">{location.state.errorMsg}</Alert>
-                            )}
-                            <Formik
+                            )} */}
+                            {/* <Formik
                             onSubmit={onLogin}
-                            initialValues={{email: '', password: ''}}
-                            validationSchema={loginSchema}>
+                            initialValues={{email: '', password: ''}}>
                             {(props)=><AuthForm {...props} />}
+                            </Formik> */}
+                            <Formik onSubmit={onLogin} initialValues={{ email: "", password: "" }}>
+                                {(props) => <AuthForm {...props} />}
                             </Formik>
                             <div className="text-center">
                             <span>Don`t have an account? Let`s <Link to="/signup">SignUp</Link></span>

@@ -6,15 +6,18 @@ import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import DropdownMenu from '../component/DropdownMenu';
+import { useSelector } from "react-redux";
 
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 
 function Profile() {
+    const addnumber = useSelector((state) => state.add.value);
     const location = useLocation();
     const navigate = useNavigate();
     const onLogout = () => {
         localStorage.removeItem("auth");
         navigate("/");
+
     };
     return(
         <>
@@ -42,7 +45,7 @@ function Profile() {
                                         </Link>
                                     </div>
                                     <div class="h4 align-self-center ">Robert Chandler</div>
-                                    <p class="p-user align-self-center">+62 813-9387-7946</p>
+                                    <p class="p-user align-self-center">+62 {addnumber}</p>
                                     </div>
                                     <Link to='/personalinfo' className='nav-link ms-3 my-1 text-hover p-confirm d-flex justify-content-center'>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-self-center w-50">
