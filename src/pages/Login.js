@@ -26,8 +26,8 @@ const AuthForm = ({values, errors, handleSubmit, handleChange})=> {
             <Form.Label></Form.Label>
             <Form.Control 
             name="email" 
-            onChange={handleChange} 
             type="email" 
+            onChange={handleChange}
             value={values.email}
             placeholder="Enter email" 
             isInvalid={!!errors.email} />  {/** INI PENTING */}
@@ -37,8 +37,8 @@ const AuthForm = ({values, errors, handleSubmit, handleChange})=> {
             <Form.Label></Form.Label>
             <Form.Control 
             name="password" 
-            onChange={handleChange} 
             type="password"
+            onChange={handleChange} 
             value={values.password}
             placeholder="Password" 
             isInvalid={!!errors.password} />  {/** INI PENTING */}
@@ -128,7 +128,8 @@ function Login() {
                             initialValues={{email: '', password: ''}}>
                             {(props)=><AuthForm {...props} />}
                             </Formik> */}
-                            <Formik onSubmit={onLogin} initialValues={{ email: "", password: "" }}>
+                            <Formik onSubmit={onLogin} 
+                            initialValues={{ email: "", password: "" }}>
                                 {(props) => <AuthForm {...props} />}
                             </Formik>
                             <div className="text-center">

@@ -1,54 +1,64 @@
 import React from 'react'
 // import {Link} from 'react-router-dom';
-import {Container, Row, Col, Button, Form} from 'react-bootstrap'
+import {Container, Row, Col, Button, Form, Alert} from 'react-bootstrap'
 // import { Mail, Lock, User } from "react-feather";
 import {Formik} from 'formik'
-import * as Yup from 'yup'
 import {Link, useNavigate} from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { register } from "../redux/asyncActions/auth";
 
 import SideAuth from '../component/SideAuth';
 
-const loginSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email address format').required('Required'),
-    password: Yup.string().min(4).required('Required')
-  })
 
-const AuthForm = ({errors, handleSubmit, handleChange})=> {
-    return(
+const SignupForm = ({values, errors, handleSubmit, handleChange})=> {
+      const navigate = useNavigate();
+      const successMsg = useSelector((state) => state.auth.successMsg);
+      const errorMsg = useSelector((state) => state.auth.errorMsg);
+
+      React.useEffect(() => {
+        if (successMsg) {
+          navigate("/login", { state: { successMsg } });
+        }
+      }, [navigate, successMsg]);
+        return(
       <>
         <Form noValidate onSubmit={handleSubmit} onChange={handleChange}> {/** INI PENTING */}
+          {errorMsg && <Alert variant="danger">{errorMsg}</Alert>}
           <Form.Group className="mb-3">
             <Form.Label></Form.Label>
             <Form.Control 
-            name="email" 
+            name="username" 
+            type="username" 
+            value={values.username}
             onChange={handleChange} 
-            type="email" 
+            placeholder="Enter username" 
+            isInvalid={!!errors.email} />  {/** INI PENTING */}
+            <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label></Form.Label>
+            <Form.Control 
+            name="email"  
+            type="email"
+            value={values.email}
+            onChange={handleChange}
             placeholder="Enter email" 
             isInvalid={!!errors.email} />  {/** INI PENTING */}
-            <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label></Form.Label>
             <Form.Control 
             name="password" 
-            onChange={handleChange} 
-            type="password" 
+            type="password"
+            value={values.password}
+            onChange={handleChange}
             placeholder="Password" 
             isInvalid={!!errors.password} />  {/** INI PENTING */}
-            <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label></Form.Label>
-            <Form.Control 
-            name="password" 
-            onChange={handleChange} 
-            type="password" 
-            placeholder="ConfirmPassword" 
-            isInvalid={!!errors.password} />  {/** INI PENTING */}
-            <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
           </Form.Group>
           <div className="d-grid">
-            <Link to="/createpin" className="auth-btn my-5"><Button className='w-100'>Sign Up</Button></Link>
+            <Button className='w-100 auth-btn' type='submit'>confirm</Button>
             </div>
             <div className="text-center">
             <span>Already have an account? Let`s <Link to="/login">Login</Link></span>
@@ -59,19 +69,20 @@ const AuthForm = ({errors, handleSubmit, handleChange})=> {
   }
 
 function Signup() {
-    const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state.auth.token);
+  const navigate = useNavigate();
 
-    const onLogin = (val) => {
-        if(val.email === 'a@mail.com' && val.password === '1234'){
-            console.log(val.email === 'a@mail.com');
-            window.alert('Login success')
-            localStorage.setItem("auth", "randomToken");
-            navigate("/dashboard");
-          }else{
-            window.alert('Login Failed')
-          }
-       
-    };
+  const onSignup = (value) => {
+    dispatch(register(value));
+  };
+
+  React.useEffect(() => {
+    if (token) {
+      navigate("/dashboard");
+    }
+  }, [navigate, token]);
+
     return(
     <>
         <Container className='mw-100 min-vh-100'>
@@ -115,10 +126,9 @@ function Signup() {
                         </span>
                     </div> */}
                     <Formik
-                            onSubmit={onLogin}
-                            initialValues={{email: '', password: ''}}
-                            validationSchema={loginSchema}>
-                            {(props)=><AuthForm {...props} />}
+                            onSubmit={onSignup}
+                            initialValues={{username: "", email: "", password: ""}}>
+                            {(props)=><SignupForm {...props} />}
                             </Formik>
                     
                 </section>

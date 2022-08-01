@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { login } from "../asyncActions/auth";
+import { login, register } from "../asyncActions/auth";
 
 const initialState = {
   token: localStorage.getItem("token") || null,
@@ -30,6 +30,14 @@ const auth = createSlice({
         state.errorMsg = action.payload?.errorMsg;
         state.successMsg = action.payload?.successMsg;
       }
+    });
+    build.addCase(register.pending, (state) => {
+      state.errorMsg = null;
+      state.successMsg = null;
+    });
+    build.addCase(register.fulfilled, (state, action) => {
+      state.errorMsg = action.payload?.errorMsg;
+      state.successMsg = action.payload?.successMsg;
     });
     }
 });

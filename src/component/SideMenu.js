@@ -1,17 +1,20 @@
 import React from 'react'
 import {Link, NavLink, useNavigate} from 'react-router-dom';
 import { Grid, User, Plus, ArrowUp, LogOut } from "react-feather";
-
+import { useDispatch } from "react-redux";
+import { logout } from "../redux/reducers/auth";
 
 
 export default function SideMenu() {
     
-    // const location = useLocation();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+
     const onLogout = () => {
-        localStorage.removeItem("auth");
-        navigate("/");
-    };
+        dispatch(logout());
+        navigate("/login");
+      };
+    
     return(
         <>
             <section className="bg-white main-box p-md-5 d-md-block d-none h-100">

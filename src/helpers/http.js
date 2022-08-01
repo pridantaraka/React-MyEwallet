@@ -7,7 +7,7 @@ const http = (token) => {
   }
   return axios.create({
     headers,
-    baseURL: process.env.CONNECTION
+    baseURL: process.env.REACT_APP_MYEWALLET_URL
   });
 };
 
