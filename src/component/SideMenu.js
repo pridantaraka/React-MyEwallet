@@ -12,7 +12,7 @@ export default function SideMenu() {
 
     const onLogout = () => {
         dispatch(logout());
-        navigate("/login");
+        navigate("/");
       };
     
     return(
@@ -55,7 +55,7 @@ export default function SideMenu() {
                         </div>
                      </Link>
                 </div>
-                   <Link to='/' className="nav-link ms-3 my-1">
+                   <Link to='' className="nav-link ms-3 my-1">
                     <div className="d-flex">
                          <div className="d-inline-flex sec-menu-p" onClick={onLogout}>
                              <div className="align-self-center px-2">

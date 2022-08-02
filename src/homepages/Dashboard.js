@@ -6,78 +6,90 @@ import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import DropdownMenu from '../component/DropdownMenu';
-
+import { useSelector, useDispatch } from "react-redux";
 
 import graficin from '../assets/image/in2.png'
 import graficout from '../assets/image/out2.png'
 import grafic from '../assets/image/graphic.png'
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
+import { getHistory } from '../redux/asyncActions/history';
 
 
-function Users({picture, name, transaction, notes}){
+function Users({picture, amount, note}){
+    
+      
     return(
     <div className="d-flex flex-row justify-content-around pb-3 my-3">
         <div className="align-self-center">
         <img className="img-fluid rounded" src={SamuelSuhi} alt="profileimg"/>
         </div>
         <div className="d-flex flex-column align-self-center">
-            <p className="p-user mb-0">{name}</p>
-             <p className="p-info mb-0">{notes}</p>
+            <p className="p-user mb-0">Mamad</p>
+             <p className="p-info mb-0">{note}</p>
          </div>
          <div className="d-flex align-self-center">
-             <p className="p-gr mb-0">Rp.{transaction}</p>
+             <p className="p-gr mb-0">Rp.{amount}</p>
          </div>
      </div>
     )
 }
 
 function Dashboard() {
-    const [data] = React.useState({
-        success: true,
-        massage: 'List User',
-        results: [
-            {
-                "id_transaction": 34,
-                "time_transaction": "2022-07-11T15:32:09.773Z",
-                "recipient_id": 33,
-                "sander_id": 45,
-                "name": "jojo",
-                "notes": "hellow",
-                "amount": "10000",
-                "type_id": 1
-            },
-            {
-                "id_transaction": 35,
-                "time_transaction": "2022-10-31T17:00:00.000Z",
-                "recipient_id": 33,
-                "sander_id": 45,
-                "name": "lilo",
-                "notes": "hellow",
-                "amount": "10000",
-                "type_id": 1
-            },
-            {
-                "id_transaction": 36,
-                "time_transaction": "2022-10-31T17:00:00.000Z",
-                "recipient_id": 33,
-                "sander_id": 45,
-                "name": "nona",
-                "notes": "hellow",
-                "amount": "1000",
-                "type_id": 1
-            },
-            {
-                "id_transaction": 46,
-                "time_transaction": "2022-10-31T17:00:00.000Z",
-                "recipient_id": 45,
-                "sander_id": 46,
-                "name": "milo",
-                "notes": "hello",
-                "amount": "50000",
-                "type_id": 1
-            }
-        ]
-    })
+    const history = useSelector((state) => state.history.data);
+    const dispatch = useDispatch();
+    const token = useSelector((state) => state.auth.token);
+    
+    
+
+    React.useEffect(() => {
+        dispatch(getHistory(token));
+      }, []);
+    // const [data] = React.useState({
+    //     success: true,
+    //     massage: 'List User',
+    //     results: [
+    //         {
+    //             "id_transaction": 34,
+    //             "time_transaction": "2022-07-11T15:32:09.773Z",
+    //             "recipient_id": 33,
+    //             "sander_id": 45,
+    //             "name": "jojo",
+    //             "notes": "hellow",
+    //             "amount": "10000",
+    //             "type_id": 1
+    //         },
+    //         {
+    //             "id_transaction": 35,
+    //             "time_transaction": "2022-10-31T17:00:00.000Z",
+    //             "recipient_id": 33,
+    //             "sander_id": 45,
+    //             "name": "lilo",
+    //             "notes": "hellow",
+    //             "amount": "10000",
+    //             "type_id": 1
+    //         },
+    //         {
+    //             "id_transaction": 36,
+    //             "time_transaction": "2022-10-31T17:00:00.000Z",
+    //             "recipient_id": 33,
+    //             "sander_id": 45,
+    //             "name": "nona",
+    //             "notes": "hellow",
+    //             "amount": "1000",
+    //             "type_id": 1
+    //         },
+    //         {
+    //             "id_transaction": 46,
+    //             "time_transaction": "2022-10-31T17:00:00.000Z",
+    //             "recipient_id": 45,
+    //             "sander_id": 46,
+    //             "name": "milo",
+    //             "notes": "hello",
+    //             "amount": "50000",
+    //             "type_id": 1
+    //         }
+    //     ]
+    // })
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -129,10 +141,10 @@ function Dashboard() {
                                         <div className="p-2">
                                             {/* map data dinamis */}
                                             <div>
-                                                {data.results.map(o => {
+                                                {history.map((o) => {
                                                     return(
                                                         <>
-                                                        <Users picture={SamuelSuhi} name={o.name} notes={o.notes} transaction={o.amount}/>
+                                                        <Users picture={SamuelSuhi} note={o.notes} amount={o.amount}/>
                                                         </>
                                                     )
                                                 })}

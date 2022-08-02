@@ -4,11 +4,18 @@ import {Container, Row, Col} from 'react-bootstrap'
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { getProfile } from "../redux/asyncActions/profile";
 import DropdownMenu from '../component/DropdownMenu';
 
 function Personalinfo() {
-    const addnumber = useSelector((state) => state.add.value);
+    const dispatch = useDispatch();
+    const token = useSelector((state) => state.auth.token);
+    const profile = useSelector((state) => state.profile.data);
+
+    React.useEffect(() => {
+        dispatch(getProfile(token));
+      }, []);
 
     return(
         <>
@@ -33,13 +40,13 @@ function Personalinfo() {
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">
                                             <p class="p-confirm mb-1">First Name</p>
-                                            <p class="h3-confirm mb-0">Robert</p>
+                                            <p class="h3-confirm mb-0">{profile?.fullname}</p>
                                         </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">
                                             <p class="p-confirm mb-1">Last Name</p>
-                                            <p class="h3-confirm mb-0">Chandler</p>
+                                            <p class="h3-confirm mb-0">{profile?.fullname}</p>
                                         </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
@@ -51,7 +58,7 @@ function Personalinfo() {
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">
                                             <p class="p-confirm mb-1">Phone Number</p>
-                                            <p class="h3-confirm mb-0">+62 {addnumber}</p>
+                                            <p class="h3-confirm mb-0">{profile?.phonenumber}</p>
                                         </div>
                                         <div class="align-self-center me-3">
                                             <Link to='/addphone' class="nav-link ms-3 my-1 sec-p-menu">Manage</Link>

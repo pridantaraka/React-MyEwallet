@@ -6,13 +6,36 @@ import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import DropdownMenu from '../component/DropdownMenu';
+import { useSelector, useDispatch } from "react-redux";
+import { getHistory } from '../redux/asyncActions/history';
 
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 import SherinaChaw from '../assets/image/users/SherinaChaw.png'
 import JessicaMera from '../assets/image/users/JessicaMera.png'
 
+function Trans(picture, note, amount) {
+    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+        <Link to='/transfermoney' class="nav-link ms-3 my-1">
+            <div class="d-flex flex-row align-self-center">
+                <img src={SamuelSuhi} alt="profileimg" className='fluid'/>
+                <div class="d-inline-flex flex-column align-self-center px-2">
+                    <p class="p-user mb-0">{note}</p>
+                    <p class="p-info mb-0">{amount}</p>
+                </div>
+            </div>
+        </Link>
+    </div>
+}
+
 function Searchpage() {
+    const history = useSelector((state) => state.history.data);
+    const dispatch = useDispatch();
+    const token = useSelector((state) => state.auth.token);
+    
+    React.useEffect(() => {
+        dispatch(getHistory(token));
+      }, []);
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -40,18 +63,18 @@ function Searchpage() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <Link to='/transfermoney' class="nav-link ms-3 my-1">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <img src={SamuelSuhi} alt="profileimg" className='fluid'/>
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-user mb-0">Samuel Suhi</p>
-                                            <p class="p-info mb-0">+62 813-8492-9994</p>
-                                        </div>
-                                        </div>
-                                        </Link>
-                                    </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                    {/* map data dinamis */}
+                                    <div>
+                                         {history.map((o) => {
+                                             return(
+                                                 <>
+                                                 <Trans picture={SamuelSuhi} note={o.notes} amount={o.amount}/>
+                                                 </>
+                                             )
+                                         })}
+                                     </div>
+                                            {/* map data dinamis */}
+                                    {/* <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
                                         <div class="d-flex flex-row align-self-center">
                                         <img src={SherinaChaw} alt="profileimg"/>
                                         <div class="d-inline-flex flex-column align-self-center px-2">
@@ -77,7 +100,7 @@ function Searchpage() {
                                             <p class="p-info mb-0">+62 810-4224-4613</p>
                                         </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </section>
                         </Col>
