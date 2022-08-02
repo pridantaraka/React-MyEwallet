@@ -15,7 +15,7 @@ import SherinaChaw from '../assets/image/users/SherinaChaw.png'
 import JessicaMera from '../assets/image/users/JessicaMera.png'
 
 function Trans(picture, note, amount) {
-    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+    <div class="d-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
         <Link to='/transfermoney' class="nav-link ms-3 my-1">
             <div class="d-flex flex-row align-self-center">
                 <img src={SamuelSuhi} alt="profileimg" className='fluid'/>
@@ -63,8 +63,19 @@ function Searchpage() {
                                             </div>
                                         </div>
                                     </div>
+                                    <Link to='/transfermoney' class="nav-link ms-1 my-1 w-100 boxconfirm">
+                                    <div class="d-inline-flex flex-row justify-content-between p-4  align-content-center">
+                                        <div class="d-flex flex-row align-self-center">
+                                        <img src={SamuelSuhi} alt="profileimg"/>
+                                        <div class="d-inline-flex flex-column align-self-center px-2">
+                                            <p class="p-user mb-0">Momo Taro</p>
+                                            <p class="p-info mb-0">+62 812-4343-6731</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </Link>
                                     {/* map data dinamis */}
-                                    <div>
+                                    {/* <div>
                                          {history.map((o) => {
                                              return(
                                                  <>
@@ -72,9 +83,10 @@ function Searchpage() {
                                                  </>
                                              )
                                          })}
-                                     </div>
+                                     </div> */}
                                             {/* map data dinamis */}
-                                    {/* <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                            
+                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
                                         <div class="d-flex flex-row align-self-center">
                                         <img src={SherinaChaw} alt="profileimg"/>
                                         <div class="d-inline-flex flex-column align-self-center px-2">
@@ -100,7 +112,7 @@ function Searchpage() {
                                             <p class="p-info mb-0">+62 810-4224-4613</p>
                                         </div>
                                         </div>
-                                    </div> */}
+                                    </div>
                                 </div>
                             </section>
                         </Col>
