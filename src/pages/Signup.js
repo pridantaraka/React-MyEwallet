@@ -79,7 +79,7 @@ function Signup() {
 
   React.useEffect(() => {
     if (token) {
-      navigate("/dashboard");
+      navigate("/pin");
     }
   }, [navigate, token]);
 
