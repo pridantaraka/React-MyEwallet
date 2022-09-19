@@ -4,6 +4,7 @@ import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import DropdownMenu from '../component/DropdownMenu';
+import { TopUp } from '../component/TopUp';
 
 function Topup() {
     return(
@@ -22,6 +23,7 @@ function Topup() {
                             <DropdownMenu />
                             <section class=" bg-white box-side main-box p-5">
                                 <div class="d-flex flex-column gap-3">
+                                    <TopUp />
                                     <h3 class="trans-his py-3">How To Top Up</h3>
                                     <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
                                         <div class="d-flex flex-row align-self-center">

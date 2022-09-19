@@ -7,21 +7,19 @@ import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import DropdownMenu from '../component/DropdownMenu';
 import { useSelector, useDispatch } from "react-redux";
-import { getHistory } from '../redux/asyncActions/history';
+// import { getHistory } from '../redux/asyncActions/history';
+import { getuser } from '../redux/asyncActions/getuser';
 
-import RobertChandler from '../assets/image/users/RobertChandler.png'
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
-import SherinaChaw from '../assets/image/users/SherinaChaw.png'
-import JessicaMera from '../assets/image/users/JessicaMera.png'
 
-function Trans(picture, note, amount) {
+function ListUser(picture, fullname, phonenumber) {
     <div class="d-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
         <Link to='/transfermoney' class="nav-link ms-3 my-1">
             <div class="d-flex flex-row align-self-center">
                 <img src={SamuelSuhi} alt="profileimg" className='fluid'/>
                 <div class="d-inline-flex flex-column align-self-center px-2">
-                    <p class="p-user mb-0">{note}</p>
-                    <p class="p-info mb-0">{amount}</p>
+                    <p class="p-user mb-0">{fullname}</p>
+                    <p class="p-info mb-0">{phonenumber}</p>
                 </div>
             </div>
         </Link>
@@ -29,13 +27,29 @@ function Trans(picture, note, amount) {
 }
 
 function Searchpage() {
-    const history = useSelector((state) => state.history.data);
-    const dispatch = useDispatch();
-    const token = useSelector((state) => state.auth.token);
+    // const getuser = useSelector((state) => state.userr.data);
+    // const dispatch = useDispatch();
+    // const token = useSelector((state) => state.auth.token);
     
-    React.useEffect(() => {
-        dispatch(getHistory(token));
-      }, []);
+    // React.useEffect(() => {
+    //     dispatch(getuser(token));
+    //   }, []);
+      const [data] = React.useState({
+        success: true,
+        massage: 'List User',
+        results: [
+            {
+                "id_transaction": 34,
+                "time_transaction": "2022-07-11T15:32:09.773Z",
+                "recipient_id": 33,
+                "sander_id": 45,
+                "name": "jojo",
+                "notes": "hellow",
+                "amount": "10000",
+                "type_id": 1
+            }
+        ]
+    })
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -76,40 +90,21 @@ function Searchpage() {
                                     </Link>
                                     {/* map data dinamis */}
                                     {/* <div>
-                                         {history.map((o) => {
+                                         {data.map((o) => {
                                              return(
                                                  <>
-                                                 <Trans picture={SamuelSuhi} note={o.notes} amount={o.amount}/>
+                                                 <ListUser picture={SamuelSuhi} fullname={o.name} phonenumber={o.amount}/>
                                                  </>
                                              )
                                          })}
                                      </div> */}
-                                            {/* map data dinamis */}
-                                            
+                                    {/* map data dinamis */}
                                     <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
                                         <div class="d-flex flex-row align-self-center">
-                                        <img src={SherinaChaw} alt="profileimg"/>
+                                        <img src="" alt="profileimg"/>
                                         <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-user mb-0">Momo Taro</p>
+                                            <p class="p-user mb-0">test</p>
                                             <p class="p-info mb-0">+62 812-4343-6731</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <img src={RobertChandler} alt="profileimg"/>
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-user mb-0">Jessica Keen</p>
-                                            <p class="p-info mb-0">+62 811-3452-5252</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <img src={JessicaMera} alt="profileimg"/>
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-user mb-0">Michael Le</p>
-                                            <p class="p-info mb-0">+62 810-4224-4613</p>
                                         </div>
                                         </div>
                                     </div>
