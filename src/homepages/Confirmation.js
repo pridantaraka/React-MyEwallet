@@ -7,9 +7,13 @@ import ModalPopup from '../component/ModalPopup';
 import DropdownMenu from '../component/DropdownMenu';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
-
+// import { useDispatch, useSelector } from 'react-redux';  
 
 function Confirmation() {
+    // const dispatch = useDispatch();
+    // const transfer = useSelector();
+
+
     const [modalShow, setModalShow] = React.useState(false);
     return(
         <>

@@ -13,6 +13,7 @@ import graficout from '../assets/image/out2.png'
 import grafic from '../assets/image/graphic.png'
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 import { getHistory } from '../redux/asyncActions/history';
+import { getProfile } from '../redux/asyncActions/profile';
 
 
 function Users({picture, amount, notes, name}){
@@ -35,12 +36,13 @@ function Users({picture, amount, notes, name}){
 
 function Dashboard() {
     const history = useSelector((state) => state.history.data);
+    const profile = useSelector((state) => state.profile.data);
     const dispatch = useDispatch();
     const token = useSelector((state) => state.auth.token);
  
-    React.useEffect(() => {
+    React.useEffect (() => {
         dispatch(getHistory(token));
-      }, [token]);
+      }, []);
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -60,7 +62,7 @@ function Dashboard() {
                             <div className="d-flex justify-content-md-between flex-md-row flex-column align-items-center">
                                 <div className="d-flex flex-column p-4">
                                     <p className="sec-m">Balance</p>
-                                    <h2 className="text-white sec-h2">Rp.1200000</h2>
+                                    <h2 className="text-white sec-h2">Rp.{profile?.balance}</h2>
                                     <p className="sec-p">+62 813-9387-7946</p>
                                 </div>
                                 <div className="d-flex flex-column justify-content-center p-4 gap-2">

@@ -2,15 +2,24 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import { Trash } from "react-feather";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import DropdownMenu from '../component/DropdownMenu';
+import { getProfile } from "../redux/asyncActions/profile";
 
 import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 
 function ManagePhone() {
-    const addnumber = useSelector((state) => state.add.value);
+    const dispatch = useDispatch();
+    const token = useSelector((state) => state.auth.token);
+    const profile = useSelector((state) => state.profile.data);
+
+    React.useEffect(() => {
+        dispatch(getProfile(token));
+      }, [token]);
+
+    // const addnumber = useSelector((state) => state.add.value);
 
     return(
         <>
@@ -34,7 +43,7 @@ function ManagePhone() {
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">
                                             <p class="p-confirm mb-1">Primary</p>
-                                            <p class="h3-confirm mb-0">+62 {addnumber}</p>
+                                            <p class="h3-confirm mb-0">+62 {profile?.phonenumber}</p>
                                         </div>
                                         <div class="align-self-center">
                                             <Link to='/personalinfo' class="nav-link ms-3 my-1 text-hover p-confirm">
