@@ -39,14 +39,14 @@ function Personalinfo() {
                                         your information, contact our support.</p>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb-1">First Name</p>
+                                            <p class="p-confirm mb-1">Full Name</p>
                                             <p class="h3-confirm mb-0">{profile?.fullname}</p>
                                         </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb-1">Last Name</p>
-                                            <p class="h3-confirm mb-0">{profile?.fullname}</p>
+                                            <p class="p-confirm mb-1">Username</p>
+                                            <p class="h3-confirm mb-0">{profile?.username}</p>
                                         </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">

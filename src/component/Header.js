@@ -2,12 +2,21 @@ import React from 'react'
 // import { Bell } from "react-feather"
 import { Nav } from 'react-bootstrap'
 import Notif from './Notif'
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { getProfile } from '../redux/asyncActions/profile';
+import {Link} from 'react-router-dom'
 
 import RobertChandler from '../assets/image/users/RobertChandler.png'
 
 export default function Header() {
-    const addnumber = useSelector((state) => state.add.value);
+    // const dispatch = useDispatch();
+    // const token = useSelector((state) => state.auth.token);
+    // const profile = useSelector((state) => state.profile.data);
+
+    // React.useEffect(() => {
+    //     dispatch(getProfile(token));
+    //   }, []);
+    // const addnumber = useSelector((state) => state.add.value);
     return(
         <>
             <header className="bg-white h-box h-boxsh mw-100">
@@ -20,8 +29,8 @@ export default function Header() {
                     <img src={RobertChandler} alt="img-profile"/>
                        </div>
                     <div className="d-flex flex-column align-self-center px-2">
-                        <p className="h-user mb-0">Robert Chandler</p>
-                        <p className="h-phone mb-0">+62 {addnumber}</p>
+                        <p className="h-user mb-0">aaa</p>
+                        <p className="h-phone mb-0">aaa</p>
                     </div>
                         <Notif />
                 </div>
