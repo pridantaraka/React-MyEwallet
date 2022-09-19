@@ -105,26 +105,6 @@ function Signup() {
                         we cover all of that for you!</p>    
                         </div>
                     </div>
-                    {/* <div className="input-group flex-nowrap">
-                        <span className="input-group-text auth-icon-wr">
-                            <User />
-                        </span>
-                        <input type="email" className="form-control auth-input" placeholder="Enter your username"/>
-                    </div>
-                    <div className="input-group flex-nowrap">
-                        <span className="input-group-text auth-icon-wr">
-                            <Mail />
-                        </span>
-                        <input type="email" className="form-control auth-input" placeholder="Enter your e-mail"/>
-                    </div>
-                    <div className="input-group flex-nowrap">
-                        <span className="input-group-text auth-icon-wr">
-                            <Lock />
-                        </span>
-                        <input type="password" className="form-control auth-input" placeholder="Enter your password"/>
-                        <span className="input-group-text auth-icon-wr">
-                        </span>
-                    </div> */}
                     <Formik
                             onSubmit={onSignup}
                             initialValues={{username: "", email: "", password: ""}}>

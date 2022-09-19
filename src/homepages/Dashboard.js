@@ -19,11 +19,11 @@ function Users({picture, amount, note}){
     
       
     return(
-    <div className="d-flex flex-row justify-content-around pb-3 my-3">
+    <div className="d-flex flex-row justify-content-between pb-3 my-3">
         <div className="align-self-center">
         <img className="img-fluid rounded" src={SamuelSuhi} alt="profileimg"/>
         </div>
-        <div className="d-flex flex-column align-self-center">
+        <div className="d-flex flex-column justify-content-center align-self-center">
             <p className="p-user mb-0">Mamad</p>
              <p className="p-info mb-0">{note}</p>
          </div>
@@ -44,52 +44,6 @@ function Dashboard() {
     React.useEffect(() => {
         dispatch(getHistory(token));
       }, []);
-    // const [data] = React.useState({
-    //     success: true,
-    //     massage: 'List User',
-    //     results: [
-    //         {
-    //             "id_transaction": 34,
-    //             "time_transaction": "2022-07-11T15:32:09.773Z",
-    //             "recipient_id": 33,
-    //             "sander_id": 45,
-    //             "name": "jojo",
-    //             "notes": "hellow",
-    //             "amount": "10000",
-    //             "type_id": 1
-    //         },
-    //         {
-    //             "id_transaction": 35,
-    //             "time_transaction": "2022-10-31T17:00:00.000Z",
-    //             "recipient_id": 33,
-    //             "sander_id": 45,
-    //             "name": "lilo",
-    //             "notes": "hellow",
-    //             "amount": "10000",
-    //             "type_id": 1
-    //         },
-    //         {
-    //             "id_transaction": 36,
-    //             "time_transaction": "2022-10-31T17:00:00.000Z",
-    //             "recipient_id": 33,
-    //             "sander_id": 45,
-    //             "name": "nona",
-    //             "notes": "hellow",
-    //             "amount": "1000",
-    //             "type_id": 1
-    //         },
-    //         {
-    //             "id_transaction": 46,
-    //             "time_transaction": "2022-10-31T17:00:00.000Z",
-    //             "recipient_id": 45,
-    //             "sander_id": 46,
-    //             "name": "milo",
-    //             "notes": "hello",
-    //             "amount": "50000",
-    //             "type_id": 1
-    //         }
-    //     ]
-    // })
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>

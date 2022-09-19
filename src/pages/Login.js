@@ -65,6 +65,8 @@ function Login() {
         const data = { email: value.email, password: value.password };
         dispatch(login(data));
       };
+
+      //const param = { recipent_id: data.user_id, amount: value.amount, notes: value.notes, pin: value.pin, token: token}
     
       React.useEffect(() => {
         if (token) {
@@ -104,22 +106,6 @@ function Login() {
                                 phone? we cover all of that for you!</p>    
                             </div>
                         </div>
-                        {/* <div className="input-group flex-nowrap">
-                            <span className="input-group-text auth-icon-wr">
-                                <i data-feather="mail"></i>
-                                <Mail />
-                            </span>
-                            <input type="email" className="form-control auth-input" placeholder="Enter your e-mail"/>
-                        </div>
-                        <div className="input-group flex-nowrap">
-                            <span className="input-group-text auth-icon-wr">
-                                <i data-feather="lock"></i>
-                                <Lock />
-                            </span>
-                            <input type="password" className="form-control auth-input" placeholder="Enter your password"/>
-                            <span className="input-group-text auth-icon-wr">
-                            </span>
-                        </div> */}
                             {/* {location.state?.errorMsg && (
                             <Alert variant="danger">{location.state.errorMsg}</Alert>
                             )} */}
@@ -128,7 +114,8 @@ function Login() {
                             initialValues={{email: '', password: ''}}>
                             {(props)=><AuthForm {...props} />}
                             </Formik> */}
-                            <Formik onSubmit={onLogin} 
+                            <Formik 
+                            onSubmit={onLogin} 
                             initialValues={{ email: "", password: "" }}>
                                 {(props) => <AuthForm {...props} />}
                             </Formik>

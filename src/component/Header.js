@@ -20,11 +20,10 @@ export default function Header() {
                     <img src={RobertChandler} alt="img-profile"/>
                        </div>
                     <div className="d-flex flex-column align-self-center px-2">
-                          <p className="h-user mb-0">Robert Chandler</p>
-                            <p className="h-phone mb-0">+62 {addnumber}</p>
+                        <p className="h-user mb-0">Robert Chandler</p>
+                        <p className="h-phone mb-0">+62 {addnumber}</p>
                     </div>
-                        
-                            <Notif />
+                        <Notif />
                 </div>
                 </Nav>
             </header>

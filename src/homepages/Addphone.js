@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 import {Link} from 'react-router-dom';
 import {Container, Row, Col, Form} from 'react-bootstrap'
 import { useDispatch } from "react-redux";
 import DropdownMenu from '../component/DropdownMenu';
 import {
     customValue
-  } from "../redux/reducers/Counter";
-
+  } from "../redux/reducers/counter";
 import SideMenu from '../component/SideMenu'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
