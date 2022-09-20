@@ -16,16 +16,16 @@ import { getHistory } from '../redux/asyncActions/history';
 import { getProfile } from '../redux/asyncActions/profile';
 
 
-function Users({picture, amount, notes, name}){
+function Users({picture, name, phone, amount}){
     
     return(
     <div className="d-flex flex-row justify-content-between pb-3 my-3">
         <div className="align-self-center">
-        <img className="img-fluid rounded" src={SamuelSuhi} alt="profileimg"/>
+        <img className="img-fluid rounded" src={picture} alt="profileimg"/>
         </div>
         <div className="d-flex flex-column justify-content-center align-self-center">
             <p className="p-user mb-0">{name}</p>
-             <p className="p-info mb-0">{notes}</p>
+             <p className="p-info mb-0">{phone}</p>
          </div>
          <div className="d-flex align-self-center">
              <p className="p-gr mb-0">Rp.{amount}</p>
@@ -36,11 +36,16 @@ function Users({picture, amount, notes, name}){
 
 function Dashboard() {
     const history = useSelector((state) => state.history.data);
+    console.log("History log", history.results);
     const profile = useSelector((state) => state.profile.data);
+    // console.log("Profile log", profile.balance);
     const dispatch = useDispatch();
     const token = useSelector((state) => state.auth.token);
  
-    React.useEffect (() => {
+    // React.useEffect (() => {
+    //     dispatch(getProfile(token));
+    //   }, []);
+      React.useEffect (() => {
         dispatch(getHistory(token));
       }, []);
     return(
@@ -62,8 +67,8 @@ function Dashboard() {
                             <div className="d-flex justify-content-md-between flex-md-row flex-column align-items-center">
                                 <div className="d-flex flex-column p-4">
                                     <p className="sec-m">Balance</p>
-                                    <h2 className="text-white sec-h2">Rp.{profile?.balance}</h2>
-                                    <p className="sec-p">+62 813-9387-7946</p>
+                                    <h2 className="text-white sec-h2">Rp.{profile.balance?profile.balance:"0"}</h2>
+                                    <p className="sec-p">{profile.phonenumber?profile.phonenumber:"Phone Number"}</p>
                                 </div>
                                 <div className="d-flex flex-column justify-content-center p-4 gap-2">
                                     <Link to='/searchpage'><button className="btn-box"><ArrowUp />Transfer</button></Link>
@@ -94,13 +99,15 @@ function Dashboard() {
                                     <div className="p-2">
                                         {/* map data dinamis */}
                                         <div>
-                                            {history.map((o) => {
+                                            
+                                            {history.results?.map((o) => {
                                                 return(
-                                                <>
-                                                <Users picture={SamuelSuhi}  note={o.notes} amount={o.amount}/>
-                                                </>
+                                                <React.Fragment key={o.id_transaction}>
+                                                <Users picture={SamuelSuhi}  name={o.fullname} phone={o.phonenumber} amount={o.amount}/>
+                                                </React.Fragment>
                                                 )
                                             })}
+                                            
                                         </div>
                                         {/* map data dinamis */}
                                     </div>

@@ -11,7 +11,7 @@ const history = createSlice({
   reducers: {},
   extraReducers: (build) => {
     build.addCase(getHistory.fulfilled, (state, action) => {
-      state.data = action.payload.results;
+      state.data = action.payload;
     });
   }
 });
