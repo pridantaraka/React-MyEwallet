@@ -42,12 +42,12 @@ function Dashboard() {
     const dispatch = useDispatch();
     const token = useSelector((state) => state.auth.token);
  
-    // React.useEffect (() => {
-    //     dispatch(getProfile(token));
-    //   }, []);
-      React.useEffect (() => {
-        dispatch(getHistory(token));
+    React.useEffect (() => {
+        dispatch(getProfile(token));
       }, []);
+    //   React.useEffect (() => {
+    //     dispatch(getHistory(token));
+    //   }, []);
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -98,17 +98,13 @@ function Dashboard() {
                                     </div>
                                     <div className="p-2">
                                         {/* map data dinamis */}
-                                        <div>
-                                            
-                                            {history.results?.map((o) => {
-                                                return(
-                                                <React.Fragment key={o.id_transaction}>
-                                                <Users picture={SamuelSuhi}  name={o.fullname} phone={o.phonenumber} amount={o.amount}/>
-                                                </React.Fragment>
-                                                )
-                                            })}
-                                            
-                                        </div>
+                                        {/* {history.results?.map((o) => {
+                                            return(
+                                            <React.Fragment key={o.id_transaction}>
+                                            <Users picture={SamuelSuhi}  name={o.fullname} phone={o.phonenumber} amount={o.amount}/>
+                                            </React.Fragment>
+                                            )
+                                        })} */}
                                         {/* map data dinamis */}
                                     </div>
                                 </div>
