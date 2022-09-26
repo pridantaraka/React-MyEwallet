@@ -5,14 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "../redux/asyncActions/auth";
 // import { Mail } from "react-feather";
 import {Formik} from 'formik'
-// import * as Yup from 'yup'
+import * as Yup from 'yup'
 
 import SideAuth from '../component/SideAuth';
 
-// const loginSchema = Yup.object().shape({
-//     email: Yup.string().email('Invalid email address format').required('Required'),
-//     password: Yup.string().min(4).required('Required')
-//   })
+const loginSchema = Yup.object().shape({
+    email: Yup.string().email('Invalid email address format').required('Required'),
+    password: Yup.string().min(8).required('Required')
+  })
 
 const AuthForm = ({values, errors, handleSubmit, handleChange})=> {
     const successMsg = useSelector((state) => state.auth.successMsg);
@@ -31,7 +31,7 @@ const AuthForm = ({values, errors, handleSubmit, handleChange})=> {
             value={values.email}
             placeholder="Enter email" 
             isInvalid={!!errors.email} />  {/** INI PENTING */}
-            {/* <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback> */}
+            <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label></Form.Label>
@@ -42,7 +42,7 @@ const AuthForm = ({values, errors, handleSubmit, handleChange})=> {
             value={values.password}
             placeholder="Password" 
             isInvalid={!!errors.password} />  {/** INI PENTING */}
-            {/* <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback> */}
+            <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
           </Form.Group>
             <div className="text-end pb-5">
                 <Link to="/forgetpwd">Forgot Password?</Link>
@@ -114,8 +114,9 @@ function Login() {
                             initialValues={{email: '', password: ''}}>
                             {(props)=><AuthForm {...props} />}
                             </Formik> */}
-                            <Formik 
-                            onSubmit={onLogin} 
+                            <Formik
+                            onSubmit={onLogin}
+                            validationSchema={loginSchema}
                             initialValues={{ email: "", password: "" }}>
                                 {(props) => <AuthForm {...props} />}
                             </Formik>

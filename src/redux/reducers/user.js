@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getuser } from "../asyncActions/getuser";
+import { getUser } from "../asyncActions/user";
 
 const initialState = {
-  data: []
+  data: [],
 };
 
 const user = createSlice({
@@ -10,11 +10,11 @@ const user = createSlice({
   initialState,
   reducers: {},
   extraReducers: (build) => {
-    build.addCase(getuser.fulfilled, (state, action) => {
-      state.data = action.payload.results;
+    build.addCase(getUser.fulfilled, (state, action) => {
+      state.data = action.payload.results?.rows;
     });
   }
 });
 
-export { getuser };
+export { getUser };
 export default user.reducer;

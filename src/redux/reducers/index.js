@@ -11,8 +11,8 @@ const reducer = combineReducers({
   auth,
   profile,
   history,
-  transfer,
-  user
+  user,
+  transfer
 });
 
 export default reducer;

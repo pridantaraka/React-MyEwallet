@@ -4,9 +4,54 @@ import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import DropdownMenu from '../component/DropdownMenu';
-import { TopUp } from '../component/TopUp';
+// import { TopUp } from '../component/TopUp';
+import { Formik } from 'formik';
+
+import { Button, Form } from "react-bootstrap"
+import * as Yup from 'yup'
+
+// const errorInput = Yup.object().shape({
+//     errInput : Yup.number.min(10000, 'Minnimal input Rp.10000')
+// })
+// const loginSchema = Yup.object().shape({
+//     email: Yup.string().email('Invalid email address format').required('Required'),
+//     password: Yup.string().min(8).required('Required')
+//   })
+
+const InputTopup = ({errors, handleSubmit, handleChange, values}) => {
+    return(
+        <>
+        <Form onSubmit={handleSubmit} onChange={handleChange}>
+            <Form.Group>
+                <Form.Control 
+                name = "input"
+                type = "number"
+                placeholder= "Rp. 0.0"
+                // value = {values.balance}
+                // isInvalid={!!errors.errInput}
+                />
+                {/* <Form.Control.Feedback type="invalid">{errors.errInput}</Form.Control.Feedback> */}
+            </Form.Group>
+            <div className='pt-3 ps-2'>
+                <span className='p1-topup mb-0'>
+                    Min Rp. 10.000
+                </span>
+            </div>
+            <div className="my-5">
+                <Button type="submit">
+                    Submit
+                </Button>
+            </div>
+        </Form>
+        </>
+    )
+}
+
 
 function Topup() {
+    // const onSubmit = (value) => {
+    //     const data = {}
+    // }
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -23,7 +68,14 @@ function Topup() {
                             <DropdownMenu />
                             <section class=" bg-white box-side main-box p-5">
                                 <div class="d-flex flex-column gap-3">
-                                    <TopUp />
+                                    <Formik
+                                    // onSubmit={}
+                                    // validationSchema={errorInput}
+                                    initialValues={{ number: "" }}>
+                                        {(props) => <InputTopup {...props} />}
+                                    </Formik>
+                                    {/* <TopUp /> */}
+                                    {/* <InputTopup /> */}
                                     <h3 class="trans-his py-3">How To Top Up</h3>
                                     <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
                                         <div class="d-flex flex-row align-self-center">

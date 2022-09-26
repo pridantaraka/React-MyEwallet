@@ -42,6 +42,9 @@ function Personalinfo() {
                                             <p class="p-confirm mb-1">Full Name</p>
                                             <p class="h3-confirm mb-0">{profile?.fullname}</p>
                                         </div>
+                                        <div class="align-self-center me-3">
+                                            <Link to='/addphone' class="nav-link ms-3 my-1 sec-p-menu">Edit</Link>
+                                        </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">

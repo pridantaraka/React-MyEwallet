@@ -14,40 +14,18 @@ import grafic from '../assets/image/graphic.png'
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 import { getHistory } from '../redux/asyncActions/history';
 import { getProfile } from '../redux/asyncActions/profile';
-
-
-function Users({picture, name, phone, amount}){
-    
-    return(
-    <div className="d-flex flex-row justify-content-between pb-3 my-3">
-        <div className="align-self-center">
-        <img className="img-fluid rounded" src={picture} alt="profileimg"/>
-        </div>
-        <div className="d-flex flex-column justify-content-center align-self-center">
-            <p className="p-user mb-0">{name}</p>
-             <p className="p-info mb-0">{phone}</p>
-         </div>
-         <div className="d-flex align-self-center">
-             <p className="p-gr mb-0">Rp.{amount}</p>
-         </div>
-     </div>
-    )
-}
+import {ListHistory} from '../component/HistoryList'
 
 function Dashboard() {
     const history = useSelector((state) => state.history.data);
-    console.log("History log", history.results);
     const profile = useSelector((state) => state.profile.data);
-    // console.log("Profile log", profile.balance);
     const dispatch = useDispatch();
     const token = useSelector((state) => state.auth.token);
  
     React.useEffect (() => {
         dispatch(getProfile(token));
+        dispatch(getHistory(token));
       }, []);
-    //   React.useEffect (() => {
-    //     dispatch(getHistory(token));
-    //   }, []);
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -98,13 +76,13 @@ function Dashboard() {
                                     </div>
                                     <div className="p-2">
                                         {/* map data dinamis */}
-                                        {/* {history.results?.map((o) => {
+                                        {history.map((o) => {
                                             return(
                                             <React.Fragment key={o.id_transaction}>
-                                            <Users picture={SamuelSuhi}  name={o.fullname} phone={o.phonenumber} amount={o.amount}/>
+                                                <ListHistory picture={SamuelSuhi}  name={o.recipient_fullname} type={o.name} amount={o.amount}/>
                                             </React.Fragment>
                                             )
-                                        })} */}
+                                        })}
                                         {/* map data dinamis */}
                                     </div>
                                 </div>
