@@ -8,6 +8,7 @@ export const getProfile = createAsyncThunk("profile/getProfile", async (token) =
     return data;
   } catch (e) {
     result.message = e.response.data.message;
+    console.log('data profile');
     return result;
   }
 });

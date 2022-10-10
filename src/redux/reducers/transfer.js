@@ -1,20 +1,34 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { postTransfer } from "../asyncActions/transfer";
+import { Transfer, TopupBalance } from "../asyncActions/transfer";
 
 const initialState = {
-  data: {}
+  data: {},
+  dataTransfer: {},
 };
 
-const profile = createSlice({
+const transfer = createSlice({
   name: "transfer",
   initialState,
-  reducers: {},
+  reducers: {
+    inputAmount: (state, action) => {
+    state.dataTransfer.amount = action.payload.amount;
+    state.dataTransfer.note = action.payload.note;
+    state.dataTransfer.time = action.payload.time;
+    state.dataTransfer.date = action.payload.date;
+  },},
   extraReducers: (build) => {
-    build.addCase(postTransfer.fulfilled, (state, action) => {
+    build.addCase(Transfer.fulfilled, (state, action) => {
       state.data = action.payload.results;
+    });
+    build.addCase(TopupBalance.pending, state => {
+      state.sucessMsg = null;
+    });
+    build.addCase(TopupBalance.fulfilled, (state, action) => {
+      state.sucessMsg = action.payload.message;
     });
   }
 });
 
-export { postTransfer };
-export default profile.reducer;
+export const {inputAmount} = transfer.actions
+export { Transfer, TopupBalance };
+export default transfer.reducer;

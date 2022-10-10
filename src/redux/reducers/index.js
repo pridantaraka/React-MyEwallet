@@ -5,10 +5,17 @@ import counter from "./counter";
 import transfer from "./transfer";
 import auth from "./auth";
 import user from "./user";
+import { persistReducer } from "redux-persist";
+import storage from 'redux-persist/lib/storage';
+
+const authConfig = {
+  storage,
+  key: 'auth',
+};
 
 const reducer = combineReducers({
   add : counter,
-  auth,
+  auth: persistReducer(authConfig, auth),
   profile,
   history,
   user,

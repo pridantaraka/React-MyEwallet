@@ -7,12 +7,13 @@ const initialState = {
   successMsg: null
 };
 
+
 const auth = createSlice({
   name: "auth",
   initialState,
   reducers: {
     logout: (state) => {
-      localStorage.removeItem("token");
+      // localStorage.removeItem("token");
       return initialState;
     }
   },
@@ -23,9 +24,11 @@ const auth = createSlice({
     });
     build.addCase(login.fulfilled, (state, action) => {
       const token = action.payload?.token;
+      const pin = action.payload?.pin;
       if (token) {
         state.token = token;
-        localStorage.setItem("token", token);
+        state.pin = pin;
+        // localStorage.setItem("token", token);
       } else {
         state.errorMsg = action.payload?.errorMsg;
         state.successMsg = action.payload?.successMsg;

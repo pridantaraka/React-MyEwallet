@@ -33,7 +33,7 @@ function AddPhone() {
                                     <p className="p-confirm">Add at least one phone number for the transfer<br/>
                                         ID so you can start transfering your money<br/>
                                         to another user.</p>
-                                    <div className="d-inline-flex flex-column justify-content-center w-md-50 align-self-center py-5 gap-5 align-content-center">
+                                    <div className="d-inline-flex flex-column justify-content-center align-self-center py-5 align-content-center">
                                         <Formik
                                         onSubmit={console.log('values')}
                                         validationSchema={EditSchema}

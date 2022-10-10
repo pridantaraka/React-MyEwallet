@@ -12,6 +12,7 @@ export const login = createAsyncThunk("auth/login", async (request) => {
       }
     });
     result.token = data.results.token;
+    result.pin = data.results.pin;
     return result;
   } catch (e) {
     result.errorMsg = e.response.data.message;

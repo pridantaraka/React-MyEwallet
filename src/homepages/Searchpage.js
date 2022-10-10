@@ -9,15 +9,15 @@ import DropdownMenu from '../component/DropdownMenu';
 import { useSelector, useDispatch } from "react-redux";
 import ListUser from '../component/ListUser';
 import { getUser } from '../redux/asyncActions/user';
+// import { selectRecipient } from '../redux/reducers/user';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 
 function Searchpage() {
     const users = useSelector((state) => state.user.data);
-    console.log("data users",users);
     const dispatch = useDispatch();
     const token = useSelector((state) => state.auth.token);
-    
+
     React.useEffect(() => {
         dispatch(getUser(token));
       }, []);
@@ -49,11 +49,10 @@ function Searchpage() {
                                             </div>
                                         </div>
                                     </div>
-                                    {users.map((o) => {
-                                        console.log("log map", o);
+                                    {users.results?.map((o) => {
                                         return(
                                         <React.Fragment key={o.id_user}>
-                                            <ListUser picture={SamuelSuhi}  name={o.fullname} phone={o.phonenumber}/>
+                                            <ListUser id={o.id_user} picture={SamuelSuhi}  name={o.fullname} phone={o.phonenumber}/>
                                         </React.Fragment>
                                         )
                                     })}

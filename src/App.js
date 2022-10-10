@@ -25,9 +25,8 @@ import StatusSuccess from './homepages/StatusSuccess'
 import StatusFail from './homepages/StatusFail'
 
 function App() {
-  React.useEffect(() => {}, []);
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />}/>
@@ -57,7 +56,7 @@ function App() {
         <Route path="statussuccess" element={<StatusSuccess />}/>
         <Route path="statusfail" element={<StatusFail />}/>
       </Routes>
-    </BrowserRouter>
+    // </BrowserRouter>
   )
 }
 
