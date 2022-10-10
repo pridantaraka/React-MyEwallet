@@ -39,6 +39,7 @@ function History() {
                                 <h3 className="trans-his">Transaction History</h3>
                                 {/* map data dinamis */}
                                 {history.map((o) => {
+                                    console.log(o);
                                     return(
                                     <React.Fragment key={o.id_transaction}>
                                     <ListHistory picture={SamuelSuhi}  name={o.recipient_fullname} type={o.name} amount={o.amount}/>
@@ -47,11 +48,19 @@ function History() {
                                 })}
                                 {/* map data dinamis */}
                             </div>
-                           <div>
-                            <div className='d-flex flex-row gap-5 mt-5'>
-                                    <Button>Prev</Button>
-                                    <Button>Next</Button>
+                            <div>
+                                <div className='d-flex flex-row justify-content-center gap-3'>
+                            <div>
+                                    <Button>
+                                        Next Page
+                                    </Button>
                                 </div>
+                                <div>
+                                    <Button>
+                                        Prev Page
+                                    </Button>
+                                </div>
+                            </div>
                            </div>
                         </section>
                         </Col>

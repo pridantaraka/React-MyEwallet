@@ -6,6 +6,7 @@ import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import { useSelector, useDispatch } from "react-redux";
 import { getProfile } from "../redux/asyncActions/profile";
+import ModalPopup from '../component/ModalPopup';
 import DropdownMenu from '../component/DropdownMenu';
 
 function Personalinfo() {
@@ -16,7 +17,7 @@ function Personalinfo() {
     React.useEffect(() => {
         dispatch(getProfile(token));
       }, []);
-
+      const [modalShow, setModalShow] = React.useState(false);
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -41,9 +42,6 @@ function Personalinfo() {
                                         <div class="d-inline-flex flex-column align-self-center px-2">
                                             <p class="p-confirm mb-1">Full Name</p>
                                             <p class="h3-confirm mb-0">{profile?.fullname}</p>
-                                        </div>
-                                        <div class="align-self-center me-3">
-                                            <Link to='/addphone' class="nav-link ms-3 my-1 sec-p-menu">Edit</Link>
                                         </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">

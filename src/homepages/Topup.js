@@ -6,31 +6,27 @@ import Footer from '../component/Footer';
 import DropdownMenu from '../component/DropdownMenu';
 // import { TopUp } from '../component/TopUp';
 import { Formik } from 'formik';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { TopupBalance } from '../redux/asyncActions/transfer';
 import { Button, Form } from "react-bootstrap"
-import * as Yup from 'yup'
+import { TopupSchema } from '../component/schemaValidation';
 
-// const errorInput = Yup.object().shape({
-//     errInput : Yup.number.min(10000, 'Minnimal input Rp.10000')
-// })
-// const loginSchema = Yup.object().shape({
-//     email: Yup.string().email('Invalid email address format').required('Required'),
-//     password: Yup.string().min(8).required('Required')
-//   })
 
-const InputTopup = ({errors, handleSubmit, handleChange, values}) => {
+const InputTopup = ({errors, handleSubmit, handleChange, touched, values}) => {
     return(
         <>
-        <Form onSubmit={handleSubmit} onChange={handleChange}>
+        <Form onSubmit={handleSubmit}>
             <Form.Group>
                 <Form.Control 
                 name = "input"
                 type = "number"
                 placeholder= "Rp. 0.0"
-                // value = {values.balance}
-                // isInvalid={!!errors.errInput}
+                onChange={handleChange}
+                // value = {values.topup}
+                isInvalid={errors.input}
+                isValid={touched.input && !errors.input}
                 />
-                {/* <Form.Control.Feedback type="invalid">{errors.errInput}</Form.Control.Feedback> */}
+                <Form.Control.Feedback type="invalid">{errors.input}</Form.Control.Feedback>
             </Form.Group>
             <div className='pt-3 ps-2'>
                 <span className='p1-topup mb-0'>
@@ -49,6 +45,19 @@ const InputTopup = ({errors, handleSubmit, handleChange, values}) => {
 
 
 function Topup() {
+
+    const topups = useSelector((state) => state.profile.token);
+    const dispatch = useDispatch();
+
+    const onClick = (value) => {
+        const amount = { input: value.balance };
+        dispatch(TopupBalance(amount));
+    }
+
+    // React.useEffect(() => {
+    //     dispatch(TopupBalance())
+    //   }, []);
+
     // const onSubmit = (value) => {
     //     const data = {}
     // }
@@ -69,9 +78,9 @@ function Topup() {
                             <section class=" bg-white box-side main-box p-5">
                                 <div class="d-flex flex-column gap-3">
                                     <Formik
-                                    // onSubmit={}
-                                    // validationSchema={errorInput}
-                                    initialValues={{ number: "" }}>
+                                    onSubmit={onClick}
+                                    validationSchema={TopupSchema}
+                                    initialValues={{ input: '' }}>
                                         {(props) => <InputTopup {...props} />}
                                     </Formik>
                                     {/* <TopUp /> */}

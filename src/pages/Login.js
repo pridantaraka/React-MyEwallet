@@ -5,14 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "../redux/asyncActions/auth";
 // import { Mail } from "react-feather";
 import {Formik} from 'formik'
-import * as Yup from 'yup'
+import { loginSchema } from '../component/schemaValidation';
 
 import SideAuth from '../component/SideAuth';
 
-const loginSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email address format').required('Required'),
-    password: Yup.string().min(8).required('Required')
-  })
 
 const AuthForm = ({values, errors, handleSubmit, handleChange})=> {
     const successMsg = useSelector((state) => state.auth.successMsg);

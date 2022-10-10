@@ -1,14 +1,46 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import {Container, Row, Col, Button} from 'react-bootstrap'
+import {Container, Row, Col, Button, Form} from 'react-bootstrap'
 import { Edit} from "react-feather";
 import SideMenu from '../component/SideMenu'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
 import DropdownMenu from '../component/DropdownMenu';
+import * as Yup from 'yup';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 
+export const TransaksiSchema = Yup.object().shape({
+    transfer: Yup.number().min(10000, 'Minnimal input Rp.10.000').required('Required')
+})
+
+const FormTransaksi = ({handleSubmit,handleChange,values,errors}) =>{
+    return(
+        <>
+            
+            <Form onSubmit={handleSubmit}>
+            <div className='d-flex align-items-center flex-column gap-3 mt-5'>
+                <Form.Group className='input-money'>
+                    <Form.Control name='transfer' type='number' placeholder='0.00'
+                    onChange={handleChange}
+                    isInvalid={!!errors.transfer}
+                    />
+                    <Form.Control.Feedback></Form.Control.Feedback>
+                </Form.Group>
+                <div>
+                    <p className="p-info mb-0 py-3">Rp.120.000 Aveliable</p>
+                </div>
+                <Form.Group className='input-notes'>
+                    <Form.Control name='note' type='text' placeholder='Add notes'
+                    onChange={handleChange}
+                    />
+                </Form.Group>
+                <Button type='submit' className='btn-box'>Submit</Button>
+                </div>
+            </Form>
+        </>
+    )
+}
 
 function TransferMoney() {
 
@@ -45,20 +77,22 @@ function TransferMoney() {
                                     <p className="p-info mb-0 py-3">Type the amount you want to transfer and then<br/>
                                     press continue to the next steps.</p>
                                 </div>
-                                <div className='d-flex align-items-center flex-column gap-3 mt-5'>
-                                    <div className='input-money'>
+                                
+                                {/* <div className='d-flex align-items-center flex-column gap-3 mt-5'> */}
+                                    {/* <div className='input-money'>
                                         <input type='text' className='' placeholder="0.00"></input>
-                                    </div>
-                                    <div>
+                                    </div> */}
+                                    <FormTransaksi />
+                                    {/* <div>
                                         <p className="p-info mb-0 py-3">Rp.120.000 Aveliable</p>
                                     </div>
                                     <div className='input-notes icon-input'>
                                         <Edit size={18} /><input type='number' placeholder="Add some notes"></input>
-                                    </div>
-                                </div>
-                                <div className='d-flex justify-content-end mt-4'>
+                                    </div> */}
+                                {/* </div> */}
+                                {/* <div className='d-flex justify-content-end mt-4'>
                                     <Link to='/confirmation' className='nav-link'><Button className='btn-box'>Submit</Button></Link>
-                                </div>
+                                </div> */}
                             </div>
                             </section>
                             </Col>

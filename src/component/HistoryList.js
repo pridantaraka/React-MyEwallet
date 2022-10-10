@@ -1,5 +1,4 @@
 export function ListHistory({picture, name, type, amount}){
-
     return(
      <div className="d-flex flex-row justify-content-between py-3">
         <div className="d-flex flex-row align-self-center">

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, NavLink, useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import { Grid, User, Plus, ArrowUp, LogOut } from "react-feather";
 import { useDispatch } from "react-redux";
 import { logout } from "../redux/reducers/auth";
@@ -21,7 +21,7 @@ export default function SideMenu() {
                 <div className="d-flex flex-column h-100 justify-content-between">
                 <div className="d-flex flex-column justify-content-end gap-5">
                     
-                <NavLink to='/dashboard'  className="nav-link ms-3 my-1">
+                <Link to='/dashboard'  className="nav-link ms-3 my-1">
                     <div className="d-inline-flex flex-row sec-menu-p">
                         <div className="align-self-center px-2">
                                 <i data-feather="grid"></i>
@@ -29,7 +29,7 @@ export default function SideMenu() {
                         </div>
                         <div><p className="mb-0">Dashboard</p></div>
                         </div>
-                </NavLink>
+                </Link>
                 <Link to='/searchpage' className="nav-link ms-3 my-1">
                         <div className="d-inline-flex flex-row sec-menu-p">
                             <div className="align-self-center px-2">

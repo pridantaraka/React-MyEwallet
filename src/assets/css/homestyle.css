@@ -255,7 +255,7 @@
 
 /* Transfer Money */
 .input-money input{
-    border:unset;
+    border-bottom: 2 solid #F999B7;
     text-align: center;
     font-style: normal;
     font-weight: 700;
@@ -266,15 +266,20 @@
     outline: none;
 }
 .input-money input::placeholder{
-    color:#B5BDCC;
+    color:#F999B7;
 }
 .input-notes input{
-    border:unset;
+    border-bottom: 2 solid #F999B7;
     padding-left: 0.5rem;
 }
-.input-notes input:focus{
-    outline: none;
+.input-notes input::placeholder{
+    color: #F999B7;
+    text-align: center;
 }
+/* .input-notes input:focus{
+    outline: none;
+    border-bottom: 2 solid #F999B7;
+} */
 .icon-input{
     border-bottom: 1px solid #B5BDCC;
     color: #B5BDCC;
@@ -356,6 +361,26 @@
 }
 /* dropdownnotif */
 
+/* edit Data */
+.form-control {
+    background: unset;
+    border: unset;
+    color: #F2789F;
+    border-bottom: 2px solid #F999B7;
+    border-radius: unset;
+    -webkit-border-radius: unset;
+    -moz-border-radius: unset;
+    -ms-border-radius: unset;
+    -o-border-radius: unset;;
+}
+.form-control:focus{
+    border-bottom: 2px solid #F999B7;
+    box-shadow: unset;
+    outline: none;
+    background: unset;
+    color: #F2789F;
+}
+/* edit Data */
 
 @media (max-width: 576px) { 
     .box-side{
