@@ -4,12 +4,16 @@ import { Transfer, TopupBalance } from "../asyncActions/transfer";
 const initialState = {
   data: {},
   dataTransfer: {},
+  getIdUser: {}
 };
 
 const transfer = createSlice({
   name: "transfer",
   initialState,
   reducers: {
+    selectRecipient: (state, action) => {
+    state.getIdUser.recipient_id = action.payload;
+  },
     inputAmount: (state, action) => {
     state.dataTransfer.amount = action.payload.amount;
     state.dataTransfer.note = action.payload.note;
@@ -29,6 +33,6 @@ const transfer = createSlice({
   }
 });
 
-export const {inputAmount} = transfer.actions
+export const {selectRecipient, inputAmount} = transfer.actions
 export { Transfer, TopupBalance };
 export default transfer.reducer;

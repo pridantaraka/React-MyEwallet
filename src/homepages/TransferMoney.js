@@ -66,7 +66,7 @@ function TransferMoney() {
     const type_id = 1;
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const recipient_id = useSelector(state => state.user.getIdUser)
+    const recipient_id = useSelector(state => state.transfer.getIdUser)
     const id_recipient = recipient_id.recipient_id;
     const recipient = useSelector(state => state.user.dataRecipient)
     const token = useSelector((state) => state.auth.token);

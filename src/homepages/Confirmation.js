@@ -5,19 +5,14 @@ import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import ModalPopup from '../component/ModalPopup';
 import DropdownMenu from '../component/DropdownMenu';
+import {  useSelector } from 'react-redux';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
-import { useDispatch, useSelector } from 'react-redux';
 
 function Confirmation() {
-    const dispatch = useDispatch();
     const getTransfer = useSelector(state => state.transfer.dataTransfer);
     const recipient = useSelector(state => state.user.dataRecipient);
     const getbalance = useSelector(state => state.profile.data);
-    const token = useSelector((state) => state.auth.token);
-    const pinUser = useSelector((state) => state.auth.pin);
-    console.log('get data token',pinUser);
-
 
     const [modalShow, setModalShow] = React.useState(false);
     return(

@@ -28,7 +28,6 @@ const auth = createSlice({
       if (token) {
         state.token = token;
         state.pin = pin;
-        // localStorage.setItem("token", token);
       } else {
         state.errorMsg = action.payload?.errorMsg;
         state.successMsg = action.payload?.successMsg;
