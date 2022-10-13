@@ -1,6 +1,5 @@
 import React from 'react'
 import {Button} from 'react-bootstrap';
-import {Link} from 'react-router-dom'
 import Modal from 'react-bootstrap/Modal';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -14,24 +13,23 @@ export default function ModalPopup(props) {
     const token = useSelector((state) => state.auth.token);
     const pinUser = useSelector((state) => state.auth.pin);
     const date_time = `${getTransfer.date} ${getTransfer.time}`;
-
     const [form, setForm] = useState({ first: '', sec: '', third: '', fourth: '', fifth: '', sixth: '' });
     const handleChangeText = (e) => {
             setForm({ ...form, [e.target.name]: e.target.value });
         };
     const onInputPin = (value) => {
         const pin = Object.values(form).join('');
-        console.log('ini pin input', pin, 'ini user', pinUser);
          if (pin === pinUser) {
             console.log('trans fail');
             const data = {
                 amount: getTransfer.amount,
                 recipient_id: getTransfer.recipient_id,
                 note: getTransfer.note,
-                time_date: date_time,
+                time_transaction: date_time,
+                type_id: getTransfer.type_id,
+                pin:  getTransfer.pin,
               };
             dispatch(Transfer({data, token}));
-            console.log('ini data', data, 'ini token', token);
             navigate('/statussuccess');
           } else {
              navigate('/statusfail');

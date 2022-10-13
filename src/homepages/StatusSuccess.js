@@ -43,7 +43,7 @@ function StatusSuccess() {
                                     <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div className="d-inline-flex flex-column align-self-center px-2">
                                             <p className="p-confirm mb -0">Amount</p>
-                                            <p className="h3-confirm mb-0">Rp{recipient.amount}</p>
+                                            <p className="h3-confirm mb-0">Rp{getTransfer.amount}</p>
                                         </div>
                                     </div>
                                     <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
@@ -61,7 +61,7 @@ function StatusSuccess() {
                                     <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div className="d-inline-flex flex-column align-self-center px-2">
                                             <p className="p-confirm mb -0">Notes</p>
-                                            <p className="h3-confirm mb-0">{recipient.notes}</p>
+                                            <p className="h3-confirm mb-0">{getTransfer.note || 'No Notes'}</p>
                                         </div>
                                     </div>
                                     <h3 className="trans-his py-3">Transfer To</h3>

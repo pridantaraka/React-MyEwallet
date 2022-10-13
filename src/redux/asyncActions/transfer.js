@@ -5,10 +5,13 @@ import qs from "qs";
 
 export const Transfer = createAsyncThunk("transaction/transfer", async (request) => {
     const result = {};
-    console.log('token data', request);
     try {
       const send = qs.stringify(request.data)
-      const { data } = await http(request.token).post(`/transfer`, send, );
+      const { data } = await http(request.token).post(`/transfer`, send, {
+        headers: {
+          'content-type': 'application/x-www-form-urlencoded',
+        },
+      }, );
       return data;
     } catch (e) {
       result.message = e.response.data.message;
@@ -21,7 +24,6 @@ export const Transfer = createAsyncThunk("transaction/transfer", async (request)
     try {
       const send = qs.stringify(request);
       const {data} = await http(token).patch('/topup', send);
-      console.log("token action",data);
       return data;
     } catch (e) {
       result.errorMsg = e.response.data.message;

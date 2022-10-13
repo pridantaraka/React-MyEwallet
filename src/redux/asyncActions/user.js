@@ -15,7 +15,6 @@ export const getUser = createAsyncThunk("/getAllUsers", async (token) => {
 
 export const getUserById = createAsyncThunk("/getUserById", async ({token,id_recipient}) => {
   const result = {};
-  console.log('requst id', id_recipient);
   try {
     const { data } = await http(token).get(`/getUserId/${id_recipient}`);
     return data;

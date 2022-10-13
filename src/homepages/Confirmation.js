@@ -57,7 +57,7 @@ function Confirmation() {
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">
                                             <p class="p-confirm mb -0">Date & Time</p>
-                                            <p class="h3-confirm mb-0">{getTransfer.date}, {getTransfer.time}</p>
+                                            <p class="h3-confirm mb-0">{getTransfer.date} , {getTransfer.time}</p>
                                         </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">

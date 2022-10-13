@@ -50,12 +50,11 @@ const FormTransaksi = ({handleSubmit,handleChange,values,errors}) =>{
 function TransferMoney() {
     var currentdate = new Date();
     var date =
-        currentdate.getDate() +
+        currentdate.getFullYear() +
         '-' +
         (currentdate.getMonth() + 1) +
         '-' +
-        currentdate.getFullYear();
-
+        currentdate.getDate();
     var time =
         currentdate.getHours() +
         ':' +
@@ -66,14 +65,15 @@ function TransferMoney() {
     const type_id = 1;
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const recipient_id = useSelector(state => state.transfer.getIdUser)
+    const recipient_id = useSelector(state => state.transfer.dataTransfer)
     const id_recipient = recipient_id.recipient_id;
     const recipient = useSelector(state => state.user.dataRecipient)
     const token = useSelector((state) => state.auth.token);
+    const pinUser = useSelector((state)=> state.auth.pin);
+    const CheckPin = parseInt(pinUser);
 
     const onInputAmount = (value) => {
-        const data = { amount: value.amount, note: value.note, date, time, type_id };
-        //  console.log(data);
+        const data = { amount: value.amount, note: value.note, date, time, type_id, pin: CheckPin };
         dispatch(inputAmount(data));
         navigate('/confirmation');
       };
