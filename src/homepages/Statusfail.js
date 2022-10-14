@@ -5,11 +5,16 @@ import Header from '../component/Header';
 import SideMenu from '../component/SideMenu';
 import Footer from '../component/Footer';
 import DropdownMenu from '../component/DropdownMenu';
+import { useSelector } from 'react-redux/es/exports';
 
 import SamuelSuhi from '../assets/image/users/SamuelSuhi.png'
 import faillogo from '../assets/image/failed.png'
 
 function StatusFail() {
+    const getTransfer = useSelector(state => state.transfer.dataTransfer);
+    const recipient = useSelector(state => state.user.dataRecipient);
+    const getbalance = useSelector(state => state.profile.data);
+
     return(
         <>
         <Container className='mw-100 min-vh-100 bg-homepg'>
@@ -39,25 +44,25 @@ function StatusFail() {
                                     <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div className="d-inline-flex flex-column align-self-center px-2">
                                             <p className="p-confirm mb -0">Amount</p>
-                                            <p className="h3-confirm mb-0">Rp100.000</p>
+                                            <p className="h3-confirm mb-0">Rp{getTransfer.amount}</p>
                                         </div>
                                     </div>
                                     <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div className="d-inline-flex flex-column align-self-center px-2">
                                             <p className="p-confirm mb -0">Balance Left</p>
-                                            <p className="h3-confirm mb-0">Rp20.000</p>
+                                            <p className="h3-confirm mb-0">Rp{getbalance.balance?getbalance.balance:'0.00'}</p>
                                         </div>
                                     </div>
                                     <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div className="d-inline-flex flex-column align-self-center px-2">
                                             <p className="p-confirm mb -0">Date & Time</p>
-                                            <p className="h3-confirm mb-0">May 11, 2020 - 12.20</p>
+                                            <p className="h3-confirm mb-0">{getTransfer.date}, {getTransfer.time}</p>
                                         </div>
                                     </div>
                                     <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div className="d-inline-flex flex-column align-self-center px-2">
                                             <p className="p-confirm mb -0">Notes</p>
-                                            <p className="h3-confirm mb-0">For buying some socks</p>
+                                            <p className="h3-confirm mb-0">{getTransfer.note || 'No Notes'}</p>
                                         </div>
                                     </div>
                                     <h3 className="trans-his py-3">Transfer To</h3>
@@ -65,14 +70,14 @@ function StatusFail() {
                                         <div className="d-flex flex-row align-self-center">
                                         <img src={SamuelSuhi} alt="userimg"/>
                                         <div className="d-inline-flex flex-column align-self-center px-2">
-                                            <p className="p-user mb-0">Samuel Suhi</p>
-                                            <p className="p-info mb-0">+62 813-8492-9994</p>
+                                            <p className="p-user mb-0">{recipient.fullname}</p>
+                                            <p className="p-info mb-0">{recipient.phonenumber}</p>
                                         </div>
                                         </div>
                                     </div>
                                     <div className="d-flex justify-content-end flex-row gap-3">
                                         <div>
-                                            <Link to='/transfermoney'><button className='btn-status w-100 px-5'>Try Again</button></Link>
+                                            <Link to='/transfermoney'><button className='btn-status  px-5'>Try Again</button></Link>
                                         </div>
                                     </div>
                                 </div>

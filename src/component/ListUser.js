@@ -16,7 +16,7 @@ export default function ListUser ({id,picture, name, phone}) {
             <div className="d-flex flex-row align-self-center">
                 <img src={picture} alt="profileimg" className='fluid'/>
                 <div className="d-inline-flex flex-column align-self-center px-2">
-                    <p className="p-user mb-0">{id}{name}</p>
+                    <p className="p-user mb-0">{name}</p>
                     <p className="p-info mb-0">{phone}</p>
                 </div>
             </div>

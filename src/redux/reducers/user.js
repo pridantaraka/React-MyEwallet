@@ -22,7 +22,6 @@ const user = createSlice({
     });
     build.addCase(getUserById.fulfilled, (state, action)=>{
       state.dataRecipient = action.payload?.results;
-      console.log('ini reducers');
     });
   }
 });

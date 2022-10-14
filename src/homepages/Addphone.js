@@ -27,7 +27,7 @@ function AddPhone() {
                             </Col>
                             <Col md={9}>
                             <DropdownMenu />
-                            <section className="bg-white box-side main-box p-5 h-100">
+                            <section className="bg-white box-side main-box p-5">
                                 <div className="d-flex flex-column justify-content-center">
                                     <h3 className="trans-his py-2">Add Phone Number</h3>
                                     <p className="p-confirm">Add at least one phone number for the transfer<br/>
@@ -40,25 +40,6 @@ function AddPhone() {
                                         initialValues={{fullname: '', phonenumber: ''}}>
                                             {(props) => <EditProfile {...props}/>}
                                         </Formik>
-                                        {/* <div className="input-group flex-nowrap">
-                                            <span className="input-group-text reset-icon-wrp">
-                                                <i data-feather="phone"></i>
-                                                <p className="mb-0 ps-2">+62</p>
-                                            </span> */}
-                                            {/* <input type="tel" className="form-control reset-input w-md-50" placeholder="Enter your phone number"/> */}
-                                            {/* <Form>
-                                                <Form.Control
-                                                type="tel"
-                                                className=''
-                                                onChange={(e) => {
-                                                dispatch(customValue(e.target.value));
-                                                }}
-                                                />
-                                            </Form> */}
-                                        {/* </div> */}
-                                        {/* <div className="align-self-center">
-                                            <Link to='/managephone' nav-link ms-3 my-1><button className="reset-btn-chnge">Add Phone Number</button></Link>
-                                        </div> */}
                                     </div>
                                 </div>
                             </section>

@@ -11,9 +11,9 @@ export default function Notif() {
 
     return(
         <>
-        <Dropdown>
-        <Dropdown.Toggle variant="success">
-        <div className="sec-menu-p align-self-center box-notif">
+        <Dropdown className='d-flex align-items-center justify-content-center'>
+        <Dropdown.Toggle>
+        <div className=''>
           <Bell />
         </div>
         </Dropdown.Toggle>
