@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 
 export const EditSchema = Yup.object().shape({
-    fullname: Yup.string().min(4, 'Minimal 4 character').required('Required'),
+    fullname: Yup.string().min(4, 'Minimal 4 character'),
     phonenumber: Yup.number().min(9).required('Minimal 9 characther with number')
 })
 

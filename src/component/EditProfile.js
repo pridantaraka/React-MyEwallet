@@ -3,6 +3,7 @@ import {Form,Button} from 'react-bootstrap'
 
 function EditProfile({handleChange, handleSubmit, errors, touched, values}) {
   return (
+    <>
     <Form onSubmit={handleSubmit}>
         <div className="d-inline-flex flex-column justify-content-center w-md-50 align-self-center py-5 gap-5 align-content-center">
         <Form.Group className='mb-3'>
@@ -12,6 +13,7 @@ function EditProfile({handleChange, handleSubmit, errors, touched, values}) {
         <Form.Group className='mb-3'>
         <Form.Control name='fullname' type='text' onChange={handleChange}
             placeholder='Input Name' 
+            value = {values.fullname}
             isInvalid={errors.fullname}
             isValid={touched.fullname && !errors.fullname}
             />
@@ -20,6 +22,7 @@ function EditProfile({handleChange, handleSubmit, errors, touched, values}) {
         <Form.Group className='mb-3'>
         <Form.Control name='phonenumber' type='number' onChange={handleChange}
             placeholder='Phone Number'
+            value={values.phonenumber}
             isInvalid={errors.phonenumber} 
             isValid={touched.phonenumber && !errors.phonenumber}
             />
@@ -28,6 +31,7 @@ function EditProfile({handleChange, handleSubmit, errors, touched, values}) {
         <Button type='submit' className="reset-btn-chnge">Cornfirm</Button>
         </div>
     </Form>
+    </>
   )
 }
 

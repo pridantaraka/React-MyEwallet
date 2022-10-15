@@ -15,6 +15,7 @@ function ManagePhone() {
     const token = useSelector((state) => state.auth.token);
     const profile = useSelector((state) => state.profile.data);
 
+    
     React.useEffect(() => {
         dispatch(getProfile(token));
       }, [token]);
