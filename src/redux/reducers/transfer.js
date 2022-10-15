@@ -4,12 +4,19 @@ import { Transfer, TopupBalance } from "../asyncActions/transfer";
 const initialState = {
   // data: {},
   dataTransfer: {},
+  dataTopup: {},
+  successMsg: null,
+  errorMsg: null,
 };
 
 const transfer = createSlice({
   name: "transfer",
   initialState,
-  reducers: {
+  reducers: { 
+    resetMsg: state=>{
+    state.successMsg= null;
+    state.errorMsg= null;
+  },
     selectRecipient: (state, action) => {
     state.dataTransfer.recipient_id = action.payload;
   },
@@ -20,20 +27,21 @@ const transfer = createSlice({
     state.dataTransfer.date = action.payload.date;
     state.dataTransfer.pin = action.payload.pin;
     state.dataTransfer.type_id = action.payload.type_id;
-  },},
+  },
+  },
   extraReducers: (build) => {
-    // build.addCase(Transfer.fulfilled, (state, action) => {
-    //   state.data = action.payload.results;
-    // });
     build.addCase(TopupBalance.pending, state => {
       state.sucessMsg = null;
+      state.errorMsg = null;
     });
     build.addCase(TopupBalance.fulfilled, (state, action) => {
-      state.sucessMsg = action.payload.message;
+      state.dataTopup = action.payload.results;
+      state.errorMsg = action.payload?.errorMsg;
+      state.successMsg = action.payload?.successMsg;
     });
   }
 });
 
-export const {selectRecipient, inputAmount} = transfer.actions
+export const {selectRecipient, inputAmount, resetMsg} = transfer.actions
 export { Transfer, TopupBalance };
 export default transfer.reducer;

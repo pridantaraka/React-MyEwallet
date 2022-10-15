@@ -11,5 +11,5 @@ export const loginSchema = Yup.object().shape({
   })
 
 export const TopupSchema = Yup.object().shape({
-    input: Yup.number().min(10000, 'Minnimal input Rp.10.000').required('Required')
+    balance: Yup.number().min(10000, 'Minnimal input Rp.10.000').required('Required')
 })
