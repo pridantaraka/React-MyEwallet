@@ -52,7 +52,6 @@ const AuthForm = ({values, errors, handleSubmit, handleChange})=> {
   }
 
 function Login() {
-    // const location = useLocation();
     const dispatch = useDispatch();
     const token = useSelector((state) => state.auth.token);
     const navigate = useNavigate();
@@ -61,24 +60,11 @@ function Login() {
         const data = { email: value.email, password: value.password };
         dispatch(login(data));
       };
-
-      //const param = { recipent_id: data.user_id, amount: value.amount, notes: value.notes, pin: value.pin, token: token}
-    
       React.useEffect(() => {
         if (token) {
           navigate("/dashboard");
         }
       }, [navigate, token]);
-    // const onLogin = (val) => {
-    //     if(val.email === 'a@mail.com' && val.password === '1234'){
-    //         console.log(val.email === 'a@mail.com');
-    //         window.alert('Login success')
-    //         localStorage.setItem("auth", "randomToken");
-    //         navigate("/dashboard");
-    //       }else{
-    //         window.alert('Login Failed')
-    //       }
-    // };
 
     return(
         <>
@@ -102,14 +88,6 @@ function Login() {
                                 phone? we cover all of that for you!</p>    
                             </div>
                         </div>
-                            {/* {location.state?.errorMsg && (
-                            <Alert variant="danger">{location.state.errorMsg}</Alert>
-                            )} */}
-                            {/* <Formik
-                            onSubmit={onLogin}
-                            initialValues={{email: '', password: ''}}>
-                            {(props)=><AuthForm {...props} />}
-                            </Formik> */}
                             <Formik
                             onSubmit={onLogin}
                             validationSchema={loginSchema}

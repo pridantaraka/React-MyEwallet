@@ -15,7 +15,7 @@ function CreatePin() {
                     <Col md ={5}>
                     <section className="auth-pad d-flex flex-column gap-5">
                         <div>
-                            <div class="auth-ewallet d-flex flex-column align-items-center mb-3 d-md-none">
+                            <div className="auth-ewallet d-flex flex-column align-items-center mb-3 d-md-none">
                                 <span className='auth-res auth-alltext'>MyEwallet</span>
                             </div>
                             <h1 className="auth-h1">Secure Your Account, Your Wallet,
