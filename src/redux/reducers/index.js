@@ -1,7 +1,7 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import profile from "./profile";
 import history from "./history";
-import counter from "./counter";
+// import counter from "./counter";
 import transfer from "./transfer";
 import auth from "./auth";
 import user from "./user";
@@ -14,7 +14,6 @@ const authConfig = {
 };
 
 const reducer = combineReducers({
-  add : counter,
   auth: persistReducer(authConfig, auth),
   profile,
   history,
