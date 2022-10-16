@@ -32,37 +32,37 @@ function Personalinfo() {
                             </Col>
                             <Col md={9}>
                             <DropdownMenu />
-                            <section class="bg-white box-side main-box p-5">
-                                <div class="d-flex flex-column gap-3">
-                                    <h3 class="trans-his py-2">Personal Information</h3>
-                                    <p class="p-confirm">We got your personal information from the sign 
+                            <section className="bg-white box-side main-box p-5">
+                                <div className="d-flex flex-column gap-3">
+                                    <h3 className="trans-his py-2">Personal Information</h3>
+                                    <p className="p-confirm">We got your personal information from the sign 
                                         up proccess. If you want to make changes on 
                                         your information, contact our support.</p>
-                                    <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb-1">Full Name</p>
-                                            <p class="h3-confirm mb-0">{profile?.fullname}</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb-1">Full Name</p>
+                                            <p className="h3-confirm mb-0">{profile?.fullname}</p>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb-1">Username</p>
-                                            <p class="h3-confirm mb-0">{profile?.username}</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb-1">Username</p>
+                                            <p className="h3-confirm mb-0">{profile?.username}</p>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb-1">Verified E-mail</p>
-                                            <p class="h3-confirm mb-0">{profile?.email}</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb-1">Verified E-mail</p>
+                                            <p className="h3-confirm mb-0">{profile?.email}</p>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb-1">Phone Number</p>
-                                            <p class="h3-confirm mb-0">{profile?.phonenumber}</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb-1">Phone Number</p>
+                                            <p className="h3-confirm mb-0">{profile?.phonenumber}</p>
                                         </div>
-                                        <div class="align-self-center me-3">
-                                            <Link to='/addphone' class="nav-link ms-3 my-1 sec-p-menu">Manage</Link>
+                                        <div className="align-self-center me-3">
+                                            <Link to='/addphone' className="nav-link ms-3 my-1 sec-p-menu">Manage</Link>
                                         </div>
                                     </div>
                                 </div>

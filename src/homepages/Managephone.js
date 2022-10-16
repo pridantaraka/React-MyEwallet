@@ -36,19 +36,19 @@ function ManagePhone() {
                             </Col>
                             <Col md={9}>
                             <DropdownMenu />
-                            <section class="bg-white box-side main-box p-5">
-                                <div class="d-flex flex-column gap-3">
-                                    <h3 class="trans-his py-2">Manage Phone Number</h3>
-                                    <p class="p-confirm">You can only delete the phone number and then
+                            <section className="bg-white box-side main-box p-5">
+                                <div className="d-flex flex-column gap-3">
+                                    <h3 className="trans-his py-2">Manage Phone Number</h3>
+                                    <p className="p-confirm">You can only delete the phone number and then
                                         you must add another phone number.</p>
-                                    <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb-1">Primary</p>
-                                            <p class="h3-confirm mb-0">+62 {profile?.phonenumber}</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb-1">Primary</p>
+                                            <p className="h3-confirm mb-0">+62 {profile?.phonenumber}</p>
                                         </div>
-                                        <div class="align-self-center">
-                                            <Link to='/personalinfo' class="nav-link ms-3 my-1 text-hover p-confirm">
-                                                <div class="align-self-center px-2">
+                                        <div className="align-self-center">
+                                            <Link to='/personalinfo' className="nav-link ms-3 my-1 text-hover p-confirm">
+                                                <div className="align-self-center px-2">
                                                     <Trash />
                                                 </div>
                                             </Link>

@@ -18,28 +18,28 @@ export default function ModalEdit(props) {
             </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <p class="p-confirm px-3">Enter your 6 digits PIN for confirmation to<br/>
+            <p className="p-confirm px-3">Enter your 6 digits PIN for confirmation to<br/>
              continue transferring money.</p>
-             <div class="d-inline-flex flex-column justify-content-center w-100 align-self-center p-5 gap-3 align-content-center">
-                <div class="d-flex flex-row gap-md-5">
-                    <div class="d-flex flex-row gap-md-4">
-                        <div class="change-pin">
-                            <input maxlength="1" type="text" class="w-100"/>
+             <div className="d-inline-flex flex-column justify-content-center w-100 align-self-center p-5 gap-3 align-content-center">
+                <div className="d-flex flex-row gap-md-5">
+                    <div className="d-flex flex-row gap-md-4">
+                        <div className="change-pin">
+                            <input maxlength="1" type="text" className="w-100"/>
                         </div>
-                        <div class="change-pin">
-                            <input maxlength="1" type="text" class="w-100"/>
+                        <div className="change-pin">
+                            <input maxlength="1" type="text" className="w-100"/>
                         </div>
-                        <div class="change-pin">
-                            <input maxlength="1" type="text" class="w-100"/>
+                        <div className="change-pin">
+                            <input maxlength="1" type="text" className="w-100"/>
                         </div>
-                        <div class="change-pin">
-                            <input maxlength="1" type="text" class="w-100"/>
+                        <div className="change-pin">
+                            <input maxlength="1" type="text" className="w-100"/>
                         </div>
-                        <div class="change-pin">
-                            <input maxlength="1" type="text" class="w-100"/>
+                        <div className="change-pin">
+                            <input maxlength="1" type="text" className="w-100"/>
                         </div>
-                           <div class="change-pin">
-                               <input maxlength="1" type="text" class="w-100"/>
+                           <div className="change-pin">
+                               <input maxlength="1" type="text" className="w-100"/>
                            </div>
                        </div>
                    </div>

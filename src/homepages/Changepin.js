@@ -20,35 +20,35 @@ function ChangePin() {
                             </Col>
                             <Col md={9}>
                             <DropdownMenu />
-                            <section class="bg-white box-side main-box p-5 mw-100">
-                                <div class="d-flex flex-column gap-3">
-                                    <h3 class="trans-his py-2">Change PIN</h3>
-                                    <p class="p-confirm">Type your new 6 digits security PIN to use in<br/> MyEwallet.</p>
-                                    <div class="d-inline-flex flex-column justify-content-center w-50 align-self-center py-5 gap-5 ">
-                                        <div class="d-flex flex-row gap-md-5">
-                                            <div class="d-flex flex-row gap-md-4">
-                                                <div class="change-pin">
-                                                    <input maxlength="1" type="text" class="w-100"/>
+                            <section className="bg-white box-side main-box p-5 mw-100">
+                                <div className="d-flex flex-column gap-3">
+                                    <h3 className="trans-his py-2">Change PIN</h3>
+                                    <p className="p-confirm">Type your new 6 digits security PIN to use in<br/> MyEwallet.</p>
+                                    <div className="d-inline-flex flex-column justify-content-center w-50 align-self-center py-5 gap-5 ">
+                                        <div className="d-flex flex-row gap-md-5">
+                                            <div className="d-flex flex-row gap-md-4">
+                                                <div className="change-pin">
+                                                    <input maxlength="1" type="text" className="w-100"/>
                                                 </div>
-                                                <div class="change-pin">
-                                                    <input maxlength="1" type="text" class="w-100"/>
+                                                <div className="change-pin">
+                                                    <input maxlength="1" type="text" className="w-100"/>
                                                 </div>
-                                                <div class="change-pin">
-                                                    <input maxlength="1" type="text" class="w-100"/>
+                                                <div className="change-pin">
+                                                    <input maxlength="1" type="text" className="w-100"/>
                                                 </div>
-                                                <div class="change-pin">
-                                                    <input maxlength="1" type="text" class="w-100"/>
+                                                <div className="change-pin">
+                                                    <input maxlength="1" type="text" className="w-100"/>
                                                 </div>
-                                                <div class="change-pin">
-                                                    <input maxlength="1" type="text" class="w-100"/>
+                                                <div className="change-pin">
+                                                    <input maxlength="1" type="text" className="w-100"/>
                                                 </div>
-                                                <div class="change-pin">
-                                                    <input maxlength="1" type="text" class="w-100"/>
+                                                <div className="change-pin">
+                                                    <input maxlength="1" type="text" className="w-100"/>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="align-self-center">
-                                            <button class="reset-btn-chnge">Change Pin</button>
+                                        <div className="align-self-center">
+                                            <button className="reset-btn-chnge">Change Pin</button>
                                         </div>
                                     </div>
                                 </div>

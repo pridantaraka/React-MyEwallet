@@ -23,41 +23,41 @@ function ChangePwd() {
                             </Col>
                             <Col md={9}>
                             <DropdownMenu />
-                            <section class="bg-white main-box box-side p-5 mw-100">
-                                <div class="d-flex flex-column gap-3">
-                                    <h3 class="trans-his py-2">Change Password</h3>
-                                    <p class="p-confirm">You must enter your current password and then<br/>
+                            <section className="bg-white main-box box-side p-5 mw-100">
+                                <div className="d-flex flex-column gap-3">
+                                    <h3 className="trans-his py-2">Change Password</h3>
+                                    <p className="p-confirm">You must enter your current password and then<br/>
                                         type your new password twice.</p>
-                                    <div class="d-inline-flex flex-column justify-content-center w-md-50 align-self-center py-5 gap-5 align-content-center">
-                                        <div class="input-group flex-nowrap w-100">
-                                            <span class="input-group-text reset-icon-wrp">
+                                    <div className="d-inline-flex flex-column justify-content-center w-md-50 align-self-center py-5 gap-5 align-content-center">
+                                        <div className="input-group flex-nowrap w-100">
+                                            <span className="input-group-text reset-icon-wrp">
                                                 <Lock />
                                             </span>
-                                            <input type="password" class="form-control reset-input" placeholder="Current password"/>
-                                            <span class="input-group-text reset-icon-wrp">
+                                            <input type="password" className="form-control reset-input" placeholder="Current password"/>
+                                            <span className="input-group-text reset-icon-wrp">
                                             <i data-feather="eye-off"></i>
                                             </span>
                                         </div>
-                                        <div class="input-group flex-nowrap ">
-                                            <span class="input-group-text reset-icon-wrp">
+                                        <div className="input-group flex-nowrap ">
+                                            <span className="input-group-text reset-icon-wrp">
                                                 <Lock />
                                             </span>
-                                            <input type="password" class="form-control reset-input" placeholder="New password"/>
-                                            <span class="input-group-text reset-icon-wrp">
+                                            <input type="password" className="form-control reset-input" placeholder="New password"/>
+                                            <span className="input-group-text reset-icon-wrp">
                                             <i data-feather="eye-off"></i>
                                             </span>
                                         </div>
-                                        <div class="input-group flex-nowrap ">
-                                            <span class="input-group-text reset-icon-wrp">
+                                        <div className="input-group flex-nowrap ">
+                                            <span className="input-group-text reset-icon-wrp">
                                                 <Lock />
                                             </span>
-                                            <input type="password" class="form-control reset-input" placeholder="Repeat new password"/>
-                                            <span class="input-group-text reset-icon-wrp">
+                                            <input type="password" className="form-control reset-input" placeholder="Repeat new password"/>
+                                            <span className="input-group-text reset-icon-wrp">
                                             <i data-feather="eye-off"></i>
                                             </span>
                                         </div>
-                                        <div class="align-self-center">
-                                            <button class="reset-btn-chnge">Change Password</button>
+                                        <div className="align-self-center">
+                                            <button className="reset-btn-chnge">Change Password</button>
                                         </div>
                                     </div>
                                 </div>

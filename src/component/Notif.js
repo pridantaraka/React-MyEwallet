@@ -20,26 +20,26 @@ export default function Notif() {
         <Dropdown.Menu>
             <div className='box-main'>
               <div d-flex flex-column>
-              <h5 class="p-confirm p-4 mb-0">Today</h5>
-                    <div class="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
-                        <div class="d-inline-flex flex-column align-self-center px-2 ">
+              <h5 className="p-confirm p-4 mb-0">Today</h5>
+                    <div className="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
+                        <div className="d-inline-flex flex-column align-self-center px-2 ">
                             <img src={innotif} alt="img-notif"/>
                         </div>
                     </div>
               </div>
-              <div class="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
-                        <div class="d-inline-flex flex-column align-self-center px-2 ">
+              <div className="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
+                        <div className="d-inline-flex flex-column align-self-center px-2 ">
                             <img src={outnotif} alt="img-notif"/>
                         </div>
                     </div>
-                    <h5 class="p-confirm p-4 mb-0">This Week</h5>
-                    <div class="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
-                        <div class="d-inline-flex flex-column align-self-center px-2 ">
+                    <h5 className="p-confirm p-4 mb-0">This Week</h5>
+                    <div className="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
+                        <div className="d-inline-flex flex-column align-self-center px-2 ">
                             <img src={innotif1} alt="img-notif"/>
                         </div>
                     </div>
-                    <div class="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
-                        <div class="d-inline-flex flex-column align-self-center px-2 ">
+                    <div className="d-inline-flex flex-row p-3 boxconfirm align-content-center w-100">
+                        <div className="d-inline-flex flex-column align-self-center px-2 ">
                             <img src={outnotif1} alt="img-notif"/>
                         </div>
                     </div>

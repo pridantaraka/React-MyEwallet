@@ -36,19 +36,19 @@ function Profile() {
                             </Col>
                             <Col md={9} className='continer-width'>
                             <DropdownMenu />
-                            <section class="bg-white box-side main-box p-5">
-                                <div class="d-flex flex-column gap-3">
-                                    <div class="d-inline-flex flex-column justify-content-center p-4 align-content-center">
-                                        <div class="d-flex align-self-center">
+                            <section className="bg-white box-side main-box p-5">
+                                <div className="d-flex flex-column gap-3">
+                                    <div className="d-inline-flex flex-column justify-content-center p-4 align-content-center">
+                                        <div className="d-flex align-self-center">
                                         <img src={RobertChandler} alt="profileimg"/>
                                     </div>
-                                    <div class="d-inline-flex flex-column align-self-center px-2">
+                                    <div className="d-inline-flex flex-column align-self-center px-2">
                                         <Link to='/personalinfo' className='nav-link ms-3 my-1'>
-                                            <p class="p-user ms-0 ps-0 mb-0 p-2 text-hover p-confirm"><Edit size={16} />Edit</p>
+                                            <p className="p-user ms-0 ps-0 mb-0 p-2 text-hover p-confirm"><Edit size={16} />Edit</p>
                                         </Link>
                                     </div>
-                                    <div class="h4 align-self-center ">{profile?.fullname}</div>
-                                    <p class="p-user align-self-center">{profile?.phonenumber}</p>
+                                    <div className="h4 align-self-center ">{profile?.fullname}</div>
+                                    <p className="p-user align-self-center">{profile?.phonenumber}</p>
                                     </div>
                                     <MenuProfile />
                                 </div>

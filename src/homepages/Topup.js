@@ -96,8 +96,8 @@ function Topup() {
                             </Col>
                             <Col md={9}>
                             <DropdownMenu />
-                            <section class=" bg-white box-side main-box p-5">
-                                <div class="d-flex flex-column gap-3">
+                            <section className=" bg-white box-side main-box p-5">
+                                <div className="d-flex flex-column gap-3">
                                     <Formik
                                     onSubmit={onClick}
                                     validationSchema={TopupSchema}
@@ -106,68 +106,68 @@ function Topup() {
                                     </Formik>
                                     {/* <TopUp /> */}
                                     {/* <InputTopup /> */}
-                                    <h3 class="trans-his py-3">How To Top Up</h3>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <div class="d-inline-flex flex-row align-self-center px-2">
-                                            <p class="p-topup pe-4 mb-0">1</p>
-                                            <p class="p1-topup mb-0">Go to the nearest ATM or you can use E-Banking.</p>
+                                    <h3 className="trans-his py-3">How To Top Up</h3>
+                                    <div className="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div className="d-flex flex-row align-self-center">
+                                        <div className="d-inline-flex flex-row align-self-center px-2">
+                                            <p className="p-topup pe-4 mb-0">1</p>
+                                            <p className="p1-topup mb-0">Go to the nearest ATM or you can use E-Banking.</p>
                                         </div>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <div class="d-inline-flex flex-row align-self-center px-2">
-                                            <p class="p-topup pe-4 mb-0">2</p>
-                                            <p class="p1-topup mb-0">Type your security number on the ATM or E-Banking.</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div className="d-flex flex-row align-self-center">
+                                        <div className="d-inline-flex flex-row align-self-center px-2">
+                                            <p className="p-topup pe-4 mb-0">2</p>
+                                            <p className="p1-topup mb-0">Type your security number on the ATM or E-Banking.</p>
                                         </div>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <div class="d-inline-flex flex-row align-self-center px-2">
-                                            <p class="p-topup pe-4 mb-0">3</p>
-                                            <p class="p1-topup mb-0">Select “Transfer” in the menu</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div className="d-flex flex-row align-self-center">
+                                        <div className="d-inline-flex flex-row align-self-center px-2">
+                                            <p className="p-topup pe-4 mb-0">3</p>
+                                            <p className="p1-topup mb-0">Select “Transfer” in the menu</p>
                                         </div>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <div class="d-inline-flex flex-row align-self-center px-2">
-                                            <p class="p-topup pe-4 mb-0">4</p>
-                                            <p class="p1-topup mb-0">Type the virtual account number that we provide you at the top.</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div className="d-flex flex-row align-self-center">
+                                        <div className="d-inline-flex flex-row align-self-center px-2">
+                                            <p className="p-topup pe-4 mb-0">4</p>
+                                            <p className="p1-topup mb-0">Type the virtual account number that we provide you at the top.</p>
                                         </div>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <div class="d-inline-flex flex-row align-self-center px-2">
-                                            <p class="p-topup pe-4 mb-0">5</p>
-                                            <p class="p1-topup mb-0">Type the amount of the money you want to top up.</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div className="d-flex flex-row align-self-center">
+                                        <div className="d-inline-flex flex-row align-self-center px-2">
+                                            <p className="p-topup pe-4 mb-0">5</p>
+                                            <p className="p1-topup mb-0">Type the amount of the money you want to top up.</p>
                                         </div>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <div class="d-inline-flex flex-row align-self-center px-2">
-                                            <p class="p-topup pe-4 mb-0">6</p>
-                                            <p class="p1-topup mb-0">Read the summary details</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div className="d-flex flex-row align-self-center">
+                                        <div className="d-inline-flex flex-row align-self-center px-2">
+                                            <p className="p-topup pe-4 mb-0">6</p>
+                                            <p className="p1-topup mb-0">Read the summary details</p>
                                         </div>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <div class="d-inline-flex flex-row align-self-center px-2">
-                                            <p class="p-topup pe-4 mb-0">7</p>
-                                            <p class="p1-topup mb-0">Press transfer / top up</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div className="d-flex flex-row align-self-center">
+                                        <div className="d-inline-flex flex-row align-self-center px-2">
+                                            <p className="p-topup pe-4 mb-0">7</p>
+                                            <p className="p1-topup mb-0">Press transfer / top up</p>
                                         </div>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
-                                        <div class="d-inline-flex flex-row align-self-center px-2">
-                                            <p class="p-topup pe-4 mb-0">8</p>
-                                            <p class="p1-topup mb-0">You can see your money in Zwallet within 3 hours.</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div className="d-flex flex-row align-self-center">
+                                        <div className="d-inline-flex flex-row align-self-center px-2">
+                                            <p className="p-topup pe-4 mb-0">8</p>
+                                            <p className="p1-topup mb-0">You can see your money in Zwallet within 3 hours.</p>
                                         </div>
                                         </div>
                                     </div>

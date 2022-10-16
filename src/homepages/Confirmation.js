@@ -29,46 +29,46 @@ function Confirmation() {
                             </Col>
                             <Col md={9}>
                             <DropdownMenu />
-                            <section class="bg-white box-side main-box p-5">
-                                <div class="col-12 d-flex flex-column gap-3">
-                                    <h3 class="trans-his py-3">Transfer To</h3>
-                                    <div class="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
-                                        <div class="d-flex flex-row align-self-center">
+                            <section className="bg-white box-side main-box p-5">
+                                <div className="col-12 d-flex flex-column gap-3">
+                                    <h3 className="trans-his py-3">Transfer To</h3>
+                                    <div className="d-inline-flex flex-row justify-content-between p-4 boxconfirm align-content-center">
+                                        <div className="d-flex flex-row align-self-center">
                                         <img src={SamuelSuhi} alt="userimg"/>
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-user mb-0">{recipient.fullname}</p>
-                                            <p class="p-info mb-0">{recipient.phonenumber}</p>
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-user mb-0">{recipient.fullname}</p>
+                                            <p className="p-info mb-0">{recipient.phonenumber}</p>
                                         </div>
                                         </div>
                                     </div>
-                                    <h3 class="trans-his py-4">Details</h3>
-                                    <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb -0">Amount</p>
+                                    <h3 className="trans-his py-4">Details</h3>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb -0">Amount</p>
                                             <p className="h3-confirm mb-0">{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' })
                                             .format(parseInt(getTransfer.amount))}</p>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb -0">Balance Left</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb -0">Balance Left</p>
                                             <p className="h3-confirm mb-0">{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' })
                                             .format(parseInt(getbalance.balance?getbalance.balance:'0.00'))}</p>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb -0">Date & Time</p>
-                                            <p class="h3-confirm mb-0">{getTransfer.date} , {getTransfer.time}</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb -0">Date & Time</p>
+                                            <p className="h3-confirm mb-0">{getTransfer.date} , {getTransfer.time}</p>
                                         </div>
                                     </div>
-                                    <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
-                                        <div class="d-inline-flex flex-column align-self-center px-2">
-                                            <p class="p-confirm mb -0">Notes</p>
-                                            <p class="h3-confirm mb-0">{getTransfer.note || 'No Notes'}</p>
+                                    <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
+                                        <div className="d-inline-flex flex-column align-self-center px-2">
+                                            <p className="p-confirm mb -0">Notes</p>
+                                            <p className="h3-confirm mb-0">{getTransfer.note || 'No Notes'}</p>
                                         </div>
                                     </div>
-                                    <div class="d-flex justify-content-end">
+                                    <div className="d-flex justify-content-end">
                                     <Button className='btn-box' onClick={() => setModalShow(true)}>
                                     Continue
                                     </Button>
