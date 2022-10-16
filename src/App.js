@@ -5,24 +5,24 @@ import PrivateRoute from './component/PrivateRoute'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
-import CreatePin from './pages/CreatePin'
+import CreatePin from './pages/Createpin'
 import Pin from './pages/Pin'
-import ForgetPwd from './pages/ForgetPwd'
-import CreateNewPwd from './pages/CreateNewPwd'
+import ForgetPwd from './pages/Forgetpwd'
+import CreateNewPwd from './pages/CreateNewpwd'
 import Dashboard from './homepages/Dashboard'
 import History from './homepages/History'
 import Confirmation from './homepages/Confirmation';
 import Profile from './homepages/Profile'
 import Personalinfo from './homepages/Personalinfo';
 import Searchpage from './homepages/Searchpage';
-import ChangePwd from './homepages/ChangePwd';
-import ChangePin from './homepages/ChangePin';
-import AddPhone from './homepages/AddPhone';
-import ManagePhone from './homepages/ManagePhone';
+import ChangePwd from './homepages/Changepwd';
+import ChangePin from './homepages/Changepin';
+import AddPhone from './homepages/Addphone';
+import ManagePhone from './homepages/Managephone';
 import Topup from './homepages/Topup';
 import TransferMoney from './homepages/TransferMoney'
 import StatusSuccess from './homepages/StatusSuccess'
-import StatusFail from './homepages/StatusFail'
+import StatusFail from './homepages/Statusfail'
 
 function App() {
   return (
