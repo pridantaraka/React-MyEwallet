@@ -44,13 +44,15 @@ function StatusFail() {
                                     <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div className="d-inline-flex flex-column align-self-center px-2">
                                             <p className="p-confirm mb -0">Amount</p>
-                                            <p className="h3-confirm mb-0">Rp{getTransfer.amount}</p>
+                                            <p className="h3-confirm mb-0">{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' })
+                                            .format(parseInt(getTransfer.amount))}</p>
                                         </div>
                                     </div>
                                     <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div className="d-inline-flex flex-column align-self-center px-2">
                                             <p className="p-confirm mb -0">Balance Left</p>
-                                            <p className="h3-confirm mb-0">Rp{getbalance.balance?getbalance.balance:'0.00'}</p>
+                                            <p className="h3-confirm mb-0">{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' })
+                                            .format(parseInt(getbalance.balance?getbalance.balance:'0.00'))}</p>
                                         </div>
                                     </div>
                                     <div className="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
@@ -76,8 +78,8 @@ function StatusFail() {
                                         </div>
                                     </div>
                                     <div className="d-flex justify-content-end flex-row gap-3">
-                                        <div>
-                                            <Link to='/transfermoney'><button className='btn-status  px-5'>Try Again</button></Link>
+                                        <div className='d-flex align-content-center'>
+                                            <Link to='/transfermoney'><button className='btn-status'>Try Again</button></Link>
                                         </div>
                                     </div>
                                 </div>

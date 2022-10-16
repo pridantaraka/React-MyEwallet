@@ -45,7 +45,8 @@ function Dashboard() {
                             <div className="d-flex justify-content-md-between flex-md-row flex-column align-items-center">
                                 <div className="d-flex flex-column p-4">
                                     <p className="sec-m">Balance</p>
-                                    <h2 className="text-white sec-h2">Rp.{profile.balance?profile.balance:"0"}</h2>
+                                    <h2 className="text-white sec-h2">{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' })
+                                    .format(parseInt(profile.balance?profile.balance:"0"))}</h2>
                                     <p className="sec-p">{profile.phonenumber?profile.phonenumber:"Phone Number"}</p>
                                 </div>
                                 <div className="d-flex flex-column justify-content-center p-4 gap-2">

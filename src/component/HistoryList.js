@@ -1,4 +1,4 @@
-export function ListHistory({picture, name, type, amount}){
+export function ListHistory({recipient_id, sender_id, picture, name, type, amount}){
     return(
      <div className="d-flex flex-row justify-content-between py-3">
         <div className="d-flex flex-row align-self-center">
@@ -9,7 +9,13 @@ export function ListHistory({picture, name, type, amount}){
         </div>
         </div>
         <div className="d-flex align-items-center">
-            <p className="p-gr">Rp.{amount}</p>
+            {/* <p className="p-gr">Rp.{amount}</p> */}
+            { recipient_id === sender_id?
+              <p style={{paddingRight: '30px', color: 'red'}}>-{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' })
+              .format(parseInt(amount||0))}</p>:
+              <p style={{paddingRight: '30px', color: 'green'}}>+{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' })
+              .format(parseInt(amount||0))}</p>
+            }
         </div>
     </div>
     )

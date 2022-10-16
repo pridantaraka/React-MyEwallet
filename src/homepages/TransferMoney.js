@@ -19,6 +19,7 @@ export const TransaksiSchema = Yup.object().shape({
 })
 
 const FormTransaksi = ({handleSubmit,handleChange,values,errors}) =>{
+    const profile = useSelector((state) => state.profile.data);
     return(
         <>
             <Form onSubmit={handleSubmit}>
@@ -31,7 +32,8 @@ const FormTransaksi = ({handleSubmit,handleChange,values,errors}) =>{
                     <Form.Control.Feedback type='invalid'>{errors.amount}</Form.Control.Feedback>
                 </Form.Group>
                 <div>
-                    <p className="p-info mb-0 py-3">Rp.120.000 Aveliable</p>
+                    <p className="p-info mb-0 py-3">{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' })
+                    .format(parseInt(profile.balance?profile.balance:"0"))} Aveliable</p>
                 </div>
                 <Form.Group className='input-notes'>
                     <Form.Control name='note' type='text' placeholder='Add notes'

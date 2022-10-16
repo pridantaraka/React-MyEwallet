@@ -45,13 +45,15 @@ function Confirmation() {
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">
                                             <p class="p-confirm mb -0">Amount</p>
-                                            <p class="h3-confirm mb-0">Rp{getTransfer.amount}</p>
+                                            <p className="h3-confirm mb-0">{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' })
+                                            .format(parseInt(getTransfer.amount))}</p>
                                         </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
                                         <div class="d-inline-flex flex-column align-self-center px-2">
                                             <p class="p-confirm mb -0">Balance Left</p>
-                                            <p class="h3-confirm mb-0">Rp{getbalance.balance?getbalance.balance:'0.00'}</p>
+                                            <p className="h3-confirm mb-0">{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' })
+                                            .format(parseInt(getbalance.balance?getbalance.balance:'0.00'))}</p>
                                         </div>
                                     </div>
                                     <div class="d-inline-flex flex-row justify-content-between p-3 boxconfirm align-content-center">
