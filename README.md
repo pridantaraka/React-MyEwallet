@@ -3,7 +3,7 @@
 ## Picture
 <table>
 <tr>
-<img src=assets/image/img/dashboard.png>
+![dashboard](https://user-images.githubusercontent.com/105355980/201054569-0a23d691-77f9-4d0e-95e5-ffc8e86e25bc.png)
 </tr>
 </table>
 
