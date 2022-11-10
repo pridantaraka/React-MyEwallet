@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import { Transfer, TopupBalance } from "../asyncActions/transfer";
 
 const initialState = {
-  // data: {},
   dataTransfer: {},
   dataTopup: {},
   successMsg: null,
@@ -31,7 +30,7 @@ const transfer = createSlice({
   },
   extraReducers: (build) => {
     build.addCase(TopupBalance.pending, state => {
-      state.sucessMsg = null;
+      state.successMsg = null;
       state.errorMsg = null;
     });
     build.addCase(TopupBalance.fulfilled, (state, action) => {

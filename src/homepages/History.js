@@ -42,7 +42,7 @@ function History() {
                                     console.log(o);
                                     return(
                                     <React.Fragment key={o.id_transaction}>
-                                    <ListHistory picture={SamuelSuhi}  name={o.recipient_fullname} type={o.name} amount={o.amount}/>
+                                    <ListHistory picture={SamuelSuhi}  name={o.recipient_fullname} type={o.name} amount={o.amount} sander_id={o.sander_id} recipient_id={o.recipient_id}/>
                                     </React.Fragment>
                                     )
                                 })}
