@@ -3,7 +3,7 @@
 ## Picture
 <table>
 <tr>
-![My Image](assets/image/img/dashboard.png)
+<img src=assets/image/img/dashboard.png>
 </tr>
 </table>
 
