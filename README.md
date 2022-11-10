@@ -1,22 +1,14 @@
 # React Js MyEwallet
 
 ## Picture
-<table>
-<tr>
-<td>
- <tr>
-  <td><td/>
-  <tr>
-  <td><td/>
- </tr>
- <tr>
-  <td><td/>
- </tr>
- </tr>
-</td>
-</tr>
-</table>
+<h2>Dashboard</h2>
 <img src="https://user-images.githubusercontent.com/105355980/201054569-0a23d691-77f9-4d0e-95e5-ffc8e86e25bc.png">
+<h2>Profile Info</h2>
+<img src="https://user-images.githubusercontent.com/105355980/201055983-7bcece1d-5d77-48c1-8145-cc8f504de83e.png">
+<h2>Topup</h2>
+<img src="https://user-images.githubusercontent.com/105355980/201056199-91d6971c-96ff-4ea3-a590-81577a7f191a.png">
+<h2>Transaksi</h2>
+<img src="https://user-images.githubusercontent.com/105355980/201056262-3135c2b4-58b2-4cf0-9f85-5b2f6441471a.png">
 
 ## About
 Create FrontEnd Web Ewallet for transaction and topup and this website also integrated with backend
