@@ -16,7 +16,7 @@ const AuthForm = ({values, errors, handleSubmit, handleChange})=> {
     return(
       <>
         {successMsg && <Alert variant="success">{successMsg}</Alert>}
-        {errorMsg && <Alert variant="danger">{errorMsg}</Alert>}
+        {errorMsg && <Alert variant="danger">{'Email or Password not Valid'}</Alert>}
         <Form noValidate onSubmit={handleSubmit} onChange={handleChange}> {/** INI PENTING */}
           <Form.Group className="mb-3">
             <Form.Label></Form.Label>

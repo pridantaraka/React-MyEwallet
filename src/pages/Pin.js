@@ -6,6 +6,7 @@ import authsuc from '../assets/image/success.png'
 import SideAuth from '../component/SideAuth';
 
 function Pin () {
+
     return(
         <>
         <Container className='mw-100 min-vh-100'>
@@ -23,6 +24,7 @@ function Pin () {
                     </div>
                     <div>
                         <h1 className="auth-h1">Your PIN Was Successfully Created</h1>
+                        <h5>Your Automaticly input is 123123 please change your PIN after login</h5>
                         <div className="pt-5">
                         <p className="auth-ptext">Your PIN was successfully created and you 
                             can now access all the features in MyEwallet. Login to your 

@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { register } from "../redux/asyncActions/auth";
 
 import SideAuth from '../component/SideAuth';
+import { SignInSchema } from '../component/schemaValidation';
 
 
 const SignupForm = ({values, errors, handleSubmit, handleChange})=> {
@@ -17,13 +18,13 @@ const SignupForm = ({values, errors, handleSubmit, handleChange})=> {
 
       React.useEffect(() => {
         if (successMsg) {
-          navigate("/login", { state: { successMsg } });
+          navigate("/pinsuccess", { state: { successMsg } });
         }
       }, [navigate, successMsg]);
         return(
       <>
         <Form noValidate onSubmit={handleSubmit} onChange={handleChange}> {/** INI PENTING */}
-          {errorMsg && <Alert variant="danger">{errorMsg}</Alert>}
+          {errorMsg && <Alert variant="danger">{'Data Error Please Check Your Input'}</Alert>}
           <Form.Group className="mb-3">
             <Form.Label></Form.Label>
             <Form.Control 
@@ -32,8 +33,8 @@ const SignupForm = ({values, errors, handleSubmit, handleChange})=> {
             value={values.username}
             onChange={handleChange} 
             placeholder="Enter username" 
-            isInvalid={!!errors.email} />  {/** INI PENTING */}
-            <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+            isInvalid={!!errors.username} />  {/** INI PENTING */}
+            <Form.Control.Feedback type="invalid">{errors.username}</Form.Control.Feedback>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label></Form.Label>
@@ -44,7 +45,7 @@ const SignupForm = ({values, errors, handleSubmit, handleChange})=> {
             onChange={handleChange}
             placeholder="Enter email" 
             isInvalid={!!errors.email} />  {/** INI PENTING */}
-            <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label></Form.Label>
@@ -55,7 +56,7 @@ const SignupForm = ({values, errors, handleSubmit, handleChange})=> {
             onChange={handleChange}
             placeholder="Password" 
             isInvalid={!!errors.password} />  {/** INI PENTING */}
-            <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
           </Form.Group>
           <div className="d-grid">
             <Button className='w-100 auth-btn' type='submit'>confirm</Button>
@@ -107,6 +108,7 @@ function Signup() {
                     </div>
                     <Formik
                             onSubmit={onSignup}
+                            validationSchema={SignInSchema}
                             initialValues={{username: "", email: "", password: ""}}>
                             {(props)=><SignupForm {...props} />}
                             </Formik>

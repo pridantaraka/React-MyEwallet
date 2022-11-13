@@ -1,5 +1,5 @@
 import React from 'react'
-import {Routes, Route, BrowserRouter} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import PrivateRoute from './component/PrivateRoute'
 
 import Home from './pages/Home'
@@ -40,21 +40,70 @@ function App() {
           <Dashboard />
           </PrivateRoute>
         }/>
-        <Route path="historypage" element={<History />}/>
-        <Route path="confirmation" element={<Confirmation />}/>
-        <Route path="profile" element={
-        <Profile />
+        <Route path="historypage" element={
+        <PrivateRoute>
+          <History />
+        </PrivateRoute>
         }/>
-        <Route path="personalinfo" element={<Personalinfo />}/>
-        <Route path="searchpage" element={<Searchpage />}/>
-        <Route path="changepwd" element={<ChangePwd />}/>
-        <Route path="changepin" element={<ChangePin />}/>
-        <Route path="addphone" element={<AddPhone />}/>
-        <Route path="managephone" element={<ManagePhone />}/>
-        <Route path="topup" element={<Topup />}/>
-        <Route path="transfermoney" element={<TransferMoney />}/>
-        <Route path="statussuccess" element={<StatusSuccess />}/>
-        <Route path="statusfail" element={<StatusFail />}/>
+        <Route path="confirmation" element={
+        <PrivateRoute>
+          <Confirmation />
+        </PrivateRoute>
+        }/>
+        <Route path="profile" element={
+        <PrivateRoute>
+          <Profile />
+        </PrivateRoute>
+        }/>
+        <Route path="personalinfo" element={
+        <PrivateRoute>
+          <Personalinfo />
+        </PrivateRoute>
+        }/>
+        <Route path="searchpage" element={
+        <PrivateRoute>
+          <Searchpage />
+        </PrivateRoute>
+        }/>
+        <Route path="changepwd" element={
+        <PrivateRoute>
+          <ChangePwd />
+        </PrivateRoute>
+        }/>
+        <Route path="changepin" element={
+        <PrivateRoute>
+          <ChangePin />
+        </PrivateRoute>
+        }/>
+        <Route path="addphone" element={
+        <PrivateRoute>
+          <AddPhone />
+        </PrivateRoute>
+        }/>
+        <Route path="managephone" element={
+        <PrivateRoute>
+          <ManagePhone />
+        </PrivateRoute>}/>
+        <Route path="topup" element={
+        <PrivateRoute>
+          <Topup />
+        </PrivateRoute>
+        }/>
+        <Route path="transfermoney" element={
+        <PrivateRoute>
+          <TransferMoney />
+        </PrivateRoute>
+        }/>
+        <Route path="statussuccess" element={
+        <PrivateRoute>
+          <StatusSuccess />
+        </PrivateRoute>
+        }/>
+        <Route path="statusfail" element={
+        <PrivateRoute>
+          <StatusFail />
+        </PrivateRoute>
+        }/>
       </Routes>
     // </BrowserRouter>
   )
